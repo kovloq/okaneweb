@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Okane</title>
+  <%= stylesheet_link_tag    'dashboard', media: 'all', 'data-turbolinks-track' => true %>
+  
+  <%= javascript_include_tag 'dashboard', 'data-turbolinks-track' => true %>
+  
+  <%= csrf_meta_tags %>
+</head>
+
+<body class="sidebar-color-grey font-source-sans-pro">
+	<div class="fluid">
+		<!-- Header page -->
+		<div class="page-header-topbar">
+			<nav id="topbar" class="navbar navbar-default container pln prn" role="navigation">
+				<div class="container-fluid pln prn">
+					<div id="topbar-menu" class="navbar-collapse pln prn">
+						<ul class="nav navbar-nav logo-wrapper">
+							<li class="btn-menu-toggle">
+								<div id="menu-toggle" class="show-collapsed">
+									<i class="fa fa-bars"></i>
+								</div>
+							</li>
+							<li class="pull-left">
+								<a href="#">Logo</a>
+							</li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							<li class="dropdown">
+								<a class="dropdown-toggle" href="#" data-toggle="dropdown">
+									<i class="icon-user"></i>&nbsp;<span class="caret"></span>
+								</a>
+                            <ul class="dropdown-menu dropdown-user pull-right">
+                                <li>
+                                    <div class="navbar-content">
+                                        <div class="row">
+                                            <div class="col-md-5 col-xs-5"><img class="img-responsive img-circle" alt="" src="http://api.randomuser.me/portraits/men/27.jpg">
+
+                                                <p class="text-center mtm"><a class="change-avatar" href="#">
+                                                    <small>Set Avatar</small>
+                                                </a></p>
+                                            </div>
+                                            <div class="col-md-7 col-xs-5"><span>Jake Rochleau</span>
+
+                                                <p class="text-muted small">example@mail.com</p>
+
+                                                <div class="divider"></div>
+                                                <a href="#">
+                                                    <button class="btn btn-default btn-sm" href="#">Edit Profile
+                                                    </button>
+                                                </a></div>
+                                        </div>
+                                    </div>
+                                    <div class="navbar-footer">
+                                        <div class="navbar-footer-content">
+                                            <div class="row">
+                                                <div class="col-md-6 col-xs-6"><a href="#">
+                                                    <button class="btn btn-default btn-sm">Change Password</button>
+                                                </a></div>
+                                                <div class="col-md-6 col-xs-6"><a href="#">
+                                                    <button class="btn btn-info btn-sm pull-right" href="page-lock-screen.html">Sign Out
+                                                    </button>
+                                                </a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+		<!-- End Header page -->
+		<!-- Body Page -->
+		<div id="wrapper">
+			<div id="page-wrapper">
+				<!-- Begin Sidebar -->
+				<div class="sidebar-main sidebar">
+					<div class="sidebar-collapse sidebar-scroll">
+						
+						<ul id="sidebar-main" class="nav">
+							<li>
+								<%= link_to('/transaction/index', {:name => 'Dashboard',:title=>'Dashboard'}) do %>
+                                <i class="icon-home"></i>
+                                <span class="menu-title">Dashboard</span>
+                                <% end %>
+								
+							</li>
+							<li>
+								<%= link_to('/transaction/index', {:name => 'User',:title=>'User'}) do %>
+                                <i class="icon-user"></i>
+                                <span class="menu-title">User</span>
+                                <% end %>
+							</li>
+							<li>
+								<%= link_to('/transaction/index', {:name => 'News',:title=>'News'}) do %>
+                                <i class="icon-calendar"></i>
+                                <span class="menu-title">Transaction</span>
+                                <% end %>
+							</li>
+						</ul>
+						
+						
+					</div>
+				</div>
+				<!-- End Sidebar -->
+				<div class="page-content">
+					<%= yield %>
+				</div>
+			</div>
+		</div>
+		<!-- End Body -->
+		<!-- Begin footer -->
+		<div id="footer">
+			<div class="copyright"> Create by: Dana
+            	<div class="pull-left">&copy;2015 </div>
+        	</div>
+		</div>
+		<!-- End Footer -->
+	</div>
+
+</body>
+</html>
