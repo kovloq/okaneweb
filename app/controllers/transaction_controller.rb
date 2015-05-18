@@ -1,13 +1,14 @@
-class TransactionController < ApplicationController
+class TransactionController < AdministratorsController
 
 	def index
 		@transaction = Transaction.order(:id => :desc).page(params[:page]).per(1) 
-		render :layout => 'dashboard'
+		
+		
 	end
 
 	def show
 		@transaction = Transaction.find params[:id]
-		render :layout => 'dashboard'
+		
 	end
 
 	def create
@@ -16,13 +17,11 @@ class TransactionController < ApplicationController
 	        redirect_to @transaction, notice: "Successfully created."
 	    else
 	      render :action => 'add'
-	      ender :layout => 'dashboard'
 	    end
 	end
 
 	def new
 		@transaction = Transaction.new
-		render :layout => 'dashboard'
 	end
 
 	private
