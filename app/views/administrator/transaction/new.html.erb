@@ -19,24 +19,23 @@
 						<div class="row" style="padding-top:10px;padding-bottom:10px">
 							
 	                     	<div class="panel-body">
-<%= debug(@transaction) %>
-	                     		<%= form_tag("/transaction", method: "post") do %>
+	                     		<%= form_for @transaction,url: {action: "create"} do |f| %>
 								  <div class="form-group" style="text-align:left">
 								    <label for="transaction_name" style="text-align:left">Transaction Name</label>
-								    <%= text_field(:transaction, :name,value:@transaction.transaction_name,class:"form-control",placeholder:"Transaction Name") %>
+								    <%= text_field(:transaction, :transaction_name,class:"form-control",placeholder:"Transaction Name") %>
 								  </div>
 								  <div class="form-group">
 								    <label for="type">Transaction Type</label>
 								    <div class="radio" style="margin-left: 25px;">
 									  <label>
-									  	<%= radio_button_tag(:category, "1") %>
+									  	<%= f.radio_button :category, "2" %>
 									   
 									    Income
 									  </label>
 									</div>
 									<div class="radio" style="margin-left: 25px;">
 									  <label>
-									  	<%= radio_button_tag(:category, "1") %>
+									  	<%= f.radio_button :category, "1" %>
 									    
 									    Expense
 									  </label>
@@ -44,11 +43,12 @@
 								  </div>
 								  <div class="form-group">
 								    <label for="value">Value</label>
-								    <%= text_field(:transaction, :value,value:@transaction.value,class:"form-control",placeholder:"Value") %>
+								    <%= text_field(:transaction, :value,class:"form-control",placeholder:"Value") %>
 								    
 								  </div>
-								  <%= hidden_field_tag(:created_by, "1") %>
-								  <%= hidden_field_tag(:updated_by, "1") %>
+
+								  <%= f.hidden_field :created_by, value:"1" %>
+								  <%= f.hidden_field :updated_by, value:"1" %>
 								  <!-- <div class="form-group">
 								    <label for="exampleInputEmail1">Description Detail</label>
 								    <%= text_area_tag(:description, "", size: "24x3",class:"form-control") %>

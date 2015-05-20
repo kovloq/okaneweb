@@ -1,11 +1,10 @@
-
 <div class="page-title-breadcrumb">
 	<div class="page-header pull-left">
 		<div class="page-title">Transaction</div>
 	</div>
 	<ol class="breadcrumb page-breadcrumb hidden-xs">
         <li><i class="fa fa-home"></i>&nbsp;
-        	<%= link_to "Home", :controller => "transaction", :action => "index" %>
+        	<%= link_to "Home", :controller => "administrator/transaction", :action => "index" %>
         	&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
         <li class="active">Transaction</li>
         <!-- <li class="active">Invoice</li> -->
@@ -33,7 +32,8 @@
 
 					<div class="panel-body">
 					<%# daftar transaksi %>
-					<a href="/transaction/new" class="btn btn-primary" >Add</a><br/>
+					<%= link_to "Add",{:controller=>"administrator/transaction",:action=>"new"},:class=>"btn btn-primary" %>
+					<br/>
 					<br/>
 
 					<table class="table table-bordered">
@@ -52,7 +52,24 @@
 							<th>Income</th>
 							<th>Expense</th>
 						</tr>
+						<% @transaction.each do |t| %>
+							<tr>
+								<td><%= t.created_at %></td>
+								<td><%= t.transaction_name %></td>
+								<td><%= t.value %></td>
+								<td><%= t.value %></td>
+								<td>Total</td>
+								<td>
+									<%= link_to "Edit",{:controller=>"administrator/transaction",:action=>"show",:id=>t.id},:class=>"btn btn-warning" %>
+
+									<%= link_to "Delete",{:controller=>"administrator/transaction",:action=>"destroy",:id=>t.id},:class=>"btn btn-danger",:method=>:delete %>
+								</td>
+							</tr>
+						<% end %>
 					</table>
+					</div>
+					<div class="panel-footer">
+						<%= paginate @transaction %>
 					</div>
 				</div> <!-- Panel -->
 			</div><!-- Col md -12 -->
