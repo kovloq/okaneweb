@@ -56,13 +56,13 @@
 							<tr>
 								<td><%= t.created_at %></td>
 								<td><%= t.transaction_name %></td>
+								<td><%= t.category==1 ? t.value : 0 %></td>
+								<td><%= t.category==1 ? 0 : t.value  %></td>
 								<td><%= t.value %></td>
-								<td><%= t.value %></td>
-								<td>Total</td>
 								<td>
-									<%= link_to "Edit",{:controller=>"administrator/transaction",:action=>"show",:id=>t.id},:class=>"btn btn-warning" %>
+									<%= link_to "Edit",{:controller=>"administrator/transaction",:action=>"edit",:id=>t.id},:class=>"btn btn-warning" %>
 
-									<%= link_to "Delete",{:controller=>"administrator/transaction",:action=>"destroy",:id=>t.id},:class=>"btn btn-danger",:method=>:delete %>
+									<%= link_to "Delete",administrator_transaction_path(t.id), :method => :delete %>
 								</td>
 							</tr>
 						<% end %>

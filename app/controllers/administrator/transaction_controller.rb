@@ -2,7 +2,7 @@ module Administrator
 	class TransactionController < AdministratorsController
 
 		def index
-			@transaction = Transaction.order(:id => :desc).page(params[:page]).per(1) 
+			@transaction = Transaction.order(:id => :desc).page(params[:page]).per(10) 
 		end
 
 		def show
@@ -11,7 +11,9 @@ module Administrator
 		end
 
 		def destroy
-			@transaction="";
+			@transaction=Transaction.find params[:id]
+			@transaction.destroy
+			redirect_to :controller => "administrator/transaction", :action => "index",:notice=>"Deleted"
 		end
 
 		def create
@@ -24,9 +26,16 @@ module Administrator
 		end
 
 		def edit
+			@transaction = Transaction.find params[:id]
 		end
 
 		def update
+			@transaction = Transaction.find(params[:id])
+		    if @transaction.update_attributes(params[:transaction])
+		     redirect_to :action => 'show', :id => @patient
+		    else
+		     render :action => 'edit'
+		    end
 		end
 
 		def new
