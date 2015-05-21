@@ -1,0 +1,2 @@
+module Administrator::MemberHelper
+end

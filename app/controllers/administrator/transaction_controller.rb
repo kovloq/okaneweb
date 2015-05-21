@@ -1,5 +1,5 @@
-module Administrator
-	class TransactionController < AdministratorsController
+
+	class Administrator::TransactionController < AdministratorsController
 
 		def index
 			@transaction = Transaction.order(:id => :desc).page(params[:page]).per(10) 
@@ -50,4 +50,3 @@ module Administrator
 	    	params.require(:transaction).permit(:transaction_name, :category,:value, :created_by,:updated_by)
 	  	end
 	end
-end

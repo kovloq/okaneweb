@@ -1,2 +1,0 @@
-module Administrator::TransactionHelper
-end
