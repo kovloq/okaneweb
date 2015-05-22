@@ -2,45 +2,342 @@
 <html>
 <head>
   <title>Okane</title>
+  <meta charset="utf-8">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <link href="images/icons/favicon.ico" rel="shortcut icon">
+  <link href="images/icons/favicon.png" rel="apple-touch-icon">
+  <link href="images/icons/favicon-72x72.png" sizes="72x72" rel="apple-touch-icon">
+  <link href="images/icons/favicon-114x114.png" sizes="114x114" rel="apple-touch-icon">
+  <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   
   <%= csrf_meta_tags %>
 </head>
-<body>
-
-<nav class="navbar navbar-default" role="navigation">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Okane</a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><%= link_to "Home", root_url %></li>
-        <li><%#= link_to "Product", 'products#index' %></li>
-      </ul>
-
-      <ul class="nav navbar-nav navbar-right">
-        <li> <a href="#">Chart</a></li>
-        
-      </ul>
-
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-
-<div class="container-fluid">
-	<%= yield %>
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom" class="frontend-one-page">
+<!--BEGIN PAGE LOADER-->
+<div id="page-loader">
+  <%= image_tag("preloader.gif", :alt => "Loading") %>
 </div>
+<!--END PAGE LOADER-->
+<!-- Go to Top page -->
+<a href="#" id="totop" style="display: none;"><i class="fa fa-angle-up"></i></a>
+<!-- ENd -->
+
+<!-- Begin Header -->
+<header>
+    <div class="bg-overlay pattern">
+        <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header page-scroll">
+                    <button class="navbar-toggle collapsed" data-target=".navbar-main-collapse" data-toggle="collapse" type="button"><i class="fa fa-tasks"></i></button>
+                    <%= link_to(root_url, {:id=>"logo",:style=>"margin-left:-80px;margin-top:10px"}) do %>
+                    <%= image_tag("logo_okane.png", :height=>"40",:alt => "Logo") %>
+                    <% end %>
+                    
+                </div>
+                <div class="navbar-main-collapse collapse navbar-collapse">
+                    <ul class="nav nav-pills nav-justified main-menu">
+                        <li class="page-scroll active"><a href="#page-top">Home</a></li>
+                        <li class="page-scroll"><a href="#about">About</a></li>
+                        <li class="page-scroll"><a href="#team">Team</a></li>
+                        <li class="page-scroll space-right"><a href="#services">Services</a></li>
+                        <li class="page-scroll space-left"><a href="#portfolio">Portfolio</a></li>
+                        <li class="page-scroll"><a href="#clients">Client</a></li>
+                        <li class="page-scroll"><a href="#blog">Blog</a></li>
+                        <li class="page-scroll"><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <section class="intro">
+            <div class="intro-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div id="slide-intro">
+                                <h1>Awesome &amp;
+                                    <div id="rotate">
+                                        <div style="display: none;">Special</div>
+                                        <div style="display: block;">Creativity</div>
+                                        <div style="display: none;">Innovation</div>
+                                    </div>
+                                </h1>
+                                <div class="line">
+                                    <div class="dot"></div>
+                                </div>
+                                <p class="intro-text">We make template for love and passion. Let us show the right way
+                                    to choose your direction. Get started now!</p></div>
+                            <div class="section-next"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-google-plus"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</header>
+<!-- End Header -->
+
+<!-- Begin About -->
+<section class="section-content" id="about">
+    <div class="container">
+        <div class="row mbxxl">
+            <div class="col-lg-12"><h2 class="section-heading">About</h2>
+
+                <div class="line dark">
+                    <div class="dot"></div>
+                </div>
+                <p class="section-description">The most <strong>innovative</strong> designers consciously reject the
+                    <strong>standard</strong> option box and cultivate an <strong>appetite</strong> for thinking
+                    <strong>wrong</strong>.</p></div>
+        </div>
+        <div class="row mbxxl">
+            <div class="col-sm-4">
+                <div class="box">
+                    <div class="box-icon"><i class="fa fa-cube"></i></div>
+                    <div class="box-title">Our<br>Mission</div>
+                    <div class="box-desc">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit
+                        quo minus id quod maxime placeat facere possimus.<p class="mtl"><a class="more-info" href="#"><i class="fa fa-arrow-right mrm"></i>More info</a></p></div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="box">
+                    <div class="box-icon"><i class="fa fa-bullseye"></i></div>
+                    <div class="box-title">Our<br>Vision</div>
+                    <div class="box-desc">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit
+                        quo minus id quod maxime placeat facere possimus.<p class="mtl"><a class="more-info" href="#"><i class="fa fa-arrow-right mrm"></i>More info</a></p></div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="box">
+                    <div class="box-icon"><i class="fa fa-flag"></i></div>
+                    <div class="box-title">Our<br>Achievement</div>
+                    <div class="box-desc">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit
+                        quo minus id quod maxime placeat facere possimus.<p class="mtl"><a class="more-info" href="#"><i class="fa fa-arrow-right mrm"></i>More info</a></p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</section>
+<!-- End About -->
+
+<section id="team" class="section-content">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 mbxxl"><h2 class="section-heading">Team</h2>
+          <div class="line dark">
+            <div class="dot"></div>
+          </div>
+        <p class="section-description"><strong>Math</strong> is <strong>easy</strong>; <strong>design</strong>
+                    is <strong>hard</strong>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="section-content section-parallax">
+  <div class="bg-overlay pattern">
+    <div class="container">
+      <div class="row mbxxl">
+        <div class="col-lg-12"><h2 class="section-heading">Services</h2>
+
+                    <div class="line dark">
+                        <div class="dot"></div>
+                    </div>
+                    <p class="section-description">Design is the <strong>application</strong> of intent - the <strong>opposite</strong>
+                        of happenstance, and an <strong>antidote</strong> to accident.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="portfolio" class="section-content">
+  <div class="container">
+    <div class="row mbxxl">
+      <div class="col-md-12"><h2 class="section-heading">Portfolio</h2>
+
+                <div class="line dark">
+                    <div class="dot"></div>
+                </div>
+                <p class="section-description"><strong>Bad</strong> design is <strong>smoke</strong>, while
+                    <strong>good</strong> design is a <strong>mirror</strong>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="clients" class="section-content">
+  <div class="container">
+    <div class="row mbxxl">
+      <div class="col-lg-12"><h2 class="section-heading">Client</h2>
+
+                <div class="line dark">
+                    <div class="dot"></div>
+                </div>
+                <p class="section-description"><strong>Don't design</strong> for <strong>everyone</strong>. It's
+                    impossible. All you end up doing is <strong>designing</strong> something that <strong>makes</strong>
+                    everyone <strong>unhappy</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+	<%= yield %>
+
+<section class="section-content" id="blog">
+    <div class="container">
+        <div class="row mbxxl">
+            <div class="col-lg-12"><h2 class="section-heading">Blog</h2>
+
+                <div class="line dark">
+                    <div class="dot"></div>
+                </div>
+                <p class="section-description"><strong>Great</strong> design will not sell an inferior product, but it
+                    will <strong>enable</strong> a great product to <strong>achieve</strong> its
+                    <strong>maximum</strong> potential.</p></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6"><img class="img-responsive" alt="alt" src="http://next-themes.com/mtek/code/frontend/assets/images/blog_img_1.jpg">
+
+                <div class="box">
+                    <div class="box-icon">
+                        <div class="number">17</div>
+                        <div class="month">Mar</div>
+                    </div>
+                    <div class="box-title">Name of Blog<br>
+
+                        <div class="sub-title">Categories of blog</div>
+                    </div>
+                    <div class="box-desc">Smoked sausage barbed wire farmer's market po-boy fais do do beignet. Mirliton
+                        fried catfish fried chicken gumbo cher couillon canaille sauce piquante bourre. Boucherie trail
+                        ride coffee beignet gumbo. Boudreaux jambalaya turducken macque choux beer fais do do Mardi Gras
+                        Fauxcheaux. Boudreaux bread pudding pecan pie couillon hot sauce pirogue Lafayette.<p class="mtl"><a class="more-info" href="#"><i class="fa fa-arrow-right mrm"></i>More info</a>
+                        </p></div>
+                </div>
+            </div>
+            <div class="col-sm-6"><img class="img-responsive" alt="alt" src="http://next-themes.com/mtek/code/frontend/assets/images/blog_img_2.jpg">
+
+                <div class="box">
+                    <div class="box-icon">
+                        <div class="number">10</div>
+                        <div class="month">Mar</div>
+                    </div>
+                    <div class="box-title">Name of Blog<br>
+
+                        <div class="sub-title">Categories of blog</div>
+                    </div>
+                    <div class="box-desc">Smoked sausage barbed wire farmer's market po-boy fais do do beignet. Mirliton
+                        fried catfish fried chicken gumbo cher couillon canaille sauce piquante bourre. Boucherie trail
+                        ride coffee beignet gumbo. Boudreaux jambalaya turducken macque choux beer fais do do Mardi Gras
+                        Fauxcheaux. Boudreaux bread pudding pecan pie couillon hot sauce pirogue Lafayette.<p class="mtl"><a class="more-info" href="#"><i class="fa fa-arrow-right mrm"></i>More info</a>
+                        </p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Begin Contact Page -->
+<section class="section-content section-parallax" id="contact">
+    <div class="bg-overlay pattern">
+        <div class="container">
+            <div class="row mbxxl">
+                <div class="col-lg-12"><h2 class="section-heading">Contact</h2>
+
+                    <div class="line dark">
+                        <div class="dot"></div>
+                    </div>
+                    <p class="section-description"><strong>Design</strong> is the conscious <strong>effort</strong> to
+                        <strong>impose</strong> a <strong>meaningful</strong> order.</p></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="box">
+                        <div class="box-icon"><i class="fa fa-map-marker"></i></div>
+                        <div class="box-title">Office<br>Location</div>
+                        <div class="box-desc">574 New London Turnpike, England</div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="box">
+                        <div class="box-icon"><i class="fa fa-phone"></i></div>
+                        <div class="box-title">Call<br>Us</div>
+                        <div class="box-desc">+84 (0) 123 456 78</div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="box">
+                        <div class="box-icon"><i class="fa fa-envelope"></i></div>
+                        <div class="box-title">Send<br>Email</div>
+                        <div class="box-desc">mintek@yahoo.info.com</div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="box">
+                        <div class="box-icon"><i class="fa fa-globe"></i></div>
+                        <div class="box-title">Follow<br>Us</div>
+                        <div class="box-desc"><a class="mrl" href="#"><i class="fa fa-pinterest"></i></a><a class="mrl" href="#"><i class="fa fa-facebook"></i></a><a class="mrl" href="#"><i class="fa fa-twitter"></i></a><a class="mrl" href="#"><i class="fa fa-google-plus"></i></a><a class="mrl" href="#"><i class="fa fa-linkedin"></i></a><a class="mrl" href="#"><i class="fa fa-behance"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <form action="#">
+                <div class="row">
+                    <div class="col-md-4"><input type="text" class="input-lg form-control" placeholder="Name"></div>
+                    <div class="col-md-4"><input type="text" class="input-lg form-control" placeholder="Email"></div>
+                    <div class="col-md-4"><input type="text" class="input-lg form-control" placeholder="Phone"></div>
+                    <div class="col-md-12 mtxl"><textarea class="input-lg form-control" placeholder="Message" rows="10"></textarea></div>
+                    <div class="col-md-2 col-md-offset-5 mtxl"><input type="submit" class="btn btn-lg btn-outlined" value="Submit Message"></div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<!-- End Contact -->
+
+<!-- Begin Footer -->
+<section class="section-content" id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-6">
+                <div class="box">
+                    <div class="box-title">About</div>
+                    <div class="box-desc">
+                      <ul class="list-unstyled">
+                        <li>Home</li>
+                        <li>About</li>
+                        <li>Benefit</li>
+                        <li>Sign Up</li>
+                        <li>Sign In</li>
+                      </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="box">
+                    <div class="box-title">Info</div>
+                    <div class="box-desc">
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <div class="box">
+                    <div class="box-title">Contact</div>
+                    <div class="box-desc">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Footer -->
+
 </body>
 </html>

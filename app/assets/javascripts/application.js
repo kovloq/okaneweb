@@ -13,4 +13,5 @@
 //= require jquery-1.11.2.min
 //= require bootstrap.min
 //= require jquery-ui.min
+//= require main
 
