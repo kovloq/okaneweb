@@ -62,7 +62,7 @@
 								<td>
 									<%= link_to "Edit",{:controller=>"administrator/transaction",:action=>"edit",:id=>t.id},:class=>"btn btn-warning" %>
 
-									<%= link_to "Delete",administrator_transaction_path(t.id), :method => :delete %>
+									<%= link_to "Delete",{ :controller=>"administrator/transaction",:action=>"destroy", :id=> t.id }, {:method => :delete,:class=>"btn btn-danger",:data => {:confirm => 'Are you sure?'}} %>
 								</td>
 							</tr>
 						<% end %>

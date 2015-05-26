@@ -13,7 +13,8 @@
 		def destroy
 			@transaction=Transaction.find params[:id]
 			@transaction.destroy
-			redirect_to :controller => "administrator/transaction", :action => "index",:notice=>"Deleted"
+			flash[:success]="Deleted"
+			redirect_to :controller => "administrator/transaction", :action => "index"
 		end
 
 		def create
