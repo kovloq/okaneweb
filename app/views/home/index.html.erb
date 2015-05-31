@@ -1,3 +1,4 @@
+
 <!-- Begin Contact Page -->
 <section class="section-content section-parallax" id="contact">
     <div class="bg-overlay pattern">
@@ -48,16 +49,47 @@
                     </div>
                 </div>
             </div>
-            <form action="#">
+            <div class="alert alert-success alert-dismissible" role="alert" style="display:none">
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span></button>
+              Your message has been sent.
+            </div>
+          
+            <%= form_tag('home/contact', remote: true, id:"myform") do |f| %>
+    
                 <div class="row">
-                    <div class="col-md-4"><input type="text" class="input-lg form-control" placeholder="Name"></div>
-                    <div class="col-md-4"><input type="text" class="input-lg form-control" placeholder="Email"></div>
-                    <div class="col-md-4"><input type="text" class="input-lg form-control" placeholder="Phone"></div>
-                    <div class="col-md-12 mtxl"><textarea class="input-lg form-control" placeholder="Message" rows="10"></textarea></div>
-                    <div class="col-md-2 col-md-offset-5 mtxl"><input type="submit" class="btn btn-lg btn-outlined" value="Submit Message"></div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input name="contact[name]" type="text" class="input-lg form-control" placeholder="Name" required>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                        <input name="contact[email]" type="email" class="input-lg form-control" placeholder="Email" required>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                        <input type="text" name="contact[phone]" class="input-lg form-control" placeholder="Phone" required>
+                        </div>
+                    </div>
+                    <div class="col-md-12 mtxl">
+                        <div class="form-group">
+                        <textarea name="contact[message]" class="input-lg form-control" placeholder="Message" rows="10" required>
+                        </textarea>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-md-offset-5 mtxl"><input type="submit" name="submit" class="btn btn-lg btn-outlined" value="Submit Message"></div>
                 </div>
-            </form>
+            <% end %>
         </div>
     </div>
 </section>
 <!-- End Contact -->
+<script>
+$(document).ready(function(){
+$('#myform').on('ajax:success', function(data, status, error) {
+    $(".alert-success").show();
+    });
+})
+</script>

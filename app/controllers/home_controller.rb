@@ -6,18 +6,25 @@ class HomeController < ApplicationController
 		# Twitter @okanemanager
 		# Pass !qazxsw@
 		# Google Plus https://plus.google.com/u/1/115652349374795853751/
+		@contact=Contact.new
 	end
 
 	def contact
 		@contact=Contact.new(contact_params)
-		if @contact.save
-		    redirect_to :controller => "home", :action => "index"
-		else
-		    render :action => 'index'
+
+		respond_to do |format|
+
+			if @contact.save
+			    # redirect_to :controller => "home", :action => "index"
+			else
+			    # render :action => 'index'
+			end
+			format.html { render :layout => false, :text => "success"}
 		end
 	end
 
-	def transaction_params
+	private
+	def contact_params
 	    params.require(:contact).permit(:name, :email,:message, :phone)
 	end
 	

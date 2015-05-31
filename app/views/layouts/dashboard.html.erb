@@ -90,15 +90,21 @@
 								
 							</li>
 							<li>
-								<%= link_to('/transaction/index', {:name => 'User',:title=>'User'}) do %>
+								<%= link_to('/transaction/member', {:name => 'User',:title=>'User'}) do %>
                                 <i class="icon-user"></i>
                                 <span class="menu-title">User</span>
                                 <% end %>
 							</li>
 							<li>
-								<%= link_to('/transaction/index', {:name => 'News',:title=>'News'}) do %>
+								<%= link_to('/transaction/transaction', {:name => 'News',:title=>'Transaction'}) do %>
                                 <i class="icon-calendar"></i>
                                 <span class="menu-title">Transaction</span>
+                                <% end %>
+							</li>
+							<li>
+								<%= link_to('/transaction/contact', {:name => 'News',:title=>'Contact'}) do %>
+                                <i class="icon-calendar"></i>
+                                <span class="menu-title">Contact</span>
                                 <% end %>
 							</li>
 						</ul>
