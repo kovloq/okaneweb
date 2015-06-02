@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   
  root 'home#index'
 post "home/contact"
+get "administrator/home"=>"administrator/home#index"
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
@@ -38,10 +39,15 @@ post "home/contact"
 
   # Example resource route with more complex sub-resources:
     namespace :administrator do
-      resources :transaction
+      
       resources :admin
       resources :contact
       resources :member
+    end
+
+    namespace :user do
+      resources :transaction
+      
     end
 
   # Example resource route with concerns:

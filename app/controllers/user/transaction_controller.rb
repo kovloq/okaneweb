@@ -1,5 +1,5 @@
 
-	class Administrator::TransactionController < AdministratorsController
+	class User::TransactionController < UsersController
 
 		def index
 			@transaction = Transaction.order(:id => :desc).page(params[:page]).per(10) 
@@ -14,13 +14,13 @@
 			@transaction=Transaction.find params[:id]
 			@transaction.destroy
 			flash[:success]="Deleted"
-			redirect_to :controller => "administrator/transaction", :action => "index"
+			redirect_to :controller => "user/transaction", :action => "index"
 		end
 
 		def create
 			@transaction = Transaction.new(transaction_params)
 		    if @transaction.save
-		        redirect_to :controller => "administrator/transaction", :action => "index"
+		        redirect_to :controller => "user/transaction", :action => "index"
 		    else
 		      render :action => 'add'
 		    end

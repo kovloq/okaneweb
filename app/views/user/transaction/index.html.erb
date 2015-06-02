@@ -4,7 +4,7 @@
 	</div>
 	<ol class="breadcrumb page-breadcrumb hidden-xs">
         <li><i class="fa fa-home"></i>&nbsp;
-        	<%= link_to "Home", :controller => "administrator/transaction", :action => "index" %>
+        	<%= link_to "Home", :controller => "user/transaction", :action => "index" %>
         	&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
         <li class="active">Transaction</li>
         <!-- <li class="active">Invoice</li> -->
@@ -32,7 +32,7 @@
 
 					<div class="panel-body">
 					<%# daftar transaksi %>
-					<%= link_to "Add",{:controller=>"administrator/transaction",:action=>"new"},:class=>"btn btn-primary" %>
+					<%= link_to "Add",{:controller=>"user/transaction",:action=>"new"},:class=>"btn btn-primary" %>
 					<br/>
 					<br/>
 
@@ -60,9 +60,9 @@
 								<td><%= t.category==1 ? 0 : t.value  %></td>
 								<td><%= t.value %></td>
 								<td>
-									<%= link_to "Edit",{:controller=>"administrator/transaction",:action=>"edit",:id=>t.id},:class=>"btn btn-warning" %>
+									<%= link_to "Edit",{:controller=>"user/transaction",:action=>"edit",:id=>t.id},:class=>"btn btn-warning" %>
 
-									<%= link_to "Delete",{ :controller=>"administrator/transaction",:action=>"destroy", :id=> t.id }, {:method => :delete,:class=>"btn btn-danger",:data => {:confirm => 'Are you sure?'}} %>
+									<%= link_to "Delete",{ :controller=>"user/transaction",:action=>"destroy", :id=> t.id }, {:method => :delete,:class=>"btn btn-danger",:data => {:confirm => 'Are you sure?'}} %>
 								</td>
 							</tr>
 						<% end %>

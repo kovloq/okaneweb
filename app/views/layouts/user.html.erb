@@ -83,25 +83,20 @@
 						
 						<ul id="sidebar-main" class="nav">
 							<li>
-								<%= link_to('/administrator/', {:name => 'Dashboard',:title=>'Dashboard'}) do %>
+								<%= link_to('/user/', {:name => 'Dashboard',:title=>'Dashboard'}) do %>
                                 <i class="icon-home"></i>
                                 <span class="menu-title">Dashboard</span>
                                 <% end %>
 								
 							</li>
+							
 							<li>
-								<%= link_to('/administrator/member', {:name => 'User',:title=>'User'}) do %>
-                                <i class="icon-user"></i>
-                                <span class="menu-title">User</span>
+								<%= link_to('/user/transaction', {:name => 'News',:title=>'Transaction'}) do %>
+                                <i class="icon-calendar"></i>
+                                <span class="menu-title">Transaction</span>
                                 <% end %>
 							</li>
 							
-							<li>
-								<%= link_to('/administrator/contact', {:name => 'News',:title=>'Contact'}) do %>
-                                <i class="icon-calendar"></i>
-                                <span class="menu-title">Contact</span>
-                                <% end %>
-							</li>
 						</ul>
 						
 						
