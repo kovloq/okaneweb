@@ -33,7 +33,7 @@
 		def update
 			@transaction = Transaction.find(params[:id])
 		    if @transaction.update_attributes(params[:transaction])
-		     redirect_to :action => 'show', :id => @patient
+		     redirect_to :action => 'edit', :id => params[:id]
 		    else
 		     render :action => 'edit'
 		    end

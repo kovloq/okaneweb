@@ -41,9 +41,9 @@
                                                     <small>Set Avatar</small>
                                                 </a></p>
                                             </div>
-                                            <div class="col-md-7 col-xs-5"><span>Jake Rochleau</span>
+                                            <div class="col-md-7 col-xs-5"><span><%= session[:admin_name] %></span>
 
-                                                <p class="text-muted small">example@mail.com</p>
+                                                <p class="text-muted small"><%= session[:admin_email] %></p>
 
                                                 <div class="divider"></div>
                                                 <a href="#">
@@ -58,10 +58,14 @@
                                                 <div class="col-md-6 col-xs-6"><a href="#">
                                                     <button class="btn btn-default btn-sm">Change Password</button>
                                                 </a></div>
-                                                <div class="col-md-6 col-xs-6"><a href="#">
+                                                <div class="col-md-6 col-xs-6">
+                                        
+                                                	<%= link_to({controller:"administrator/login",action:"logout"}) do %>
+
                                                     <button class="btn btn-info btn-sm pull-right" href="page-lock-screen.html">Sign Out
                                                     </button>
-                                                </a></div>
+                                                    <% end %>
+                                            	</div>
                                             </div>
                                         </div>
                                     </div>
@@ -90,6 +94,13 @@
 								
 							</li>
 							<li>
+								<%= link_to('/administrator/admin', {:name => 'Admin',:title=>'Admin'}) do %>
+                                <i class="icon-user"></i>
+                                <span class="menu-title">Admin</span>
+                                <% end %>
+								
+							</li>
+							<li>
 								<%= link_to('/administrator/member', {:name => 'User',:title=>'User'}) do %>
                                 <i class="icon-user"></i>
                                 <span class="menu-title">User</span>
@@ -109,6 +120,7 @@
 				</div>
 				<!-- End Sidebar -->
 				<div class="page-content">
+					
 					<%= yield %>
 				</div>
 			</div>
@@ -116,7 +128,7 @@
 		<!-- End Body -->
 		<!-- Begin footer -->
 		<div id="footer">
-			<div class="copyright"> Create by: Dana
+			<div class="copyright"> Created by: Dana
             	<div class="pull-left">&copy;2015 </div>
         	</div>
 		</div>

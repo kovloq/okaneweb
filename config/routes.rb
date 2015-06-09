@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
   
-
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -9,7 +7,9 @@ Rails.application.routes.draw do
   
  root 'home#index'
 post "home/contact"
-get "administrator/home"=>"administrator/home#index"
+match 'administrator', to: 'administrator/home#index', via: [:get]
+
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
@@ -40,6 +40,9 @@ get "administrator/home"=>"administrator/home#index"
   # Example resource route with more complex sub-resources:
     namespace :administrator do
       
+      post 'login/login'
+      get 'login/index'
+      get 'login/logout'
       resources :admin
       resources :contact
       resources :member

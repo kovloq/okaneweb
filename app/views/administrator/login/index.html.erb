@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>Login</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet"
+          href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700">
+    <%= stylesheet_link_tag    'dashboard', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'dashboard', 'data-turbolinks-track' => true %>
+    
+    <link type="text/css" rel="stylesheet" href="global/vendors/iCheck/skins/all.css">
+    
+</head>
+<body class="page-signin">
+<div class="page-form">
+    <%= form_for @admin,url:{controller:"administrator/login",action:"login"},html:{class:"form",id:"myform"} do |f| %>
+        <div class="header-content text-center"><h1>Login</h1></div>
+        <div class="body-content">
+            <% flash.each do |key, value| %>
+            <div class="alert alert-<%= key %>"><%= value %></div>
+            <% end %>
+            <div class="list-group">
+                <div class="list-group-item"><input type="text" name="admin[username]" placeholder="Username" class="form-control"></div>
+                <div class="list-group-item"><input type="password" name="admin[password]" placeholder="Password" class="form-control"></div>
+            </div>
+
+            <div class="row">
+                
+            <div class="col-sm-6"><label><input type="checkbox" class="form-control-shadow">&nbsp;
+                Remember me</label>
+            </div>
+            <div class="col-sm-6">
+                    <button type="submit" class="btn btn-success btn-circle btn-block btn-shadow mbs">Log in</button>
+                </div>
+            
+                
+            </div>
+            <hr>
+            
+        </div>
+    <% end %>
+</div>
+
+</body>
+</html>

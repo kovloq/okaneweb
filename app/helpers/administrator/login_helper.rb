@@ -1,0 +1,2 @@
+module Administrator::LoginHelper
+end
