@@ -1,5 +1,30 @@
 Rails.application.routes.draw do
   
+
+  namespace :user do
+  get 'expense/new'
+  end
+
+  namespace :user do
+  get 'expense/edit'
+  end
+
+  namespace :user do
+  get 'expense/index'
+  end
+
+  namespace :user do
+  get 'income/new'
+  end
+
+  namespace :user do
+  get 'income/edit'
+  end
+
+  namespace :user do
+  get 'income/index'
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -46,11 +71,13 @@ match 'administrator', to: 'administrator/home#index', via: [:get]
       resources :admin
       resources :contact
       resources :member
+      resources :category
     end
 
     namespace :user do
       resources :transaction
-      
+      resources :income
+      resources :expense
     end
 
   # Example resource route with concerns:

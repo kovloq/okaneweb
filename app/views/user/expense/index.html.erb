@@ -1,0 +1,70 @@
+<div class="page-title-breadcrumb">
+	<div class="page-header pull-left">
+		<div class="page-title">Category</div>
+	</div>
+	<ol class="breadcrumb page-breadcrumb hidden-xs">
+        <li><i class="fa fa-home"></i>&nbsp;
+        	<%= link_to "Category", :controller => "administrator/category", :action => "index" %>
+        	&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
+        <li class="active">Category</li>
+        <!-- <li class="active">Invoice</li> -->
+    </ol>
+</div>
+
+<div class="box-content">
+    <div class="content">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel">
+
+                    <div class="panel-heading">
+                        <div class="row" style="padding-top:10px;padding-bottom:10px">
+                            <div class="col-md-6">
+                            <h4>Category</h4>
+                            </div>
+                            <div class="col-md-6">
+                                <form class="form-search left" action="#">
+                                 <div class="input-icon right"><i class="icon-magnifier"></i><input type="text" class="form-control" placeholder="Search...">
+                                  </div>
+                             </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel-body">
+                    <%# daftar transaksi %>
+                    <%= link_to "Add",{:controller=>"administrator/category",:action=>"new"},:class=>"btn btn-primary" %>
+                    <br/>
+                    <br/>
+
+                    <table class="table table-bordered">
+                        <tr>
+                            <th>Name</th>
+                            <th>Color</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                        
+                        <% @category.each do |t| %>
+                            <tr>
+                                <td><%= t.name %></td>
+                                <td><%= t.color %></td>
+                                
+                                <td>
+                                    <%= link_to "Edit",{:controller=>"administrator/category",:action=>"edit",:id=>t.id},:class=>"btn btn-warning" %>
+
+                                    
+                                </td>
+                                <td><%= link_to "Delete",{ :controller=>"administrator/category",:action=>"destroy", :id=> t.id }, {:method => :delete,:class=>"btn btn-danger",:data => {:confirm => 'Are you sure?'}} %></td>
+                            </tr>
+                        <% end %>
+                    </table>
+                    </div>
+                    <div class="panel-footer">
+                        <%= paginate @category %>
+                    </div>
+                </div> <!-- Panel -->
+            </div><!-- Col md -12 -->
+        </div><!-- Row -->
+    </div><!--  content -->
+</div><!-- Box Content -->
