@@ -1,0 +1,43 @@
+<div class="page-title-breadcrumb">
+	<div class="page-header pull-left">
+		<div class="page-title">FAQ</div>
+	</div>
+	<ol class="breadcrumb page-breadcrumb hidden-xs">
+        <li><i class="fa fa-home"></i>&nbsp;
+        	<%= link_to "Home", :controller => "user/faq", :action => "show" %>
+        	&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
+        <li class="active">FAQ</li>
+       
+    </ol>
+</div>
+
+
+<div class="box-content">
+    <div class="content">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="accordion" class="panel-group accordion">
+                    <% @faq.each do |t| %>
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h5 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="accordion-toggle collapsed">
+                                    <i class="icon-arrow"></i>
+                                    <%= t.title %>
+                                </a>
+                            </h5>
+                        </div>
+                        <div style="height: 0px;" id="collapseOne" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <%= t.description %>
+                            </div>
+                        </div>
+                    </div>
+                    <% end %>
+                </div>
+
+
+            </div><!-- ENd Col 12 Panel -->
+        </div>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+<div class="page-title-breadcrumb">
+	<div class="page-header pull-left">
+		<div class="page-title">FAQ</div>
+	</div>
+	<ol class="breadcrumb page-breadcrumb hidden-xs">
+        <li><i class="fa fa-home"></i>&nbsp;
+        	<%= link_to "Home", :controller => "administrator/home", :action => "index" %>
+        	&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
+        <li class="active">FAQ</li>
+        <!-- <li class="active">Invoice</li> -->
+    </ol>
+</div>
+<div class="box-content">
+	<div class="content">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="panel">
+					<div class="panel-body">
+						<%= form_for @faq,url: {action: "update"} do |f| %>
+						<div class="form-group" style="text-align:left">
+							<label for="title" style="text-align:left">Title</label>
+								<%= text_field(:faq, :title,class:"form-control",placeholder:"Title") %>
+						</div>
+						<div class="form-group" style="text-align:left">
+							<label for="title" style="text-align:left">Order</label>
+								<%= number_field(:faq, :order,class:"form-control",placeholder:"Order") %>
+						</div>
+						<div class="form-group" style="text-align:left">
+							<label for="title" style="text-align:left">Description</label>
+								<%= text_area(:faq, :description,class:"form-control",placeholder:"Description") %>
+						</div>
+						<div class="form-group">
+								  	<input type="submit" class="btn btn-primary" value="Edit"> 
+						</div>
+						<% end %>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

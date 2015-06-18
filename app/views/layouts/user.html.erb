@@ -91,10 +91,46 @@
 							</li>
 							
 							<li>
-								<%= link_to('/user/transaction', {:name => 'News',:title=>'Transaction'}) do %>
+								<a href="#">
                                 <i class="icon-calendar"></i>
                                 <span class="menu-title">Transaction</span>
+                                <span class="arrow"></span>
+                                </a>
+                                <ul class="nav nav-second-level collapse">
+                                	<li>
+                                		<%= link_to('/user/income', {:name => 'Income',:title=>'Income'}) do %>
+			                                <i class="icon-home"></i>
+			                                <span class="submenu-title">Income</span>
+			                            <% end %>
+                                	</li>
+                                	<li>
+                                		<%= link_to('/user/expense', {:name => 'Expense',:title=>'Expense'}) do %>
+			                                <i class="icon-home"></i>
+			                                <span class="submenu-title">Expense</span>
+			                            <% end %>
+
+                                	</li>
+                                	<li>
+                                		<%= link_to('/user/report', {:name => 'Report',:title=>'Report'}) do %>
+			                                <i class="icon-docs"></i>
+			                                <span class="submenu-title">Report</span>
+			                            <% end %>
+                                	</li>
+                                </ul>
+							</li>
+							<li>
+								<%= link_to('/user/faq/show', {:name => 'FAQ',:title=>'FAQ'}) do %>
+                                <i class="icon-question"></i>
+                                <span class="menu-title">FAQ</span>
                                 <% end %>
+								
+							</li>
+							<li>
+								<%= link_to('/user/setting/show', {:name => 'Setting',:title=>'Setting'}) do %>
+                                <i class="icon-settings"></i>
+                                <span class="menu-title">Setting</span>
+                                <% end %>
+								
 							</li>
 							
 						</ul>

@@ -1,29 +1,4 @@
 Rails.application.routes.draw do
-  
-
-  namespace :user do
-  get 'expense/new'
-  end
-
-  namespace :user do
-  get 'expense/edit'
-  end
-
-  namespace :user do
-  get 'expense/index'
-  end
-
-  namespace :user do
-  get 'income/new'
-  end
-
-  namespace :user do
-  get 'income/edit'
-  end
-
-  namespace :user do
-  get 'income/index'
-  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -33,7 +8,7 @@ Rails.application.routes.draw do
  root 'home#index'
 post "home/contact"
 match 'administrator', to: 'administrator/home#index', via: [:get]
-
+match 'user', to: 'user/home#index', via: [:get]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -72,12 +47,20 @@ match 'administrator', to: 'administrator/home#index', via: [:get]
       resources :contact
       resources :member
       resources :category
+      resources :faq
     end
 
     namespace :user do
       resources :transaction
       resources :income
       resources :expense
+      get 'faq/show'
+      get 'setting/show'
+      get 'setting/update'
+      get 'report/index'
+      get 'report/new'
+      get 'report/create'
+      get 'home/index'
     end
 
   # Example resource route with concerns:
