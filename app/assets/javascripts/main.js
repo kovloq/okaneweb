@@ -1,3 +1,22 @@
+//Devise Registration AjAX
+$(document).ready(function(){
+$('#ajax_signup').on('ajax:success', function(data, status, error) {
+    
+    
+    if(status !='')
+    {
+        $("#error").html(status);
+        $("#error").show();
+        $("#success").hide();
+    }else{
+        $("#success").html("Success");
+        $("#success").show();
+        $("#error").hide();
+    }
+    });
+})
+
+
 $(function () {
 
     //BEGIN PAGE LOADER

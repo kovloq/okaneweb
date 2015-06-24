@@ -44,7 +44,7 @@
                         <li class="page-scroll"><a href="#about">About</a></li>
                         <li class="page-scroll"><a href="#team">Team</a></li>
                         <li class="page-scroll space-right"><a href="#services">Services</a></li>
-                        <li class="page-scroll space-left"><a href="#portfolio">Portfolio</a></li>
+                        <li class="page-scroll space-left"><a href="#register">Register</a></li>
                         <li class="page-scroll"><a href="#clients">Client</a></li>
                         <li class="page-scroll"><a href="#blog">Blog</a></li>
                         <li class="page-scroll"><a href="#contact">Contact</a></li>
@@ -155,19 +155,50 @@
   </div>
 </section>
 
-<section id="portfolio" class="section-content">
+<section id="register" class="section-content">
   <div class="container">
     <div class="row mbxxl">
-      <div class="col-md-12"><h2 class="section-heading">Portfolio</h2>
+      <div class="col-md-12"><h2 class="section-heading">Register</h2>
 
                 <div class="line dark">
                     <div class="dot"></div>
                 </div>
                 <p class="section-description"><strong>Bad</strong> design is <strong>smoke</strong>, while
                     <strong>good</strong> design is a <strong>mirror</strong>.</p>
-<button type="button" data-target="#myModal"
-                                                                data-toggle="modal" class="btn btn-primary">View Demo
-                                                        </button>
+
+        <div class="row">
+            
+            <div class="col-md-3">
+            </div>
+            <div class="col-md-6">
+                <div class="alert alert-success" id="success" role="alert" style="display:none"></div>
+                <div class="alert alert-danger" id="error" role="alert" style="display:none"></div>
+                <%= form_tag('members', remote: true, id:"ajax_signup") do |f| %>
+                <div class="form-group">
+                    
+                    <input type="text" class="form-control" name="member[name]" id="exampleInputEmail1" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    
+                    <input type="email" class="form-control" name="member[email]" id="exampleInputEmail1" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    
+                    <input type="password" class="form-control" name="member[password]" id="password" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    
+                    <input type="password" class="form-control" name="member[password_confirmation]" id="password" placeholder="Repeat Password">
+                </div>
+            
+                <div class="form-grup">
+                    <input type="submit" class="btn btn-success" value="Register"/>
+                </div>
+                <% end %>
+            </div>
+            <div class="col-md-3">
+            </div>
+        </div>
       </div>
     </div>
   </div>
