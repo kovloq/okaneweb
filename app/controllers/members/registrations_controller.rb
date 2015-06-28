@@ -1,6 +1,6 @@
 class Members::RegistrationsController < Devise::RegistrationsController
-  respond_to :json
-  layout false
+  # respond_to :json
+  # layout false
 # before_filter :configure_sign_up_params, only: [:create]
 # before_filter :configure_account_update_params, only: [:update]
 
@@ -13,20 +13,7 @@ class Members::RegistrationsController < Devise::RegistrationsController
   def create
     
     super
-    build_resource
-    # respond_to do |format|
-      # format.html { super }
-      if resource.save
-        @text="Success"
-        
-        # render :layout => false, :text => resource.errors
-      else
-        @text=resource.errors.full_messages
-        # render :layout => false, :text => resource.errors.full_messages
-      end
-      # render "blank"
-      
-    # end
+    
 
   end
 

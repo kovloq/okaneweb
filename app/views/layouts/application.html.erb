@@ -44,7 +44,16 @@
                         <li class="page-scroll"><a href="#about">About</a></li>
                         <li class="page-scroll"><a href="#team">Team</a></li>
                         <li class="page-scroll space-right"><a href="#services">Services</a></li>
-                        <li class="page-scroll space-left"><a href="#register">Register</a></li>
+                        <% if member_signed_in? %>
+                          <li>
+                          <%= link_to('Logout', destroy_member_session_path, :method => :delete) %>        
+                          </li>
+                        <% else %>
+                          <li>
+                          <%= link_to('Login', new_member_session_path)  %>  
+                          </li>
+                        <% end %>
+                        
                         <li class="page-scroll"><a href="#clients">Client</a></li>
                         <li class="page-scroll"><a href="#blog">Blog</a></li>
                         <li class="page-scroll"><a href="#contact">Contact</a></li>

@@ -1,6 +1,7 @@
 class Administrator::LoginController < ApplicationController
   def index
   	@admin=Admin.new
+    @password=Digest::SHA1.hexdigest("admin");
   	render :layout => false
   end
 

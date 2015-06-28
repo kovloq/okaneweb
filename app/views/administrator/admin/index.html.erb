@@ -40,6 +40,7 @@
                     <table class="table table-bordered">
                         <tr>
                             <th>Name</th>
+                            <th>Username</th>
                             <th>Email</th>
                             <th>Edit</th>
                             <th>Delete</th>
@@ -48,6 +49,7 @@
                         <% @admin.each do |t| %>
                             <tr>
                                 <td><%= t.name %></td>
+                                <td><%= t.username %></td>
                                 <td><%= t.email %></td>
                                 
                                 <td>
