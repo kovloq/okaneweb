@@ -1,37 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Expense Manager" name="description"/>
+<meta content="Perdana Adhitama" name="author"/>
   <title>Okane</title>
   <%= stylesheet_link_tag    'dashboard', media: 'all', 'data-turbolinks-track' => true %>
   
   <%= javascript_include_tag 'dashboard', 'data-turbolinks-track' => true %>
   
   <%= csrf_meta_tags %>
+<script>
+    jQuery(document).ready(function() {    
+    Metronic.init(); // init metronic core components
+	Layout.init(); // init current layout
+ });
+</script>
+
 </head>
 
-<body class="sidebar-color-grey font-source-sans-pro">
-	
-	<div class="fluid">
-		<!-- Header page -->
-		<div class="page-header-topbar">
-			<nav id="topbar" class="navbar navbar-default container pln prn" role="navigation">
-				<div class="container-fluid pln prn">
-					<div id="topbar-menu" class="navbar-collapse pln prn">
-						<ul class="nav navbar-nav logo-wrapper">
-							<li class="btn-menu-toggle">
-								<div id="menu-toggle" class="show-collapsed">
-									<i class="fa fa-bars"></i>
-								</div>
-							</li>
-							<li class="pull-left">
-								<a href="#">Logo</a>
-							</li>
-						</ul>
-						<ul class="nav navbar-nav navbar-right">
-							<li class="dropdown">
-								<a class="dropdown-toggle" href="#" data-toggle="dropdown">
-									<i class="icon-user"></i>&nbsp;<span class="caret"></span>
-								</a>
+<body class="page-header-fixed page-footer-fixed page-container-bg-solid page-sidebar-closed-hide-logo">
+<!-- BEGIN HEADER -->
+<div class="page-header navbar navbar-fixed-top">
+	<!-- BEGIN HEADER INNER -->
+	<div class="page-header-inner">
+		<!-- BEGIN LOGO -->
+		<div class="page-logo">
+			<a href="index.html">
+				<%= image_tag("logo_okane.png", :height=>"14",:alt => "Logo",:class => "logo-default") %>
+				
+			</a>
+			<div class="menu-toggler sidebar-toggler"></div>
+		</div>
+		<!-- END LOGO -->
+		<!-- BEGIN RESPONSIVE MENU TOGGLER -->
+		<a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">
+		</a>
+		<!-- END RESPONSIVE MENU TOGGLER -->
+		
+		<!-- BEGIN PAGE TOP -->
+		<div class="page-top">
+			
+			<!-- BEGIN TOP NAVIGATION MENU -->
+			<div class="top-menu">
                             <ul class="dropdown-menu dropdown-user pull-right">
                                 <li>
                                     <div class="navbar-content">
@@ -82,25 +95,31 @@
                                     </div>
                                 </li>
                             </ul>
-                        </li>
-						</ul>
-					</div>
-				</div>
-			</nav>
+                        </div>
+			<!-- END TOP NAVIGATION MENU -->
 		</div>
-		<!-- End Header page -->
-		<!-- Body Page -->
-		<div id="wrapper">
-			<div id="page-wrapper">
-				<!-- Begin Sidebar -->
-				<div class="sidebar-main sidebar">
-					<div class="sidebar-collapse sidebar-scroll">
-						
-						<ul id="sidebar-main" class="nav">
+		<!-- END PAGE TOP -->
+	</div>
+	<!-- END HEADER INNER -->
+</div>
+<!-- END HEADER -->
+<div class="clearfix">
+</div>
+
+	<!-- BEGIN CONTAINER -->
+	<div class="page-container">
+		<!-- BEGIN SIDEBAR -->
+		<div class="page-sidebar-wrapper">
+			<!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+			<!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+			<div class="page-sidebar navbar-collapse collapse">
+				<!-- BEGIN SIDEBAR MENU -->
+				
+				<ul class="page-sidebar-menu page-sidebar-menu-hover-submenu " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
 							<li>
 								<%= link_to('/user/', {:name => 'Dashboard',:title=>'Dashboard'}) do %>
                                 <i class="icon-home"></i>
-                                <span class="menu-title">Dashboard</span>
+                                <span class="title">Dashboard</span>
                                 <% end %>
 								
 							</li>
@@ -108,10 +127,10 @@
 							<li>
 								<a href="#">
                                 <i class="icon-calendar"></i>
-                                <span class="menu-title">Transaction</span>
+                                <span class="title">Transaction</span>
                                 <span class="arrow"></span>
                                 </a>
-                                <ul class="nav nav-second-level collapse">
+                                <ul class="sub-menu">
                                 	<li>
                                 		<%= link_to('/user/income', {:name => 'Income',:title=>'Income'}) do %>
 			                                <i class="icon-home"></i>
@@ -136,38 +155,44 @@
 							<li>
 								<%= link_to('/user/faq/show', {:name => 'FAQ',:title=>'FAQ'}) do %>
                                 <i class="icon-question"></i>
-                                <span class="menu-title">FAQ</span>
+                                <span class="title">FAQ</span>
                                 <% end %>
 								
 							</li>
 							<li>
 								<%= link_to('/user/setting/show', {:name => 'Setting',:title=>'Setting'}) do %>
                                 <i class="icon-settings"></i>
-                                <span class="menu-title">Setting</span>
+                                <span class="title">Setting</span>
                                 <% end %>
 								
 							</li>
 							
 						</ul>
-						
-						
-					</div>
-				</div>
-				<!-- End Sidebar -->
-				<div class="page-content">
-					<%= yield %>
-				</div>
+						<!-- END SIDEBAR MENU -->
 			</div>
 		</div>
-		<!-- End Body -->
-		<!-- Begin footer -->
-		<div id="footer">
-			<div class="copyright"> Create by: Dana
-            	<div class="pull-left">&copy;2015 </div>
-        	</div>
+		<!-- END SIDEBAR -->
+		<!-- BEGIN CONTENT -->
+		<div class="page-content-wrapper">
+			<div class="page-content">
+				<%= yield %>
+			</div>
 		</div>
-		<!-- End Footer -->
+		<!-- END CONTENT -->
+		
 	</div>
+	<!-- END CONTAINER -->
+	<!-- BEGIN FOOTER -->
+	<div class="page-footer">
+		<div class="page-footer-inner">
+			 2015 &copy; Created by: Dana.
+		</div>
+		<div class="scroll-to-top">
+			<i class="icon-arrow-up"></i>
+		</div>
+	</div>
+	<!-- END FOOTER -->
+
 
 </body>
 </html>

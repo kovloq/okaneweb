@@ -1,2 +1,54 @@
-<h1>User::Expense#edit</h1>
-<p>Find me in app/views/user/expense/edit.html.erb</p>
+
+<h3 class="page-title">Expense</h3>
+<div class="page-bar">
+    <ul class="page-breadcrumb">
+        <li>
+            <%= link_to "Home", :controller => "user/home", :action => "index" %>
+            &nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;
+        </li>
+        <li>
+            <a href="#">Expense</a>
+            &nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;
+            </li>
+        <li>
+        <a href="#">Edit</a>
+        </li>
+    </ul>
+</div>
+
+
+<div class="portlet box green">
+	<div class="portlet-title">
+        <div class="caption">
+            <i class="fa fa-plus"></i>
+            Edit Expense
+        </div>
+    </div>
+    <div class="portlet-body form">
+	                     		<%= form_for @expense,url: {action: "update"} do |f| %>
+	                     		<div class="form-body">
+								  <div class="form-group">
+									<label for="title" >Title</label>
+									<%= text_field(:expense, :name,class:"form-control",placeholder:"Name") %>
+								  </div>
+									<div class="form-group">
+										<label for="title" >Category</label>
+										<%= text_field(:expense, :category,class:"form-control",placeholder:"Category") %>
+									</div>
+									<div class="form-group">
+										<label for="title" >Date</label>
+										<%= text_field(:expense, :date,class:"form-control",placeholder:"Date") %>
+									</div>
+									<div class="form-group">
+										<label for="title" >Description</label>
+										<%= text_area(:expense, :description,class:"form-control",placeholder:"Description") %>
+									</div>
+								</div>
+
+								  <div class="form-actions">
+								  	<input type="submit" class="btn green" value="Edit"> 
+								  	<a href="#" class="btn back-cancel default">Cancel</a>
+								  </div>
+								<% end %>
+	</div>
+</div>				

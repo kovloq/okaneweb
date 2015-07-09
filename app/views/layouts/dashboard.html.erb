@@ -1,152 +1,164 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Okane</title>
-  <%= stylesheet_link_tag    'dashboard', media: 'all', 'data-turbolinks-track' => true %>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Expense Manager" name="description"/>
+<meta content="Perdana Adhitama" name="author"/>
+<title>Okane</title>
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css"/>
+<link rel="shortcut icon" href="favicon.ico"/>
+<%= stylesheet_link_tag    'dashboard', media: 'all', 'data-turbolinks-track' => true %>
   
-  <%= javascript_include_tag 'dashboard', 'data-turbolinks-track' => true %>
+<%= javascript_include_tag 'dashboard', 'data-turbolinks-track' => true %>
   
-  <%= csrf_meta_tags %>
+<%= csrf_meta_tags %>
+<script>
+    jQuery(document).ready(function() {    
+    Metronic.init(); // init metronic core components
+	Layout.init(); // init current layout
+ });
+</script>
 </head>
 
-<body class="sidebar-color-grey font-source-sans-pro">
-	<div class="fluid">
-		<!-- Header page -->
-		<div class="page-header-topbar">
-			<nav id="topbar" class="navbar navbar-default container pln prn" role="navigation">
-				<div class="container-fluid pln prn">
-					<div id="topbar-menu" class="navbar-collapse pln prn">
-						<ul class="nav navbar-nav logo-wrapper">
-							<li class="btn-menu-toggle">
-								<div id="menu-toggle" class="show-collapsed">
-									<i class="fa fa-bars"></i>
-								</div>
-							</li>
-							<li class="pull-left">
-								<a href="#">Logo</a>
-							</li>
-						</ul>
-						<ul class="nav navbar-nav navbar-right">
-							<li class="dropdown">
-								<a class="dropdown-toggle" href="#" data-toggle="dropdown">
-									<i class="icon-user"></i>&nbsp;<span class="caret"></span>
-								</a>
-                            <ul class="dropdown-menu dropdown-user pull-right">
-                                <li>
-                                    <div class="navbar-content">
-                                        <div class="row">
-                                            <div class="col-md-5 col-xs-5"><img class="img-responsive img-circle" alt="" src="http://api.randomuser.me/portraits/men/27.jpg">
-
-                                                <p class="text-center mtm"><a class="change-avatar" href="#">
-                                                    <small>Set Avatar</small>
-                                                </a></p>
-                                            </div>
-                                            <div class="col-md-7 col-xs-5"><span><%= session[:admin_name] %></span>
-
-                                                <p class="text-muted small"><%= session[:admin_email] %></p>
-
-                                                <div class="divider"></div>
-                                                <a href="#">
-                                                    <button class="btn btn-default btn-sm" href="#">Edit Profile
-                                                    </button>
-                                                </a></div>
-                                        </div>
-                                    </div>
-                                    <div class="navbar-footer">
-                                        <div class="navbar-footer-content">
-                                            <div class="row">
-                                                <div class="col-md-6 col-xs-6"><a href="#">
-                                                    <button class="btn btn-default btn-sm">Change Password</button>
-                                                </a></div>
-                                                <div class="col-md-6 col-xs-6">
-                                        
-                                                	<%= link_to({controller:"administrator/login",action:"logout"}) do %>
-
-                                                    <button class="btn btn-info btn-sm pull-right" href="page-lock-screen.html">Sign Out
-                                                    </button>
-                                                    <% end %>
-                                            	</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
-						</ul>
-					</div>
-				</div>
-			</nav>
+<body class="page-header-fixed page-footer-fixed page-container-bg-solid page-sidebar-closed-hide-logo">
+<!-- BEGIN HEADER -->
+<div class="page-header navbar navbar-fixed-top">
+	<!-- BEGIN HEADER INNER -->
+	<div class="page-header-inner">
+		<!-- BEGIN LOGO -->
+		<div class="page-logo">
+			<a href="index.html">
+				<%= image_tag("logo_okane.png", :height=>"14",:alt => "Logo",:class => "logo-default") %>
+				
+			</a>
+			<div class="menu-toggler sidebar-toggler"></div>
 		</div>
-		<!-- End Header page -->
-		<!-- Body Page -->
-		<div id="wrapper">
-			<div id="page-wrapper">
-				<!-- Begin Sidebar -->
-				<div class="sidebar-main sidebar">
-					<div class="sidebar-collapse sidebar-scroll">
-						
-						<ul id="sidebar-main" class="nav">
-							<li>
-								<%= link_to('/administrator/', {:name => 'Dashboard',:title=>'Dashboard'}) do %>
-                                <i class="icon-home"></i>
-                                <span class="menu-title">Dashboard</span>
-                                <% end %>
-								
-							</li>
-							<li>
-								<%= link_to('/administrator/admin', {:name => 'Admin',:title=>'Admin'}) do %>
-                                <i class="icon-user"></i>
-                                <span class="menu-title">Admin</span>
-                                <% end %>
-								
-							</li>
-							<li>
-								<%= link_to('/administrator/member', {:name => 'User',:title=>'User'}) do %>
-                                <i class="icon-user"></i>
-                                <span class="menu-title">User</span>
-                                <% end %>
-							</li>
-							<li>
-								<%= link_to('/administrator/category', {:name => 'Category',:title=>'Category'}) do %>
-                                <i class="icon-calendar"></i>
-                                <span class="menu-title">Category</span>
-                                <% end %>
-							</li>
-							
-							<li>
-								<%= link_to('/administrator/contact', {:name => 'News',:title=>'Contact'}) do %>
-                                <i class="icon-calendar"></i>
-                                <span class="menu-title">Contact</span>
-                                <% end %>
-							</li>
-							<li>
-								<%= link_to('/administrator/faq', {:name => 'FAQ',:title=>'FAQ'}) do %>
-                                <i class="icon-question"></i>
-                                <span class="menu-title">FAQ</span>
-                                <% end %>
-							</li>
-							
-						</ul>
-						
-						
-					</div>
-				</div>
-				<!-- End Sidebar -->
-				<div class="page-content">
+		<!-- END LOGO -->
+		<!-- BEGIN RESPONSIVE MENU TOGGLER -->
+		<a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">
+		</a>
+		<!-- END RESPONSIVE MENU TOGGLER -->
+		
+		<!-- BEGIN PAGE TOP -->
+		<div class="page-top">
+			
+			<!-- BEGIN TOP NAVIGATION MENU -->
+			<div class="top-menu">
+				<ul class="nav navbar-nav pull-right">
 					
-					<%= yield %>
-				</div>
+					<!-- BEGIN USER LOGIN DROPDOWN -->
+					
+					<li class="dropdown dropdown-user">
+						<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+						<img alt="" class="img-circle" src=""/>
+						<span class="username username-hide-on-mobile">
+						<%= session[:admin_name] %></span>
+						<i class="fa fa-angle-down"></i>
+						</a>
+						<ul class="dropdown-menu dropdown-menu-default">
+							<li>
+								<a href="extra_profile.html">
+								<i class="icon-user"></i> My Profile </a>
+							</li>
+							
+							<li>
+								<%= link_to({controller:"administrator/login",action:"logout"}) do %>
+								
+								<i class="icon-key"></i> Log Out </a>
+								<% end %>
+							</li>
+						</ul>
+					</li>
+					<!-- END USER LOGIN DROPDOWN -->
+				</ul>
+			</div>
+			<!-- END TOP NAVIGATION MENU -->
+		</div>
+		<!-- END PAGE TOP -->
+	</div>
+	<!-- END HEADER INNER -->
+</div>
+<!-- END HEADER -->
+<div class="clearfix">
+</div>
+
+	<!-- BEGIN CONTAINER -->
+	<div class="page-container">
+		<!-- BEGIN SIDEBAR -->
+		<div class="page-sidebar-wrapper">
+			<!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+			<!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+			<div class="page-sidebar navbar-collapse collapse">
+				<!-- BEGIN SIDEBAR MENU -->
+				
+				<ul class="page-sidebar-menu page-sidebar-menu-hover-submenu " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
+					<li class="start">
+						<%= link_to('/administrator/', {:name => 'Dashboard',:title=>'Dashboard'}) do %>
+                        <i class="icon-home"></i>
+                        <span class="title">Dashboard</span>
+                        <% end %>
+								
+					</li>
+					<li>
+						<%= link_to('/administrator/admin', {:name => 'Admin',:title=>'Admin'}) do %>
+                        <i class="icon-user"></i>
+                        <span class="title">Admin</span>
+                         <% end %>
+								
+					</li>
+					<li>
+						<%= link_to('/administrator/member', {:name => 'User',:title=>'User'}) do %>
+                        <i class="icon-user"></i>
+                        <span class="title">User</span>
+                        <% end %>
+					</li>
+					<li>
+						<%= link_to('/administrator/category', {:name => 'Category',:title=>'Category'}) do %>
+                        <i class="icon-calendar"></i>
+                        <span class="title">Category</span>
+                        <% end %>
+					</li>
+							
+					<li>
+						<%= link_to('/administrator/contact', {:name => 'News',:title=>'Contact'}) do %>
+                        <i class="icon-calendar"></i>
+                        <span class="title">Contact</span>
+                        <% end %>
+					</li>
+					<li>
+						<%= link_to('/administrator/faq', {:name => 'FAQ',:title=>'FAQ'}) do %>
+                        <i class="icon-question"></i>
+                        <span class="title">FAQ</span>
+                        <% end %>
+					</li>
+				</ul>
+				<!-- END SIDEBAR MENU -->
 			</div>
 		</div>
-		<!-- End Body -->
-		<!-- Begin footer -->
-		<div id="footer">
-			<div class="copyright"> Created by: Dana
-            	<div class="pull-left">&copy;2015 </div>
-        	</div>
+		<!-- END SIDEBAR -->
+		<!-- BEGIN CONTENT -->
+		<div class="page-content-wrapper">
+			<div class="page-content">
+				<%= yield %>
+			</div>
 		</div>
-		<!-- End Footer -->
+		<!-- END CONTENT -->
+		
 	</div>
+	<!-- END CONTAINER -->
+	<!-- BEGIN FOOTER -->
+	<div class="page-footer">
+		<div class="page-footer-inner">
+			 2015 &copy; Created by: Dana.
+		</div>
+		<div class="scroll-to-top">
+			<i class="icon-arrow-up"></i>
+		</div>
+	</div>
+	<!-- END FOOTER -->
+
 
 </body>
 </html>

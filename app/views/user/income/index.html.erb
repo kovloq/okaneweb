@@ -1,42 +1,33 @@
-<div class="page-title-breadcrumb">
-	<div class="page-header pull-left">
-		<div class="page-title">Income</div>
-	</div>
-	<ol class="breadcrumb page-breadcrumb hidden-xs">
-        <li><i class="fa fa-home"></i>&nbsp;
-        	<%= link_to "Category", :controller => "user/income", :action => "index" %>
-        	&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
-        <li class="active">Income</li>
-        <!-- <li class="active">Invoice</li> -->
-    </ol>
+<h3 class="page-title">Income</h3>
+<div class="page-bar">
+    <ul class="page-breadcrumb">
+        <li>
+            <%= link_to "Home", :controller => "user/home", :action => "index" %>
+            &nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;
+        </li>
+        
+        <li>
+        <a href="#">Income</a>
+        </li>
+    </ul>
 </div>
 
-<div class="box-content">
-    <div class="content">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="panel">
+<div class="portlet box green">
+    <div class="portlet-title">
+        <div class="caption">
+            <i class="icon-user "></i>
+            <span class="caption-subject bold uppercase">Income List</span>
+            
+        </div>
+        <div class="actions">
+            <%= link_to('/user/income/new', {:name => 'New Income',:title=>'New income',:class=>"btn btn-circle btn-primary"}) do %>
+                <i class="fa fa-plus"></i>
+                <span class="hidden-480">New</span>
+            <% end %>
+        </div>
+    </div>
 
-                    <div class="panel-heading">
-                        <div class="row" style="padding-top:10px;padding-bottom:10px">
-                            <div class="col-md-6">
-                            <h4>Income</h4>
-                            </div>
-                            <div class="col-md-6">
-                                <form class="form-search left" action="#">
-                                 <div class="input-icon right"><i class="icon-magnifier"></i><input type="text" class="form-control" placeholder="Search...">
-                                  </div>
-                             </form>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="panel-body">
-                    <%# daftar transaksi %>
-                    <%= link_to "Add",{:controller=>"user/income",:action=>"new"},:class=>"btn btn-primary" %>
-                    <br/>
-                    <br/>
-
+    <div class="portlet-body"><!-- Begin body -->
                     <table class="table table-bordered">
                         <tr>
                             <th>Name</th>
@@ -59,12 +50,7 @@
                             </tr>
                         <% end %>
                     </table>
-                    </div>
-                    <div class="panel-footer">
+                    
                         <%= paginate @income %>
-                    </div>
-                </div> <!-- Panel -->
-            </div><!-- Col md -12 -->
-        </div><!-- Row -->
-    </div><!--  content -->
-</div><!-- Box Content -->
+    </div><!-- End Body -->
+</div><!-- End Portlet -->

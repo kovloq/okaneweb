@@ -1,2 +1,50 @@
-<h1>Administrator::Member#edit</h1>
-<p>Find me in app/views/administrator/member/edit.html.erb</p>
+
+<h3 class="page-title">User</h3>
+<div class="page-bar">
+    <ul class="page-breadcrumb">
+        <li>
+            <%= link_to "Home", :controller => "administrator/member", :action => "index" %>
+            &nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;
+        </li>
+        <li>
+            <a href="#">User</a>
+            <i class="fa fa-angle-right"></i>
+            </li>
+        <li>
+        <a href="#">Edit</a>
+        </li>
+    </ul>
+</div>
+
+
+<div class="portlet box green">
+	<div class="portlet-title">
+        <div class="caption">
+            <i class="fa fa-edit"></i>
+            Edit User
+        </div>
+    </div>
+							
+	                <div class="portlet-body form">
+	                     		<%= form_for @member,url: {action: "update"} do |f| %>
+	                     		<div class="form-body">
+								  <div class="form-group" style="text-align:left">
+								    <label for="transaction_name" style="text-align:left">Name</label>
+								    <%= text_field(:member, :name,class:"form-control",placeholder:"Name") %>
+								  </div>
+								  
+								  <div class="form-group">
+								    <label for="Email">Email</label>
+								    <%= email_field(:member, :email,class:"form-control",placeholder:"Email") %>
+								    
+								  </div>
+								</div>
+								  <div class="form-actions">
+								  	<input type="submit" class="btn btn-primary" value="Add"> 
+								  	<a href="#" class="btn back-cancel default">Cancel</a>
+								  </div>
+								<% end %>
+	                </div>
+                     	
+</div><!-- Portlet -->					
+						       

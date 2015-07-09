@@ -11,8 +11,17 @@
 // about supported directives.
 //
 //= require jquery-1.11.2.min
+//= require jquery-migrate.min
 //= require jquery_ujs
-//= require bootstrap.min
 //= require jquery-ui.min
+//= require bootstrap.min
+//= require bootstrap-hover-dropdown.min
+//= require jquery.slimscroll.min
+//= require jquery.blockui.min
+//= require jquery.cokie.min
+//= require jquery.uniform.min
+//= require bootstrap-switch.min
+//= require metronic
+//= require layout
 
 

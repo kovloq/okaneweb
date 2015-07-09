@@ -1,21 +1,26 @@
-<div class="page-title-breadcrumb">
-	<div class="page-header pull-left">
-		<div class="page-title">FAQ</div>
-	</div>
-	<ol class="breadcrumb page-breadcrumb hidden-xs">
-        <li><i class="fa fa-home"></i>&nbsp;
-        	<%= link_to "Home", :controller => "user/faq", :action => "show" %>
-        	&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
-        <li class="active">FAQ</li>
-       
-    </ol>
+<h3 class="page-title">FAQ</h3>
+<div class="page-bar">
+    <ul class="page-breadcrumb">
+        <li>
+            <%= link_to "Home", :controller => "user/home", :action => "index" %>
+            &nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;
+        </li>
+        
+        <li>
+        <a href="#">FAQ</a>
+        </li>
+    </ul>
 </div>
 
-
-<div class="box-content">
-    <div class="content">
-        <div class="row">
-            <div class="col-md-12">
+<div class="portlet box green">
+    <div class="portlet-title">
+        <div class="caption">
+            <i class="icon-question "></i>
+            <span class="caption-subject bold uppercase">FAQ</span>
+            
+        </div>
+        
+    </div>
                 <div id="accordion" class="panel-group accordion">
                     <% @faq.each do |t| %>
                     <div class="panel">
@@ -37,7 +42,4 @@
                 </div>
 
 
-            </div><!-- ENd Col 12 Panel -->
-        </div>
-    </div>
 </div>

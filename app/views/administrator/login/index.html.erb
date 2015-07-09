@@ -8,38 +8,56 @@
           href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700">
     <%= stylesheet_link_tag    'dashboard', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'dashboard', 'data-turbolinks-track' => true %>
-    
-    <link type="text/css" rel="stylesheet" href="global/vendors/iCheck/skins/all.css">
-    
+    <%= stylesheet_link_tag "select2" %>
+    <%= stylesheet_link_tag "login3" %>
+    <%= javascript_include_tag 'select2.min' %>
+    <%= javascript_include_tag 'login' %>
 </head>
-<body class="page-signin">
-<div class="page-form">
+<body class="login">
+<!-- BEGIN LOGO -->
+<div class="logo">
+    <a href="index.html">
+    <%= image_tag("logo_okane.png", :height=>"40",:alt => "Logo",:class => "logo-default") %>
+    </a>
+</div>
+<!-- END LOGO -->
+<!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+<div class="menu-toggler sidebar-toggler">
+</div>
+<!-- END SIDEBAR TOGGLER BUTTON -->
+<!-- BEGIN LOGIN -->
+<div class="content">
     
-    <%= form_for @admin,url:{controller:"administrator/login",action:"login"},html:{class:"form",id:"myform"} do |f| %>
-        <div class="header-content text-center"><h1>Login</h1></div>
-        <div class="body-content">
+    <%= form_for @admin,url:{controller:"administrator/login",action:"login"},html:{class:"login-form",id:"myform"} do |f| %>
+        <h3 class="form-title">Login</h3>
+        
             <% flash.each do |key, value| %>
             <div class="alert alert-<%= key %>"><%= value %></div>
             <% end %>
-            <div class="list-group">
-                <div class="list-group-item"><input type="text" name="admin[username]" placeholder="Username" class="form-control"></div>
-                <div class="list-group-item"><input type="password" name="admin[password]" placeholder="Password" class="form-control"></div>
-            </div>
-
-            <div class="row">
-                
-            <div class="col-sm-6"><label><input type="checkbox" class="form-control-shadow">&nbsp;
-                Remember me</label>
-            </div>
-            <div class="col-sm-6">
-                    <button type="submit" class="btn btn-success btn-circle btn-block btn-shadow mbs">Log in</button>
+            <div class="form-group">
+                <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
+                <label class="control-label visible-ie8 visible-ie9">Username</label>
+                <div class="input-icon">
+                    <i class="fa fa-user"></i>
+                    <input class="form-control placeholder-no-fix" type="text" autocomplete="off" placeholder="Username" name="admin[username]"/>
                 </div>
-            
-                
             </div>
-            <hr>
+            <div class="form-group">
+                <label class="control-label visible-ie8 visible-ie9">Password</label>
+                <div class="input-icon">
+                    <i class="fa fa-lock"></i>
+                    <input class="form-control placeholder-no-fix" type="password" autocomplete="off" placeholder="Password" name="admin[password]"/>
+                </div>
+            </div>
+            <div class="form-actions">
+                <label class="checkbox">
+                <input type="checkbox" name="remember" value="1"/> Remember me </label>
+                <button type="submit" class="btn green-haze pull-right">
+                Login <i class="m-icon-swapright m-icon-white"></i>
+                </button>
+            </div>
             
-        </div>
+     
     <% end %>
 </div>
 
