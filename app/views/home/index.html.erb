@@ -1,95 +1,106 @@
+<section id="slider" class="slider-parallax" data-height-lg="600" data-height-md="500" data-height-sm="400" data-height-xs="300" data-height-xxs="250">
+    <div class="container clearfix">
+        <div class="vertical-middle dark center">
 
-<!-- Begin Contact Page -->
-<section class="section-content section-parallax" id="contact">
-    <div class="bg-overlay pattern">
-        <div class="container">
-            <div class="row mbxxl">
-                <div class="col-lg-12"><h2 class="section-heading">Contact</h2>
+            <div class="heading-block nobottommargin center">
+                <h1>
+                    <span class="text-rotater " data-separator="|" data-rotate="flipInX" data-speed="3500">
+                                Okane makes your expense <span class="t-rotate">Trackable|Easy|Recordable</span>
+                    </span>
+                </h1>
+            <span class="hidden-xs">Learn how to save your money.</span>
+            </div>
+                <%= link_to({:controller=>"home",:action=>"benefits"},:class=>"button button-border button-light button-rounded button-reveal tright button-large topmargin hidden-xs") do %>
+                    <i class="icon-angle-right"></i><div>Start Tour</div>
+                <% end %>
+                
 
-                    <div class="line dark">
-                        <div class="dot"></div>
-                    </div>
-                    <p class="section-description"><strong>Design</strong> is the conscious <strong>effort</strong> to
-                        <strong>impose</strong> a <strong>meaningful</strong> order.</p></div>
-            </div>
-            <div class="row">
-                <div class="col-sm-3">
-                    <div class="box">
-                        <div class="box-icon"><i class="fa fa-map-marker"></i></div>
-                        <div class="box-title">Office<br>Location</div>
-                        <div class="box-desc">574 New London Turnpike, England</div>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="box">
-                        <div class="box-icon"><i class="fa fa-phone"></i></div>
-                        <div class="box-title">Call<br>Us</div>
-                        <div class="box-desc">+84 (0) 123 456 78</div>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="box">
-                        <div class="box-icon"><i class="fa fa-envelope"></i></div>
-                        <div class="box-title">Send<br>Email</div>
-                        <div class="box-desc">okanemanager@gmail.com</div>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="box">
-                        <div class="box-icon"><i class="fa fa-globe"></i></div>
-                        <div class="box-title">Follow<br>Us</div>
-                        <div class="box-desc">
-                            <a class="mrl" href="https://www.pinterest.com/okanemanager/"><i class="fa fa-pinterest"></i></a>
-                            <a class="mrl" href="https://www.facebook.com/okanemanager"><i class="fa fa-facebook"></i></a>
-                            <a class="mrl" href="https://twitter.com/okanemanager"><i class="fa fa-twitter"></i></a>
-                            <a class="mrl" href="https://plus.google.com/u/1/115652349374795853751/"><i class="fa fa-google-plus"></i></a>
-                            <a class="mrl" href="#"><i class="fa fa-linkedin"></i></a>
-                            <a class="mrl" href="#"><i class="fa fa-behance"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="alert alert-success alert-dismissible" role="alert" style="display:none">
-              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span></button>
-              Your message has been sent.
-            </div>
-          
-            <%= form_tag('home/contact', remote: true, id:"myform") do |f| %>
-    
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="form-group">
-                            <input name="contact[name]" type="text" class="input-lg form-control" placeholder="Name" required>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="form-group">
-                        <input name="contact[email]" type="email" class="input-lg form-control" placeholder="Email" required>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="form-group">
-                        <input type="text" name="contact[phone]" class="input-lg form-control" placeholder="Phone" required>
-                        </div>
-                    </div>
-                    <div class="col-md-12 mtxl">
-                        <div class="form-group">
-                        <textarea name="contact[message]" class="input-lg form-control" placeholder="Message" rows="10" required>
-                        </textarea>
-                        </div>
-                    </div>
-                    <div class="col-md-2 col-md-offset-5 mtxl"><input type="submit" name="submit" class="btn btn-lg btn-outlined" value="Submit Message"></div>
-                </div>
-            <% end %>
         </div>
     </div>
 </section>
-<!-- End Contact -->
-<script>
-$(document).ready(function(){
-$('#myform').on('ajax:success', function(data, status, error) {
-    $(".alert-success").show();
-    });
-})
-</script>
+<!-- Content
+        ============================================= -->
+        <section id="content">
+
+            <div class="content-wrap">
+
+                <div class="container clearfix">
+
+                    <div class="col_one_third">
+                        <div class="feature-box fbox-border fbox-effect">
+                            <div class="fbox-icon">
+                                <a href="#"><i class="icon-screen i-alt"></i></a>
+                            </div>
+                            <h3>Responsive Layout</h3>
+                            <p>Powerful Layout with Responsive functionality that can be adapted to any screen size. Resize browser to view.</p>
+                        </div>
+                    </div>
+
+                    <div class="col_one_third">
+                        <div class="feature-box fbox-border fbox-effect">
+                            <div class="fbox-icon">
+                                <a href="#"><i class="icon-line-file i-alt"></i></a>
+                            </div>
+                            <h3>Export your expenses</h3>
+                            <p>Export your expenses to see how much money that you've spend.</p>
+                        </div>
+                    </div>
+
+                    <div class="col_one_third col_last">
+                        <div class="feature-box fbox-border fbox-effect">
+                            <div class="fbox-icon">
+                                <a href="#"><i class="icon-line2-social-facebook i-alt"></i></a>
+                            </div>
+                            <h3>Social Media Login</h3>
+                            <p>Login with your favourite social media Facebook, Twitter or Google Plus.</p>
+                        </div>
+                    </div>
+
+                    <div class="clear"></div>
+
+                    <div class="col_one_third">
+                        <div class="feature-box fbox-border fbox-effect">
+                            <div class="fbox-icon">
+                                <a href="#"><i class="icon-line-head i-alt"></i></a>
+                            </div>
+                            <h3>Free</h3>
+                            <p>Join our app for free.</p>
+                        </div>
+                    </div>
+
+                    <div class="col_one_third">
+                        <div class="feature-box fbox-border fbox-effect">
+                            <div class="fbox-icon">
+                                <a href="#"><i class="icon-graph i-alt"></i></a>
+                            </div>
+                            <h3>Graph View</h3>
+                            <p>Graph view available.</p>
+                        </div>
+                    </div>
+
+                    <div class="col_one_third col_last">
+                        <div class="feature-box fbox-border fbox-effect">
+                            <div class="fbox-icon">
+                                <a href="#"><i class="icon-bell-alt i-alt"></i></a>
+                            </div>
+                            <h3>Alert</h3>
+                            <p>Get alerts when you exceed your budget.</p>
+                        </div>
+                    </div>
+
+                     <div class="clear"></div>
+
+                </div>
+
+                <div class="promo topmargin-lg promo-border promo-full">
+                    <div class="container clearfix">
+                        <h5>Join now or take a look at benefits</h5>
+                        <div class="clear"></div>
+                        <%= link_to "Join",new_member_registration_path,{:style=>"width:47%",:class=>"pull-left btn btn-success btn-lg button-xlarge button-rounded"} %>
+                        
+                        <%= link_to "See Benefits",home_benefits_path,{:style=>"width:47%",:class=>"pull-right btn btn-primary btn-lg button-xlarge button-rounded"} %>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>

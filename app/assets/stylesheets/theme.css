@@ -1,0 +1,3 @@
+.header_color .sub_menu > ul > li > a, .header_color .sub_menu > div > ul > li > a, .header_color .main_menu ul:first-child > li > a, #top .header_color .main_menu .menu ul .current_page_item > a, #top .header_color .main_menu .menu ul .current-menu-item > a, #top .header_color .sub_menu li ul a {
+    color: #808080;
+}

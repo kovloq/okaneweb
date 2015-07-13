@@ -1,0 +1,184 @@
+        <section id="page-title">
+
+            <div class="container clearfix">
+                <h1>Benefits</h1>
+                <span>See our benefits</span>
+                <ol class="breadcrumb">
+                    <li><a href="#">Home</a></li>
+                    <li class="active">Benefits</li>
+                </ol>
+            </div>
+
+        </section>
+
+        <!-- Content
+        ============================================= -->
+        <section id="content">
+
+            <div class="content-wrap">
+
+                <div class="container clearfix">
+                    <div class="col_two_fifth topmargin nobottommargin" >
+                        <%= image_tag("responsive.jpg", :alt => "Responsive") %>
+                    </div>
+
+                    <div class="col_three_fifth nobottommargin col_last">
+
+                        <div class="heading-block">
+                            <h3>Responsive view.</h3>
+                            <span>See our app in different platforms.</span>
+                        </div>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero quod consequuntur quibusdam, enim expedita sed quia nesciunt incidunt accusamus necessitatibus modi adipisci officia libero accusantium esse hic, obcaecati, ullam, laboriosam!</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti vero, animi suscipit id facere officia. Aspernatur, quo, quos nisi dolorum aperiam fugiat deserunt velit rerum laudantium cum magnam excepturi quod, fuga architecto provident, cupiditate delectus voluptate eaque! Sit neque ut eum, voluptatibus odit cum dolorum ipsa voluptates inventore cumque a.</p>
+
+
+                    </div>
+
+                    <div class="clear"></div><div class="line"></div>
+
+                    <div class="col_three_fifth">
+
+                        <div class="heading-block">
+                            <h3>Graph view.</h3>
+                            <span>Graph view helps you see your expense easily.</span>
+                        </div>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero quod consequuntur quibusdam, enim expedita sed quia nesciunt incidunt accusamus necessitatibus modi adipisci officia libero accusantium esse hic, obcaecati, ullam, laboriosam!</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti vero, animi suscipit id facere officia. Aspernatur, quo, quos nisi dolorum aperiam fugiat deserunt velit rerum laudantium cum magnam excepturi quod, fuga architecto provident, cupiditate delectus voluptate eaque! Sit neque ut eum, voluptatibus odit cum dolorum ipsa voluptates inventore cumque a.</p>
+
+
+                    </div>
+
+                    <div class="col_two_fifth topmargin col_last" id="doughnutChart" style="opacity: 0;">
+                        <canvas id="doughnutChartCanvas" width="430" height="300"></canvas>
+                    </div>
+
+                    <script type="text/javascript">
+
+                    jQuery(window).load( function(){
+
+                        
+                        var doughnutChartData = [
+                            {
+                                value: 30,
+                                color:"#F7464A"
+                            },
+                            {
+                                value : 50,
+                                color : "#46BFBD"
+                            },
+                            {
+                                value : 100,
+                                color : "#FDB45C"
+                            },
+                            {
+                                value : 40,
+                                color : "#949FB1"
+                            },
+                            {
+                                value : 120,
+                                color : "#4D5360"
+                            }
+                        ];
+
+                        var globalGraphSettings = {animation : Modernizr.canvas};
+
+                       
+
+                        function showDoughnutChart(){
+                            var ctx = document.getElementById("doughnutChartCanvas").getContext("2d");
+                            new Chart(ctx).Doughnut(doughnutChartData,globalGraphSettings);
+                        }
+                        $('#doughnutChart').appear( function(){ $(this).css({ opacity: 1 }); setTimeout(showDoughnutChart,300); },{accX: 0, accY: -155},'easeInCubic');
+
+                    });
+
+                    </script>
+                    <div class="clear"></div><div class="line"></div>
+
+                    <div class="col_two_fifth topmargin nobottommargin">
+                        <%= image_tag("export.jpg", :alt => "Export") %>
+                    </div>
+
+                    <div class="col_three_fifth nobottommargin col_last">
+
+                        <div class="heading-block">
+                            <h3>Export your document.</h3>
+                            <span>Export your document.</span>
+                        </div>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero quod consequuntur quibusdam, enim expedita sed quia nesciunt incidunt accusamus necessitatibus modi adipisci officia libero accusantium esse hic, obcaecati, ullam, laboriosam!</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti vero, animi suscipit id facere officia. Aspernatur, quo, quos nisi dolorum aperiam fugiat deserunt velit rerum laudantium cum magnam excepturi quod, fuga architecto provident, cupiditate delectus voluptate eaque! Sit neque ut eum, voluptatibus odit cum dolorum ipsa voluptates inventore cumque a.</p>
+
+
+                    </div>
+
+                    <div class="clear"></div><div class="line"></div>
+
+
+
+                    <div class="col_three_fifth">
+
+                        <div class="heading-block">
+                            <h3>Social Media Login</h3>
+                            <span>Social Media login.</span>
+                        </div>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero quod consequuntur quibusdam, enim expedita sed quia nesciunt incidunt accusamus necessitatibus modi adipisci officia libero accusantium esse hic, obcaecati, ullam, laboriosam!</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti vero, animi suscipit id facere officia. Aspernatur, quo, quos nisi dolorum aperiam fugiat deserunt velit rerum laudantium cum magnam excepturi quod, fuga architecto provident, cupiditate delectus voluptate eaque! Sit neque ut eum, voluptatibus odit cum dolorum ipsa voluptates inventore cumque a.</p>
+
+
+                    </div>
+
+                    <div class="col_two_fifth topmargin col_last">
+                         <%= image_tag("socmed.png", :alt => "Social Media") %>
+                    </div>
+
+                    <div class="clear"></div><div class="line"></div>
+
+                    <div class="col_two_fifth topmargin nobottommargin">
+                        <%= image_tag("check.png", :alt => "Export") %>
+                    </div>
+
+                    <div class="col_three_fifth nobottommargin col_last">
+
+                        <div class="heading-block">
+                            <h3>Free to use.</h3>
+                            <span>free to use.</span>
+                        </div>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero quod consequuntur quibusdam, enim expedita sed quia nesciunt incidunt accusamus necessitatibus modi adipisci officia libero accusantium esse hic, obcaecati, ullam, laboriosam!</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti vero, animi suscipit id facere officia. Aspernatur, quo, quos nisi dolorum aperiam fugiat deserunt velit rerum laudantium cum magnam excepturi quod, fuga architecto provident, cupiditate delectus voluptate eaque! Sit neque ut eum, voluptatibus odit cum dolorum ipsa voluptates inventore cumque a.</p>
+
+
+                    </div>
+                    <div class="clear"></div><div class="line"></div>
+
+                    <div class="col_three_fifth">
+
+                        <div class="heading-block">
+                            <h3>Alert</h3>
+                            <span>Alert.</span>
+                        </div>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero quod consequuntur quibusdam, enim expedita sed quia nesciunt incidunt accusamus necessitatibus modi adipisci officia libero accusantium esse hic, obcaecati, ullam, laboriosam!</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti vero, animi suscipit id facere officia. Aspernatur, quo, quos nisi dolorum aperiam fugiat deserunt velit rerum laudantium cum magnam excepturi quod, fuga architecto provident, cupiditate delectus voluptate eaque! Sit neque ut eum, voluptatibus odit cum dolorum ipsa voluptates inventore cumque a.</p>
+
+
+                    </div>
+
+                    <div class="col_two_fifth topmargin col_last">
+                         <%= image_tag("bell.png", :alt => "Social Media") %>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>

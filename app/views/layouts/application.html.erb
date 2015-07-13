@@ -9,294 +9,225 @@
   <link href="images/icons/favicon.png" rel="apple-touch-icon">
   <link href="images/icons/favicon-72x72.png" sizes="72x72" rel="apple-touch-icon">
   <link href="images/icons/favicon-114x114.png" sizes="114x114" rel="apple-touch-icon">
-  <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic">
+  <link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   
+    <!--[if lt IE 9]>
+        <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   
   <%= csrf_meta_tags %>
 </head>
-<body id="page-top" data-spy="scroll" data-target=".navbar-custom" class="frontend-one-page">
-<!--BEGIN PAGE LOADER-->
-<div id="page-loader">
-  <%= image_tag("preloader.gif", :alt => "Loading") %>
-</div>
-<!--END PAGE LOADER-->
-<!-- Go to Top page -->
-<a href="#" id="totop" style="display: none;"><i class="fa fa-angle-up"></i></a>
-<!-- ENd -->
+<body class="stretched">
 
-<!-- Begin Header -->
-<header>
-    <div class="bg-overlay pattern">
-        <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-            <div class="container">
-                <div class="navbar-header page-scroll">
-                    <button class="navbar-toggle collapsed" data-target=".navbar-main-collapse" data-toggle="collapse" type="button"><i class="fa fa-tasks"></i></button>
-                    <%= link_to(root_url, {:id=>"logo",:style=>"margin-left:-80px;margin-top:10px"}) do %>
-                    <%= image_tag("logo_okane.png", :height=>"40",:alt => "Logo") %>
-                    <% end %>
-                    
+    <!-- Document Wrapper
+    ============================================= -->
+    <div id="wrapper" class="clearfix">
+
+        <!-- Top Bar
+        ============================================= -->
+        <div id="top-bar">
+
+            <div class="container clearfix">
+
+                <div class="col_half   clearfix nobottommargin">
+
+                    <!-- Top Social
+                    ============================================= -->
+                    <div id="top-social">
+                        <ul>
+                            <li><a href="https://www.facebook.com/okanemanager" class="si-facebook"><span class="ts-icon"><i class="icon-facebook"></i></span><span class="ts-text">Facebook</span></a></li>
+                            <li><a href="https://twitter.com/okanemanager" class="si-twitter"><span class="ts-icon"><i class="icon-twitter"></i></span><span class="ts-text">Twitter</span></a></li>
+                            <li><a href="https://plus.google.com/u/1/115652349374795853751/" class="si-gplus"><span class="ts-icon"><i class="icon-google-plus"></i></span><span class="ts-text">Google Plus</span></a></li>
+                            
+                        </ul>
+                    </div>
                 </div>
-                <div class="navbar-main-collapse collapse navbar-collapse">
-                    <ul class="nav nav-pills nav-justified main-menu">
-                        <li class="page-scroll active"><a href="#page-top">Home</a></li>
-                        <li class="page-scroll"><a href="#about">About</a></li>
-                        <li class="page-scroll"><a href="#team">Team</a></li>
-                        <li class="page-scroll space-right"><a href="#services">Services</a></li>
-                        <% if member_signed_in? %>
-                          <li>
-                          <%= link_to('Logout', destroy_member_session_path, :method => :delete) %>        
-                          </li>
-                        <% else %>
-                          <li>
-                          <%= link_to('Login', new_member_session_path)  %>  
-                          </li>
+
+                <div class="col_half  fright col_last nobottommargin clearfix">
+
+                    <!-- Top Links
+                    ============================================= -->
+                    <div class="top-links">
+                        <ul>
+                            <% if member_signed_in? %>
+                              <li>
+                              <%= link_to('Logout', destroy_member_session_path, :method => :delete) %>        
+                              </li>
+                            <% else %>
+                              <li>
+                              <%= link_to('Login', new_member_session_path)  %>  
+                              </li>
+                            <% end %>
+                        </ul>
+                    </div><!-- end top link -->
+                </div>
+
+                
+            </div>
+        </div><!-- End Top bar -->
+
+        <!-- Header
+        ============================================= -->
+        <header id="header" class="full-header">
+
+            <div id="header-wrap">
+
+                <div class="container clearfix">
+
+                    <div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
+
+                    <!-- Logo
+                    ============================================= -->
+                    <div id="logo" style="padding-top:20px;">
+                        <%= link_to(root_url, {:id=>"logos",:class=>"standar-logo"}) do %>
+                        <%= image_tag("logo_okane.png", :height=>"40",:alt => "Logo",:style=>"height:40px") %>
                         <% end %>
                         
-                        <li class="page-scroll"><a href="#clients">Client</a></li>
-                        <li class="page-scroll"><a href="#blog">Blog</a></li>
-                        <li class="page-scroll"><a href="#contact">Contact</a></li>
-                    </ul>
+                    </div><!-- #logo end -->
+
+                    <!-- Primary Navigation
+                    ============================================= -->
+                    <nav id="primary-menu">
+                        
+                        <% arr=[["Home","index"],["About","about"],["Benefits","benefits"],["Blog","blog"],["Contact","kontak"]] %>
+
+                        <ul>
+                            <% 
+                            arr.each do |a| 
+                            if(params[:action]==a[1])
+                                kls="current";
+                            else
+                                kls="";
+                            end
+                            %>
+                            
+                            <li class="<%= kls %>">
+                                <%= link_to({:controller=>"home",:action=>a[1]}) do %>
+                                <div><%= a[0] %></div>
+                                <% end %>
+                            </li>
+                            <% end %> 
+                            
+                        </ul>
+
+                        <!-- Top Cart
+                        ============================================= -->
+                        <div id="top-cart">
+                            <a href="#" id="top-cart-trigger"><i class="icon-user"></i><span>5</span></a>
+                        </div>
+                        <!-- End Top Cart -->
+
+                        <!-- Top Search
+                        ============================================= -->
+                        <div id="top-search">
+                            <a href="#" id="top-search-trigger"><i class="icon-search3"></i><i class="icon-line-cross"></i></a>
+                            <form action="search.html" method="get">
+                                <input type="text" name="q" class="form-control" value="" placeholder="Type &amp; Hit Enter..">
+                            </form>
+                        </div><!-- #top-search end -->
+
+                    </nav>
                 </div>
             </div>
-        </nav>
-        <section class="intro">
-            <div class="intro-body">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div id="slide-intro">
-                                <h1>Awesome &amp;
-                                    <div id="rotate">
-                                        <div style="display: none;">Special</div>
-                                        <div style="display: block;">Creativity</div>
-                                        <div style="display: none;">Innovation</div>
-                                    </div>
-                                </h1>
-                                <div class="line">
-                                    <div class="dot"></div>
-                                </div>
-                                <p class="intro-text">We make template for love and passion. Let us show the right way
-                                    to choose your direction. Get started now!</p></div>
-                            <div class="section-next"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-google-plus"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
+        </header><!-- End Header -->
+
+                    <%= yield %>
+                
+
+        <!-- Footer
+        ============================================= -->
+        <footer id="footer" class="dark">
+
+            <div id="copyrights">
+
+                <!-- Footer Widgets
+                ============================================= -->
+                <div class="container clearfix">
+                    <div class="col_half">
+                        Copyrights &copy; 2015<br>
+                        <div class="copyright-links"><a href="#" data-toggle="modal" data-target="#terms">Terms of Use</a> / <a href="#" data-toggle="modal" data-target="#privacy">Privacy Policy</a></div>
+                    </div>
+
+                    <div class="col_half col_last tright">
+                        <div class="fright clearfix">
+                            <a href="https://www.facebook.com/okanemanager" class="social-icon si-small si-borderless si-facebook">
+                                <i class="icon-facebook"></i>
+                                <i class="icon-facebook"></i>
+                            </a>
+
+                            <a href="ttps://twitter.com/okanemanager" class="social-icon si-small si-borderless si-twitter">
+                                <i class="icon-twitter"></i>
+                                <i class="icon-twitter"></i>
+                            </a>
+
+                            <a href="https://plus.google.com/u/1/115652349374795853751/" class="social-icon si-small si-borderless si-gplus">
+                                <i class="icon-gplus"></i>
+                                <i class="icon-gplus"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-    </div>
-</header>
-<!-- End Header -->
+        </footer>
+                                
 
-<!-- Begin About -->
-<section class="section-content" id="about">
-    <div class="container">
-        <div class="row mbxxl">
-            <div class="col-lg-12"><h2 class="section-heading">About</h2>
 
-                <div class="line dark">
-                    <div class="dot"></div>
+    </div><!-- End Wrapper -->
+
+    <!-- Go To Top
+    ============================================= -->
+    <div id="gotoTop" class="icon-angle-up"></div>
+    
+    <!-- TErm of use -->
+    <div class="modal fade " id="terms" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-body">
+                <div class="modal-content">
+                   <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" >Terms and Conditions</h4>
+                    </div>
+                    <div class="modal-body">
+                                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                                            <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                                            <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                                            <p class="nobottommargin">Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
                 </div>
-                <p class="section-description">The most <strong>innovative</strong> designers consciously reject the
-                    <strong>standard</strong> option box and cultivate an <strong>appetite</strong> for thinking
-                    <strong>wrong</strong>.</p></div>
+            </div>
         </div>
-        <div class="row mbxxl">
-            <div class="col-sm-4">
-                <div class="box">
-                    <div class="box-icon"><i class="fa fa-cube"></i></div>
-                    <div class="box-title">Our<br>Mission</div>
-                    <div class="box-desc">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit
-                        quo minus id quod maxime placeat facere possimus.<p class="mtl"><a class="more-info" href="#"><i class="fa fa-arrow-right mrm"></i>More info</a></p></div>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="box">
-                    <div class="box-icon"><i class="fa fa-bullseye"></i></div>
-                    <div class="box-title">Our<br>Vision</div>
-                    <div class="box-desc">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit
-                        quo minus id quod maxime placeat facere possimus.<p class="mtl"><a class="more-info" href="#"><i class="fa fa-arrow-right mrm"></i>More info</a></p></div>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="box">
-                    <div class="box-icon"><i class="fa fa-flag"></i></div>
-                    <div class="box-title">Our<br>Achievement</div>
-                    <div class="box-desc">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit
-                        quo minus id quod maxime placeat facere possimus.<p class="mtl"><a class="more-info" href="#"><i class="fa fa-arrow-right mrm"></i>More info</a></p></div>
+    </div>
+
+    <!-- Privacy Policy -->
+    <div class="modal fade" id="privacy" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-body">
+                <div class="modal-content">
+                   <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" >Privacy Policy</h4>
+                    </div>
+                    <div class="modal-body">
+                                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                                            <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                                            <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                                            <p class="nobottommargin">Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     
-</section>
-<!-- End About -->
-
-<section id="team" class="section-content">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 mbxxl"><h2 class="section-heading">Team</h2>
-          <div class="line dark">
-            <div class="dot"></div>
-          </div>
-        <p class="section-description"><strong>Math</strong> is <strong>easy</strong>; <strong>design</strong>
-                    is <strong>hard</strong>.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="services" class="section-content section-parallax">
-  <div class="bg-overlay pattern">
-    <div class="container">
-      <div class="row mbxxl">
-        <div class="col-lg-12"><h2 class="section-heading">Services</h2>
-
-                    <div class="line dark">
-                        <div class="dot"></div>
-                    </div>
-                    <p class="section-description">Design is the <strong>application</strong> of intent - the <strong>opposite</strong>
-                        of happenstance, and an <strong>antidote</strong> to accident.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="register" class="section-content">
-  <div class="container">
-    <div class="row mbxxl">
-      <div class="col-md-12"><h2 class="section-heading">Register</h2>
-
-                <div class="line dark">
-                    <div class="dot"></div>
-                </div>
-                <p class="section-description"><strong>Bad</strong> design is <strong>smoke</strong>, while
-                    <strong>good</strong> design is a <strong>mirror</strong>.</p>
-
-        <div class="row">
-            
-            <div class="col-md-3">
-            </div>
-            <div class="col-md-6">
-                <div class="alert alert-success" id="success" role="alert" style="display:none"></div>
-                <div class="alert alert-danger" id="error" role="alert" style="display:none"></div>
-                <%= form_tag('members', remote: true, id:"ajax_signup") do |f| %>
-                <div class="form-group">
-                    
-                    <input type="text" class="form-control" name="member[name]" id="exampleInputEmail1" placeholder="Name">
-                </div>
-                <div class="form-group">
-                    
-                    <input type="email" class="form-control" name="member[email]" id="exampleInputEmail1" placeholder="Email">
-                </div>
-                <div class="form-group">
-                    
-                    <input type="password" class="form-control" name="member[password]" id="password" placeholder="Password">
-                </div>
-                <div class="form-group">
-                    
-                    <input type="password" class="form-control" name="member[password_confirmation]" id="password" placeholder="Repeat Password">
-                </div>
-            
-                <div class="form-grup">
-                    <input type="submit" class="btn btn-success" value="Register"/>
-                </div>
-                <% end %>
-            </div>
-            <div class="col-md-3">
-            </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="clients" class="section-content">
-  <div class="container">
-    <div class="row mbxxl">
-      <div class="col-lg-12"><h2 class="section-heading">Client</h2>
-
-                <div class="line dark">
-                    <div class="dot"></div>
-                </div>
-                <p class="section-description"><strong>Don't design</strong> for <strong>everyone</strong>. It's
-                    impossible. All you end up doing is <strong>designing</strong> something that <strong>makes</strong>
-                    everyone <strong>unhappy</strong></p>
-      </div>
-    </div>
-  </div>
-</section>
-
-	
-
-<section class="section-content" id="blog">
-    <div class="container">
-        <div class="row mbxxl">
-            <div class="col-lg-12"><h2 class="section-heading">Blog</h2>
-
-                <div class="line dark">
-                    <div class="dot"></div>
-                </div>
-                <p class="section-description"><strong>Great</strong> design will not sell an inferior product, but it
-                    will <strong>enable</strong> a great product to <strong>achieve</strong> its
-                    <strong>maximum</strong> potential.</p></div>
-        </div>
-        <div class="row">
-            <div class="col-sm-6"><img class="img-responsive" alt="alt" src="http://next-themes.com/mtek/code/frontend/assets/images/blog_img_1.jpg">
-
-                <div class="box">
-                    <div class="box-icon">
-                        <div class="number">17</div>
-                        <div class="month">Mar</div>
-                    </div>
-                    <div class="box-title">Name of Blog<br>
-
-                        <div class="sub-title">Categories of blog</div>
-                    </div>
-                    <div class="box-desc">Smoked sausage barbed wire farmer's market po-boy fais do do beignet. Mirliton
-                        fried catfish fried chicken gumbo cher couillon canaille sauce piquante bourre. Boucherie trail
-                        ride coffee beignet gumbo. Boudreaux jambalaya turducken macque choux beer fais do do Mardi Gras
-                        Fauxcheaux. Boudreaux bread pudding pecan pie couillon hot sauce pirogue Lafayette.<p class="mtl"><a class="more-info" href="#"><i class="fa fa-arrow-right mrm"></i>More info</a>
-                        </p></div>
-                </div>
-            </div>
-            <div class="col-sm-6"><img class="img-responsive" alt="alt" src="http://next-themes.com/mtek/code/frontend/assets/images/blog_img_2.jpg">
-
-                <div class="box">
-                    <div class="box-icon">
-                        <div class="number">10</div>
-                        <div class="month">Mar</div>
-                    </div>
-                    <div class="box-title">Name of Blog<br>
-
-                        <div class="sub-title">Categories of blog</div>
-                    </div>
-                    <div class="box-desc">Smoked sausage barbed wire farmer's market po-boy fais do do beignet. Mirliton
-                        fried catfish fried chicken gumbo cher couillon canaille sauce piquante bourre. Boucherie trail
-                        ride coffee beignet gumbo. Boudreaux jambalaya turducken macque choux beer fais do do Mardi Gras
-                        Fauxcheaux. Boudreaux bread pudding pecan pie couillon hot sauce pirogue Lafayette.<p class="mtl"><a class="more-info" href="#"><i class="fa fa-arrow-right mrm"></i>More info</a>
-                        </p></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<!-- Contact Form loaded from yield -->
-<%= yield %>
-<!-- End Contact -->
-
-<!-- Begin Footer -->
-<section class="section-content" id="footer" style="padding-top:10px;padding-bottom:10px;">
-    <div class="container text-center">
-        <p>Copyright &copy; <%= Time.now.year %></p>
-        <p>Built with <span class="glyphicon glyphicon-heart" aria-hidden="true"></span></p>
-    </div>
-</section>
-<!-- End Footer -->
-
+    <%= javascript_include_tag 'functions', 'data-turbolinks-track' => true %>
 </body>
 </html>

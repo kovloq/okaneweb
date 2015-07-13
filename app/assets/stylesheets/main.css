@@ -7,3 +7,28 @@ margin:0;
 padding:0;
 list-style-type:none;
 }
+
+#header,#header-wrap,#header #primary-menu,#header #primary-menu ul,#primary-menu ul li a{
+	height:80px;
+}
+#primary-menu ul li a {
+	line-height: 80px;
+}
+#logo{
+	height:80px;
+}
+#top-search, #top-cart, #side-panel-trigger {
+	margin-top:30px;
+}
+
+#primary-menu > ul > li:hover a,
+#primary-menu > ul > li.current a { color: red; }
+
+#page-title{
+	padding-top:20px;
+	padding-bottom:20px;
+}
+
+#slider{
+	background: url('landing.jpg') no-repeat; background-size: cover
+}

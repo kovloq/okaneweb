@@ -1,0 +1,93 @@
+		<section id="page-title">
+
+            <div class="container clearfix">
+                <h1>Contact</h1>
+                <span>Get in Touch with Us</span>
+                <ol class="breadcrumb">
+                    <li><a href="#">Home</a></li>
+                    <li class="active">Contact</li>
+                </ol>
+            </div>
+
+        </section>
+
+        <!-- Content
+        ============================================= -->
+        <section id="content">
+
+            <div class="content-wrap">
+
+                <div class="container clearfix">
+				<!-- Postcontent
+					============================================= -->
+					<div class=" nobottommargin">
+
+						<h3>Send us a message</h3>
+
+						<div class="alert alert-success alert-dismissible" role="alert" style="display:none">
+			              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			                <span aria-hidden="true">&times;</span></button>
+			              Your message has been sent.
+			            </div>
+						<%= form_tag('/home/contact', remote: true, id:"myform",class:"nobottommargin") do |f| %>
+						
+							<div class="form-process"></div>
+
+							<div class="col_one_third">
+								<label for="template-contactform-name">Name <small>*</small></label>
+								<input type="text" id="template-contactform-name" name="contact[name]" value="" class="sm-form-control required" />
+							</div>
+
+							<div class="col_one_third">
+								<label for="template-contactform-email">Email <small>*</small></label>
+								<input type="email" id="template-contactform-email" name="contact[email]" value="" class="required email sm-form-control" />
+							</div>
+
+							<div class="col_one_third col_last">
+								<label for="template-contactform-phone">Phone</label>
+								<input type="text" id="template-contactform-phone" name="contact[phone]" value="" class="sm-form-control" />
+							</div>
+
+							<div class="clear"></div>
+
+							<div class="col_full">
+								<label for="template-contactform-subject">Subject <small>*</small></label>
+								<input type="text" id="template-contactform-subject" name="template-contactform-subject" value="" class="required sm-form-control" />
+							</div>
+
+							
+
+							<div class="clear"></div>
+
+							<div class="col_full">
+								<label for="template-contactform-message">Message <small>*</small></label>
+								<textarea class="required sm-form-control" id="template-contactform-message" name="contact[message]" rows="6" cols="30"></textarea>
+							</div>
+
+							<div class="col_full hidden">
+								<input type="text" id="template-contactform-botcheck" name="template-contactform-botcheck" value="" class="sm-form-control" />
+							</div>
+
+							<div class="col_full">
+								<input type="submit" name="submit" class="button button-3d nomargin" value="Send Message">
+								
+							</div>
+
+						<% end %>
+
+						
+
+					</div><!-- .postcontent end -->
+
+				</div>
+            </div>
+        </section>
+        <!-- End Content -->
+<script>
+$(document).ready(function(){
+	$('#myform').on('ajax:success', function(data, status, error) {
+    	$(".alert-success").show();
+    	
+    });
+})
+</script>

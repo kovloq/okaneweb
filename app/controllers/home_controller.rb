@@ -1,6 +1,7 @@
 class HomeController < ApplicationController
 # respond_to :json
 	def index
+		# facebook https://www.facebook.com/okanemanager
 		# Email okanemanager@gmail.com
 		# pass !qazxsw@
 		# Twitter @okanemanager
@@ -21,6 +22,20 @@ class HomeController < ApplicationController
 			end
 			format.html { render :layout => false, :text => "success"}
 		end
+	end
+
+	def kontak
+		render "contact"
+	end
+
+	def about
+	end
+
+	def benefits 
+	end
+
+	def blog
+		
 	end
 
 	private

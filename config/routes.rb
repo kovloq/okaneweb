@@ -9,6 +9,10 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   
  root 'home#index'
+get "home/kontak"
+get "home/about"
+get "home/benefits"
+get "home/blog"
 post "home/contact"
 match 'administrator', to: 'administrator/home#index', via: [:get]
 match 'user', to: 'user/home#index', via: [:get]
