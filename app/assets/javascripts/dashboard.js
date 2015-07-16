@@ -23,5 +23,7 @@
 //= require bootstrap-switch.min
 //= require metronic
 //= require layout
+//= require highcharts
+//= require exporting
 
 
