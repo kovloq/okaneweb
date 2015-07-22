@@ -38,6 +38,6 @@ class User::IncomeController < UsersController
 
   private
   def income_params
-    params.require(:income).permit(:name, :category,:date,:descripton)
+    params.require(:income).permit(:name, :category_id,:date,:description)
   end
 end

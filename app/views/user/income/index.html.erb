@@ -28,6 +28,7 @@
     </div>
 
     <div class="portlet-body"><!-- Begin body -->
+        
                     <table class="table table-bordered">
                         <tr>
                             <th>Name</th>
@@ -35,11 +36,11 @@
                             <th>Edit</th>
                             <th>Delete</th>
                         </tr>
-                        
+                       
                         <% @income.each do |t| %>
                             <tr>
                                 <td><%= t.name %></td>
-                                <td><%= t.category %></td>
+                                <td><%= t.category.name %></td>
                                 
                                 <td>
                                     <%= link_to "Edit",{:controller=>"user/income",:action=>"edit",:id=>t.id},:class=>"btn btn-warning" %>

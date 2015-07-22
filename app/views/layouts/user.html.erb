@@ -45,55 +45,31 @@
 			
 			<!-- BEGIN TOP NAVIGATION MENU -->
 			<div class="top-menu">
-                            <ul class="dropdown-menu dropdown-user pull-right">
-                                <li>
-                                    <div class="navbar-content">
-                                        <div class="row">
-                                            <div class="col-md-5 col-xs-5"><img class="img-responsive img-circle" alt="" src="http://api.randomuser.me/portraits/men/27.jpg">
+                            <ul class="nav navbar-nav pull-right">
+                                <!-- BEGIN USER LOGIN DROPDOWN -->
+					
+								<li class="dropdown dropdown-user">
+									<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+									<img alt="" class="img-circle" src="http://api.randomuser.me/portraits/men/27.jpg"/>
+									<span class="username username-hide-on-mobile">
+									<%= current_member.name %></span>
+									<i class="fa fa-angle-down"></i>
+									</a>
+									<ul class="dropdown-menu dropdown-menu-default">
+										<li>
+											<a href="extra_profile.html">
+											<i class="icon-user"></i> My Profile </a>
+										</li>
+										
+										<li>
 
-                                                <p class="text-center mtm"><a class="change-avatar" href="#">
-                                                    <small>Set Avatar</small>
-                                                </a></p>
-                                            </div>
-                                            <div class="col-md-7 col-xs-5"><span><%= current_member.name %></span>
-
-                                                <p class="text-muted small"><%= current_member.email %></p>
-
-                                                <div class="divider"></div>
-                                                <a href="#">
-                                                    <button class="btn btn-default btn-sm" href="#">Edit Profile
-                                                    </button>
-                                                </a></div>
-                                        </div>
-                                    </div>
-                                    <div class="navbar-footer">
-                                        <div class="navbar-footer-content">
-                                            <div class="row">
-                                                <div class="col-md-6 col-xs-6"><a href="#">
-                                                    <button class="btn btn-default btn-sm">Change Password</button>
-                                                </a></div>
-                                                <div class="col-md-6 col-xs-6">
-                                                	<% if member_signed_in? %>
-							                         
-							                          <%= link_to(destroy_member_session_path, :method => :delete) do |s| %> 
-							                          <button class="btn btn-info btn-sm pull-right" href="page-lock-	screen.html">Sign Out
-                                                    	</button>       
-							                          <% end %>
-							                        
-							                        <% else %>
-							                          
-							                          <%= link_to(new_member_session_path) do |s|  %>  
-							                          <button class="btn btn-info btn-sm pull-right" href="page-lock-	screen.html">Sign In
-                                                    	</button> 
-                                                      <% end %>
-							                          
-							                        <% end %>
-                                                	
-                                            	</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
+											<%= link_to(destroy_member_session_path, :method => :delete) do |s| %> 
+							                    <i class="icon-key"></i> Log Out </a>      
+							                <% end %>
+										</li>
+									</ul>
+								</li>
+								<!-- END USER LOGIN DROPDOWN -->
                             </ul>
                         </div>
 			<!-- END TOP NAVIGATION MENU -->

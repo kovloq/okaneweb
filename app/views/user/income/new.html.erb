@@ -7,7 +7,7 @@
             &nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;
         </li>
         <li>
-            <a href="#">Income</a>
+            <%= link_to "Income", :controller => "user/income", :action => "index" %>
             &nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;
             </li>
         <li>
@@ -33,7 +33,7 @@
 							</div>
 							<div class="form-group">
 								<label for="title" >Category</label>
-								<%= text_field(:income, :category,class:"form-control",placeholder:"Category") %>
+								<%= text_field(:income, :category_id,class:"form-control",placeholder:"Category") %>
 							</div>
 							<div class="form-group">
 								<label for="title" >Date</label>

@@ -42,7 +42,7 @@
                             <tr>
                                 <td><%= t.name %></td>
                                 <td><%= t.date %></td>
-                                <td><%= t.category %></td>
+                                <td><%= t.category.name %></td>
                                 
                                 <td>
                                     <%= link_to "Edit",{:controller=>"user/expense",:action=>"edit",:id=>t.id},:class=>"btn btn-warning" %>

@@ -38,6 +38,6 @@ class User::ExpenseController < UsersController
 
   private
   def expense_params
-    params.require(:expense).permit(:name, :category,:date,:descripton)
+    params.require(:expense).permit(:name, :category_id,:date,:description)
   end
 end
