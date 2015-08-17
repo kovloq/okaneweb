@@ -1,5 +1,6 @@
 class User::ExpenseController < UsersController
   def new
+    @category=Category.all
   	@expense = Expense.new
   end
 
@@ -22,6 +23,7 @@ class User::ExpenseController < UsersController
   end
 
   def edit
+    @category=Category.all
   	@expense = Expense.find params[:id]
   end
 

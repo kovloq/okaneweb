@@ -1,10 +1,12 @@
 class User::IncomeController < UsersController
   def new
+    @category=Category.all
   	@income = Income.new
   end
 
   def create
     @income = Income.new(income_params)
+    
     if @income.save
         redirect_to :controller => "user/income", :action => "index"
     else
@@ -22,6 +24,7 @@ class User::IncomeController < UsersController
   end
 
   def edit
+    @category=Category.all
   	@income = Income.find params[:id]
   end
 
