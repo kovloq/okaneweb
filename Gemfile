@@ -8,6 +8,7 @@ gem 'rails', '4.1.5'
 group :production do
 	gem 'pg'
 	gem 'thin'
+	gem 'rails_12factor'
 end
 
 group :development, :test do
