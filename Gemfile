@@ -7,6 +7,7 @@ gem 'rails', '4.1.5'
 
 group :production do
 	gem 'pg'
+	gem 'mysql2'
 	gem 'thin'
 	gem 'rails_12factor'
 end
