@@ -32,6 +32,7 @@
                         <tr>
                             <th>Name</th>
                             <th>Color</th>
+                            <th>Type</th>
                             <th>Edit</th>
                             <th>Delete</th>
                         </tr>
@@ -40,7 +41,7 @@
                             <tr>
                                 <td><%= t.name %></td>
                                 <td><%= t.color %></td>
-                                
+                                <td><%= t.tipe==1? "Income" : "Expense" %></td>
                                 <td>
                                     <%= link_to "Edit",{:controller=>"administrator/category",:action=>"edit",:id=>t.id},:class=>"btn btn-sm  btn-warning" %>
 

@@ -1,78 +1,105 @@
 <div class="box-content">
     <div class="content">
-    	<div id="chart"></di>
-        <!-- <div class="row">
+        <div class="row">
             <div class="col-md-6">
-            	Your income
+            	<% @income.each do |i|  
+                total=i["total"]/@income.length
+                %>
+                
+                
+                <% end %>
+               
+                <div id="income"></div>
 			</div>
 			<div class="col-md-6">
-				Your Expense
+				
+                <div id="expense"></div>
 			</div>
-		</div> -->
+		</div>
 	</div>
 </div>
 <script>
 $(function () {
-    $('#chart').highcharts({
-        chart: {
-            type: 'bar'
-        },
-        title: {
-            text: 'Historic World Population by Region'
-        },
-        subtitle: {
-            text: 'Source: <a href="https://en.wikipedia.org/wiki/World_population">Wikipedia.org</a>'
-        },
-        xAxis: {
-            categories: ['Africa', 'America', 'Asia', 'Europe', 'Oceania'],
-            title: {
-                text: null
-            }
-        },
-        yAxis: {
-            min: 0,
-            title: {
-                text: 'Population (millions)',
-                align: 'high'
+
+    $(document).ready(function () {
+
+        // Build the Income chart
+        $('#income').highcharts({
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'pie'
             },
-            labels: {
-                overflow: 'justify'
-            }
-        },
-        tooltip: {
-            valueSuffix: ' millions'
-        },
-        plotOptions: {
-            bar: {
-                dataLabels: {
-                    enabled: true
+            exporting: { enabled: false },
+            title: {
+                text: 'Total Income this month (<%= @date.strftime("%B")%>)'
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: false
+                    },
+                    showInLegend: true
                 }
-            }
-        },
-        legend: {
-            layout: 'vertical',
-            align: 'right',
-            verticalAlign: 'top',
-            x: -40,
-            y: 80,
-            floating: true,
-            borderWidth: 1,
-            backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
-            shadow: true
-        },
-        credits: {
-            enabled: false
-        },
-        series: [{
-            name: 'Year 1800',
-            data: [107, 31, 635, 203, 2]
-        }, {
-            name: 'Year 1900',
-            data: [133, 156, 947, 408, 6]
-        }, {
-            name: 'Year 2012',
-            data: [1052, 954, 4250, 740, 38]
-        }]
+            },
+            series: [{
+                name: "Income",
+                colorByPoint: true,
+                data: [
+                <% @income.each do |i| %>
+                {
+                    name: "<%= i.category.name %>",
+                    y: <%= number_with_precision i["total"].to_f/@income.length, :precision => 2 %>
+                },
+                <% end %>
+                ]
+            }]
+        });
+
+        // Build the Income chart
+        $('#expense').highcharts({
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'pie'
+            },
+            exporting: { enabled: false },
+            title: {
+                text: 'Total Expense this month (<%= @date.strftime("%B")%>)'
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: false
+                    },
+                    showInLegend: true
+                }
+            },
+            series: [{
+                name: "Expense",
+                colorByPoint: true,
+                data: [
+                <% @expense.each do |i| %>
+                {
+                    name: "<%= i.category.name %>",
+                    y: <%= number_with_precision i["total"].to_f/@income.length, :precision => 2 %>
+                },
+                <% end %>
+                ]
+            }]
+        });
     });
 });
 </script>

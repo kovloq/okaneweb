@@ -25,15 +25,34 @@
     </div>
 							
 	                     	<div class="portlet-body form">
-	                     		<%= form_for @category,url: {action: "create"} do |f| %>
+	                     		<%= form_for @category,url: {action: "update"} do |f| %>
 	                     		<div class="form-body">
 								  <div class="form-group" style="text-align:left">
 								    <label for="category name" style="text-align:left">Name</label>
 								    <%= text_field(:category, :name,class:"form-control",placeholder:"Name") %>
 								  </div>
-								  
 								  <div class="form-group">
-								    <label for="Category">Email</label>
+								  	<div class="radio-list">
+								  		<% if (@category.tipe==1) %>
+								  		<label>
+										<div class="radio"><input type="radio" value="1" name="category[tipe]" checked></div>
+										Income </label>
+										<label>
+										<div class="radio"><input type="radio" value="2" name="category[tipe]"></div>
+										Expense </label>
+								  		<% else %>
+								  		<label>
+										<div class="radio"><input type="radio" value="1" name="category[tipe]"></div>
+										Income </label>
+										<label>
+										<div class="radio"><input type="radio" value="2" name="category[tipe]" checked></div>
+										Expense </label>
+								  		<% end %>
+										
+									</div>
+								  </div>
+								  <div class="form-group">
+								    <label for="Category">Color</label>
 								    <%= text_field(:category, :color,class:"form-control",placeholder:"Color") %>
 								    
 								  </div>
@@ -41,7 +60,7 @@
 								</div>
 								  <div class="form-actions">
 								  	<input type="submit" class="btn btn-primary" value="Edit"> 
-								  	<a href="#" class="btn back-cancel default">Cancel</a>
+								  	<a href="/administrator/category" class="btn back-cancel default">Cancel</a>
 								  </div>
 								<% end %>
 	                     	</div>

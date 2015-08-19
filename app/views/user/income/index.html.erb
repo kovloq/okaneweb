@@ -33,6 +33,7 @@
                         <tr>
                             <th>Name</th>
                             <th>Category</th>
+                            <th>Date</th>
                             <th>Edit</th>
                             <th>Delete</th>
                         </tr>
@@ -41,7 +42,7 @@
                             <tr>
                                 <td><%= t.name %></td>
                                 <td><%= t.category.name %></td>
-                                
+                                <td><%= t.date %></td>
                                 <td>
                                     <%= link_to "Edit",{:controller=>"user/income",:action=>"edit",:id=>t.id},:class=>"btn btn-warning" %>
 

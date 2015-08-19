@@ -1,5 +1,6 @@
-class User::ReportController < Usersontroller
+class User::ReportController < UsersController
   def index
+  	
   end
 
   def new

@@ -20,4 +20,6 @@
  *= require layout
  *= require default
  *= require custom
+ *= require bootstrap-datepicker3.min
+ *= require select2
  */

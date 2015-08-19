@@ -5,6 +5,7 @@ class User::ExpenseController < UsersController
   end
 
   def create
+    params[:expense]["member_id"]=current_member["id"]
     @expense = Expense.new(expense_params)
     if @expense.save
         redirect_to :controller => "user/expense", :action => "index"
@@ -40,6 +41,6 @@ class User::ExpenseController < UsersController
 
   private
   def expense_params
-    params.require(:expense).permit(:name, :category_id,:date,:description)
+    params.require(:expense).permit(:name, :category_id,:date,:description,:member_id)
   end
 end

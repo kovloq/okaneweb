@@ -29,11 +29,11 @@
 	                     		<div class="form-body">
 								  <div class="form-group">
 									<label for="title" >Title</label>
-									<%= text_field(:expense, :name,class:"form-control",placeholder:"Name") %>
+									<%= text_field(:expense, :name,class:"form-control",minlength:"2",placeholder:"Shopping") %>
 								  </div>
 									<div class="form-group">
 										<label for="title" >Category</label>
-										<select class="form-control" name="income[category_id]">
+										<select class="form-control select2me" name="expense[category_id]">
 											<option value="">Select Category</option>
 											<% @category.each do |c| %>
 											<option value="<%= c["id"] %>"><%= c["name"] %></option>
@@ -42,7 +42,12 @@
 									</div>
 									<div class="form-group">
 										<label for="title" >Date</label>
-										<%= text_field(:expense, :date,class:"form-control",placeholder:"Date") %>
+										<div class="input-group date date-picker" data-provide="datepicker" data-date-format="yyyy-mm-dd">
+											<input type="text"  class="form-control" name="expense[date]" readonly>
+											<span class="input-group-btn">
+											<button class="btn default" type="button"><i class="fa fa-calendar"></i></button>
+											</span>
+										</div>
 									</div>
 									<div class="form-group">
 										<label for="title" >Description</label>
@@ -56,4 +61,4 @@
 								  </div>
 								<% end %>
 	</div>
-</div>				
+</div>		

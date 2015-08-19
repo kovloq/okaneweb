@@ -23,7 +23,7 @@ class Administrator::CategoryController < AdministratorsController
 
   def update
     @category = Category.find(params[:id])
-    if @category.update_attributes(params[:category])
+    if @category.update_attributes(category_params)
       redirect_to :action => 'edit', :id => params[:id]
     else
       render :action => 'edit'
@@ -43,6 +43,6 @@ class Administrator::CategoryController < AdministratorsController
 
   private
   def category_params
-    params.require(:category).permit(:name, :color)
+    params.require(:category).permit(:name, :color,:tipe)
   end
 end

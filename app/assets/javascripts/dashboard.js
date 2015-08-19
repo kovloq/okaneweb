@@ -25,5 +25,7 @@
 //= require layout
 //= require highcharts
 //= require exporting
-
+//= require bootstrap-datepicker.min
+//= require select2
+//= require jquery.validate.min
 

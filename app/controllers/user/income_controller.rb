@@ -5,6 +5,7 @@ class User::IncomeController < UsersController
   end
 
   def create
+    params[:income][:member_id]=current_member["id"]
     @income = Income.new(income_params)
     
     if @income.save
@@ -29,7 +30,7 @@ class User::IncomeController < UsersController
   end
 
   def index
-  	@income = Income.order(:id => :desc).page(params[:page]).per(10) 
+  	@income = Income.where("member_id",current_member["id"]).order(:id => :desc).page(params[:page]).per(10) 
   end
 
   def destroy
@@ -41,6 +42,6 @@ class User::IncomeController < UsersController
 
   private
   def income_params
-    params.require(:income).permit(:name, :category_id,:date,:description)
+    params.require(:income).permit(:name, :category_id,:date,:description,:member_id)
   end
 end
