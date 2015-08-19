@@ -30,7 +30,7 @@ class User::IncomeController < UsersController
   end
 
   def index
-  	@income = Income.where("member_id",current_member["id"]).order(:id => :desc).page(params[:page]).per(10) 
+  	@income = Income.where("member_id = ? ",current_member["id"]).order(:id => :desc).page(params[:page]).per(10) 
   end
 
   def destroy

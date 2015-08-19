@@ -29,7 +29,7 @@ class User::ExpenseController < UsersController
   end
 
   def index
-  	@expense = Expense.order(:id => :desc).page(params[:page]).per(10) 
+  	@expense = Expense.where("member_id = ? ",current_member["id"]).order(:id => :desc).page(params[:page]).per(10) 
   end
 
   def destroy
