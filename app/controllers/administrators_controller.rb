@@ -1,6 +1,6 @@
 class AdministratorsController < ApplicationController
 	layout 'dashboard'
-	before_filter :authorize
+	# before_filter :authorize
 	# user = admin
 	# pass = admin
 	def authorize
