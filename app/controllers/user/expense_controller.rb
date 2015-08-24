@@ -1,6 +1,6 @@
 class User::ExpenseController < UsersController
   def new
-    @category=Category.all
+    @category=Category.where("tipe = ? ",2);
   	@expense = Expense.new
   end
 
@@ -24,7 +24,7 @@ class User::ExpenseController < UsersController
   end
 
   def edit
-    @category=Category.all
+    @category=Category.where("tipe = ? ",2);
   	@expense = Expense.find params[:id]
   end
 
@@ -41,6 +41,6 @@ class User::ExpenseController < UsersController
 
   private
   def expense_params
-    params.require(:expense).permit(:name, :category_id,:date,:description,:member_id)
+    params.require(:expense).permit(:name, :category_id,:date,:description,:member_id,:amount)
   end
 end

@@ -28,10 +28,10 @@
     </div>
 
     <div class="portlet-body"><!-- Begin body -->
-                    <table class="table table-bordered">
+                    <table class="table table-bordered table-responsive">
                         <tr>
                             <th>Name</th>
-                            <th>Color</th>
+                            
                             <th>Type</th>
                             <th>Edit</th>
                             <th>Delete</th>
@@ -40,7 +40,7 @@
                         <% @category.each do |t| %>
                             <tr>
                                 <td><%= t.name %></td>
-                                <td><%= t.color %></td>
+                                
                                 <td><%= t.tipe==1? "Income" : "Expense" %></td>
                                 <td>
                                     <%= link_to "Edit",{:controller=>"administrator/category",:action=>"edit",:id=>t.id},:class=>"btn btn-sm  btn-warning" %>

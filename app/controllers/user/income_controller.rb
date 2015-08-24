@@ -1,6 +1,6 @@
 class User::IncomeController < UsersController
   def new
-    @category=Category.all
+    @category=Category.where("tipe = ? ",1);
   	@income = Income.new
   end
 
@@ -25,7 +25,7 @@ class User::IncomeController < UsersController
   end
 
   def edit
-    @category=Category.all
+    @category=Category.where("tipe = ? ",1);
   	@income = Income.find params[:id]
   end
 
@@ -42,6 +42,6 @@ class User::IncomeController < UsersController
 
   private
   def income_params
-    params.require(:income).permit(:name, :category_id,:date,:description,:member_id)
+    params.require(:income).permit(:name, :category_id,:date,:description,:member_id,:amount)
   end
 end
