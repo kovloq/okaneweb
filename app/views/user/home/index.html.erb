@@ -13,15 +13,28 @@
         <div class="row">
             <div class="col-md-4">
                 <h3>Income</h3>
-                <%= debug(@tot_income) %>
+                <% if(@tot_income.length > 0) %>
+                <%= @tot_income["tot"] %>
+                <% else %>
+                0
+                <% end %>
+                    
             </div>
             <div class="col-md-4">
                 <h3>Expense</h3>
-                
+                <% if(@tot_expense.length > 0) %>
+                <%= @tot_expense["tot"] %>
+                <% else %>
+                0
+                <% end %>
             </div>
             <div class="col-md-4">
                 <h3>You Save</h3>
-                
+                <% if(@tot_expense.length > 0 && @tot_income.length > 0) %>
+                <%= @tot_income["tot"] - @tot_expense["tot"] %>
+                <% else %>
+                0
+                <% end %>
             </div>
         </div>
         <div class="row">
