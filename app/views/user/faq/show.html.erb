@@ -26,13 +26,13 @@
                     <div class="panel">
                         <div class="panel-heading">
                             <h5 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="accordion-toggle collapsed">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse<%= t.id %>" class="accordion-toggle collapsed">
                                     <i class="icon-arrow"></i>
                                     <%= t.title %>
                                 </a>
                             </h5>
                         </div>
-                        <div style="height: 0px;" id="collapseOne" class="panel-collapse collapse">
+                        <div style="height: 0px;" id="collapse<%= t.id %>" class="panel-collapse collapse">
                             <div class="panel-body">
                                 <%= t.description %>
                             </div>
