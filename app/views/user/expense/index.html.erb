@@ -30,13 +30,15 @@
         </div>
     </div>
 
-    <div class="portlet-body"><!-- Begin body -->
+    <div class="portlet-body table-responsive"><!-- Begin body -->
 
-                    <table class="table table-bordered table-responsive">
+                    <table class="table table-bordered ">
                         <tr>
                             <th>Name</th>
-                            <th>Date</th>
+                            
                             <th>Category</th>
+                            <th>Amount</th>
+                            <th>Date</th>
                             <th>Edit</th>
                             <th>Delete</th>
                         </tr>
@@ -44,9 +46,10 @@
                         <% @transaction.each do |t| %>
                             <tr>
                                 <td><%= t.name %></td>
-                                <td><%= t.date %></td>
-                                <td><%= t.category.name %></td>
                                 
+                                <td><%= t.category.name %></td>
+                                <td><%= t.amount %></td>
+                                <td><%= t.date %></td>
                                 <td>
                                     <%= link_to "Edit",{:controller=>"user/expense",:action=>"edit",:id=>t.id},:class=>"btn btn-warning" %>
 
