@@ -12,6 +12,7 @@ class User::HomeController < UsersController
 	  	@expense=Transaction.select("COUNT(*) as total,category_id").where("EXTRACT(MONTH FROM date) = ? AND member_id = ? AND t_category = ? ",DateTime.now.strftime("%m"),current_member["id"],2).group("category_id")
       @tot_income=Transaction.select("SUM(amount) as tot").where("EXTRACT(MONTH FROM date) = ? AND member_id = ? AND t_category = ? ",DateTime.now.strftime("%m"),current_member["id"],1).group("id").first
       @tot_expense=Transaction.select("SUM(amount) as tot").where("EXTRACT(MONTH FROM date) = ? AND member_id = ? AND t_category = ? ",DateTime.now.strftime("%m"),current_member["id"],2).group("id").first
+      @coba=Transaction.select("SUM(amount) as tot").where("EXTRACT(MONTH FROM date) = ? AND member_id = ? AND t_category = ? ",DateTime.now.strftime("%m"),current_member["id"],1).group("id").first.to_sql
       
   	end
     
