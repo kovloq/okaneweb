@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150824095128) do
+ActiveRecord::Schema.define(version: 20150826043804) do
 
   create_table "admins", force: true do |t|
     t.string   "name"
@@ -98,15 +98,18 @@ ActiveRecord::Schema.define(version: 20150824095128) do
   add_index "members", ["reset_password_token"], name: "index_members_on_reset_password_token", unique: true
 
   create_table "transactions", force: true do |t|
-    t.integer  "user_id"
-    t.string   "transaction_name"
-    t.integer  "category"
-    t.integer  "value"
+    t.integer  "member_id"
+    t.string   "name"
+    t.integer  "t_category"
+    t.integer  "amount"
     t.datetime "created_at"
     t.integer  "created_by"
     t.datetime "updated_at"
     t.integer  "updated_by"
     t.boolean  "delete_flag"
+    t.date     "date"
+    t.text     "description"
+    t.integer  "category_id"
   end
 
 end

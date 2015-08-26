@@ -23,3 +23,9 @@
  *= require bootstrap-datepicker3.min
  *= require select2
  */
+.green-text{
+	color:green !important;
+}
+.red-text{
+	color:red !important;
+}

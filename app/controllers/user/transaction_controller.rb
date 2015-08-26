@@ -1,7 +1,8 @@
-
 	class User::TransactionController < UsersController
 
 		def index
+			sql="select * from incomes, expenses WHERE incomes.member_id='22' AND expenses.member_id='22'"
+			@test=ActiveRecord::Base.connection.execute(sql)
 			@transaction = Transaction.order(:id => :desc).page(params[:page]).per(10) 
 		end
 

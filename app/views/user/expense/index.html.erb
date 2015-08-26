@@ -5,7 +5,10 @@
             <%= link_to "Home", :controller => "user/home", :action => "index" %>
             &nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;
         </li>
-        
+        <li>
+            <%= link_to "Transaction", :controller => "user/transaction", :action => "index" %>
+            &nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;
+        </li>
         <li>
         <a href="#">Expense</a>
         </li>
@@ -38,7 +41,7 @@
                             <th>Delete</th>
                         </tr>
                         
-                        <% @expense.each do |t| %>
+                        <% @transaction.each do |t| %>
                             <tr>
                                 <td><%= t.name %></td>
                                 <td><%= t.date %></td>
@@ -54,6 +57,6 @@
                         <% end %>
                     </table>
                     
-                        <%= paginate @expense %>
+                        <%= paginate @transaction %>
     </div><!-- End Body -->
 </div><!-- End Portlet -->

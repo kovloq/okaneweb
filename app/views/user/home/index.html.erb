@@ -1,5 +1,29 @@
+<h3 class="page-title">Dashboard</h3>
+<div class="page-bar">
+    <ul class="page-breadcrumb">
+        
+        <li>
+        <a href="#">Home</a>
+        </li>
+    </ul>
+</div>
+
 <div class="box-content">
     <div class="content">
+        <div class="row">
+            <div class="col-md-4">
+                <h3>Income</h3>
+                <%= @tot_income["tot"] %>
+            </div>
+            <div class="col-md-4">
+                <h3>Expense</h3>
+                <%= @tot_expense["tot"] %>
+            </div>
+            <div class="col-md-4">
+                <h3>You Save</h3>
+                <%= @tot_income["tot"] - @tot_expense["tot"] %>
+            </div>
+        </div>
         <div class="row">
             <div class="col-md-6">
             	<%# @income.each do |i|  
