@@ -5,7 +5,7 @@ class Member < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable,:omniauthable, :omniauth_providers => [:facebook,:twitter,:google_oauth2]
 
 	def self.from_omniauth(auth)
-	  where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
+	  where(provider: auth.provider, uid: auth.uid).first_or_create do |member|
 	    member.email = auth.info.email
 	    member.password = Devise.friendly_token[0,20]
 	    member.name = auth.info.name   # assuming the user model has a name
