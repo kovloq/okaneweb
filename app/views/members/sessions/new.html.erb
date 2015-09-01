@@ -31,28 +31,17 @@
     
         <%= f.submit "Log in", :class =>"btn green-haze pull-right" %>
       </div>
-
-      <div class="login-options" style="display:none">
+        <%- if devise_mapping.omniauthable? %>
+        <div class="login-options">
         <h4>Or login with</h4>
         <ul class="social-icons">
-          <li>
-            <a class="facebook" data-original-title="facebook" href="javascript:;">
-            </a>
-          </li>
-          <li>
-            <a class="twitter" data-original-title="Twitter" href="javascript:;">
-            </a>
-          </li>
-          <li>
-            <a class="googleplus" data-original-title="Google Plus" href="javascript:;">
-            </a>
-          </li>
-          <li>
-            <a class="linkedin" data-original-title="Linkedin" href="javascript:;">
-            </a>
-          </li>
-        </ul>
-      </div>
+          <%- resource_class.omniauth_providers.each do |provider| %>
+            <li><%= link_to "Sign in with #{provider.to_s.titleize}", omniauth_authorize_path(resource_name, provider),class:"#{provider}","data-original-title"=>"#{provider}" %></li>
+          <% end -%>
+          </ul>
+        </div>
+        <% end -%>
+      
     <% end %>
 
     <%= render "members/shared/links" %>

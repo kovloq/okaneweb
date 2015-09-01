@@ -5352,7 +5352,7 @@ Social Icons
 .social-icons li .github {
   background: url(github.png) no-repeat;
 }
-.social-icons li .googleplus {
+.social-icons li .googleplus,.social-icons li .google_oauth2 {
   background: url(googleplus.png) no-repeat;
 }
 .social-icons li .jolicloud {
