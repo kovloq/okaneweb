@@ -11,33 +11,7 @@
 <div class="box-content">
     <div class="content">
         <div class="row">
-            <div class="col-md-4">
-                <h3>Income</h3>
-                
-                <% if @tot_income["tot"].present? && @tot_income.present? %>
-                    <%= @tot_income["tot"] %>
-                <% else %>
-                0
-                <% end %>
-            </div>
-            <div class="col-md-4">
-                <h3>Expense</h3>
-                <% if @tot_expense["tot"].present? && @tot_expense.present? %>
-                <%= @tot_expense["tot"] %>
-                <% else %>
-                0
-                <% end %>
-                
-            </div>
-            <div class="col-md-4">
-                <h3>You Save</h3>
-                <% if(@tot_expense["tot"].present? && @tot_expense.present? && @tot_income["tot"].present? && @tot_income.present?) %>
-                
-                <%= "#{@tot_income['tot'] - @tot_expense['tot']}" %>
-                <% else %>
-                0
-                <% end %>
-            </div>
+            
         </div>
         <div class="row">
             <div class="col-md-6">
