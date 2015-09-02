@@ -3,6 +3,8 @@ class User::HomeController < UsersController
     require 'json'
 
   	# current_member["id"]
+    @tot_income = Hash.new
+    @tot_expense = Hash.new
   	@date = Date.today
   	if Rails.env.development?
 	  	@income=Transaction.select("COUNT(*) as total,category_id").where("strftime('%m', date) = ? AND member_id = ? AND t_category = ? ",DateTime.now.strftime("%m"),current_member["id"],1).group("category_id")
