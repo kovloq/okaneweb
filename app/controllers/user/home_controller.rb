@@ -20,7 +20,7 @@ class User::HomeController < UsersController
         # @tot_income["tot"]=""
       # end
       # if @tot_expense.nil?
-        @tot_expense["tot"]=""
+        # @tot_expense["tot"]=""
       # end
       
   	end
