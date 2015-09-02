@@ -41,7 +41,7 @@ class Members::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   def twitter
     # You need to implement the method below in your model (e.g. app/models/user.rb)
-    @member = Member.from_omniauth(request.env["omniauth.auth"])
+    @member = Member.from_omniauth(request.env["omniauth.auth"].except("extra"))
 
     if @member.persisted?
       sign_in_and_redirect @member, :event => :authentication #this will throw if @user is not activated
