@@ -17,12 +17,12 @@ class User::HomeController < UsersController
       @tot_income=Transaction.select("SUM(amount) as tot,id").where("EXTRACT(MONTH FROM date) = ? AND member_id = ? AND t_category = ? ",DateTime.now.strftime("%m"),current_member["id"],1).group("id").first
       @tot_expense=Transaction.select("SUM(amount) as tot,id").where("EXTRACT(MONTH FROM date) = ? AND member_id = ? AND t_category = ? ",DateTime.now.strftime("%m"),current_member["id"],2).group("id").first
       if @tot_income.nil?
-        @tot_income={ "tot" =>null,
-           "id" => null}
+        @tot_income={ "tot" =>"",
+           "id" => ""}
       end
       if @tot_expense.nil?
-        @tot_expense={ "tot" =>null,
-           "id" => null}
+        @tot_expense={ "tot" =>"",
+           "id" => ""}
       end
       
   	end
