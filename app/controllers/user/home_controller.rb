@@ -1,5 +1,7 @@
 class User::HomeController < UsersController
   def index
+    require 'json'
+
   	# current_member["id"]
   	@date = Date.today
   	if Rails.env.development?
