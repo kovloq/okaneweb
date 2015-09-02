@@ -2,6 +2,10 @@ Rails.application.routes.draw do
 
 
   devise_for :members,controllers: { sessions: "members/sessions",registrations:"members/registrations",:omniauth_callbacks => "members/omniauth_callbacks" }
+
+  devise_scope :member do
+    delete 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_member_session
+  end
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

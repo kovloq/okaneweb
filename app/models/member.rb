@@ -9,7 +9,7 @@ class Member < ActiveRecord::Base
 	    member.email = auth.info.email
 	    member.password = Devise.friendly_token[0,20]
 	    member.name = auth.info.name   # assuming the user model has a name
-	    # member.image = auth.info.image # assuming the user model has an image
+	    member.image = auth.info.image # assuming the user model has an image
 	  end
 	end
 

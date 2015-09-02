@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150901124456) do
+ActiveRecord::Schema.define(version: 20150902100503) do
 
   create_table "admins", force: true do |t|
     t.string   "name"
@@ -93,6 +93,7 @@ ActiveRecord::Schema.define(version: 20150901124456) do
     t.string   "unconfirmed_email"
     t.string   "provider"
     t.string   "uid"
+    t.string   "image"
   end
 
   add_index "members", ["confirmation_token"], name: "index_members_on_confirmation_token", unique: true
