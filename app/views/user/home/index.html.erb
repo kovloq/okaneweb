@@ -13,7 +13,7 @@
         <div class="row">
             <div class="col-md-4">
                 <h3>Income</h3>
-                <% if @tot_income["tot"] %>
+                <% if @tot_income["tot"].present? %>
                 <%= @tot_income["tot"] %>
                 <% else %>
                 0
@@ -22,7 +22,7 @@
             </div>
             <div class="col-md-4">
                 <h3>Expense</h3>
-                <% if @tot_expense["tot"] %>
+                <% if @tot_expense["tot"].present? %>
                 <%= @tot_expense["tot"] %>
                 <% else %>
                 0
@@ -30,7 +30,7 @@
             </div>
             <div class="col-md-4">
                 <h3>You Save</h3>
-                <% if(@tot_expense["tot"] && @tot_income["tot"]) %>
+                <% if(@tot_expense["tot"].present? && @tot_income["tot"].present?) %>
                 <%= @tot_income["tot"] - @tot_expense["tot"] %>
                 <% else %>
                 0
