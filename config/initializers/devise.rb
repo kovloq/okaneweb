@@ -236,7 +236,7 @@ Devise.setup do |config|
 
   config.omniauth :facebook, "1040009522689306", "ae13737e72bdc05e018b51ea64bf1440", scope: 'email', info_fields: 'email, name'
   config.omniauth :twitter, "zv15mICjTlRyaMzKU3fgkJw0N", "dr0Ec0WcjzZhumRlyWB05T6TpnoUr8XXOzqG3O3gqdjNPvZTLn"
-  config.omniauth :google_oauth2, "607962179714-mjhgdk4qv2l7ngl1ff7hi2hrh3qp6045.apps.googleusercontent.com", "pyxb65amQxQMtqkUd8wpszI6",scope: 'profile', "email,"image_aspect_ratio: 'square', image_size: 48, access_type: 'online'
+  config.omniauth :google_oauth2, "607962179714-mjhgdk4qv2l7ngl1ff7hi2hrh3qp6045.apps.googleusercontent.com", "pyxb65amQxQMtqkUd8wpszI6",scope: 'profile', "email",image_aspect_ratio: 'square', image_size: 48, access_type: 'online'
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
