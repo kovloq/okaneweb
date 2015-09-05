@@ -10,16 +10,20 @@ class Member < ActiveRecord::Base
 	    member.password = Devise.friendly_token[0,20]
 	    member.name = auth.info.name   # assuming the user model has a name
 	    member.image = auth.info.image # assuming the user model has an image
+	    
 	  end
 	end
 
-	def self.new_with_session(params, session)
-	   super.tap do |member|
-	      if data = session["devise.facebook_data"] && session["devise.facebook_data"]["extra"]["raw_info"]
-	        member.email = data["email"] if member.email.blank?
+	def self.new_with_session(params,session)
+	    if session["devise.user_attributes"]
+	      new(session["devise.user_attributes"],without_protection: true) do |member|
+	        member.attributes = params
+	        member.valid?
 	      end
+	    else
+	      super
 	    end
-	end
+  	end
 
    	protected
 	def confirmation_required?
