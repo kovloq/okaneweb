@@ -2,8 +2,8 @@ class Member < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,:confirmable,
-         :recoverable, :rememberable, :trackable, :validatable,:omniauthable, :omniauth_providers => [:facebook,:twitter,:google_oauth2]
-
+         :recoverable, :rememberable, :trackable, :omniauthable, :omniauth_providers => [:facebook,:twitter,:google_oauth2]
+# :validatable,
 	def self.from_omniauth(auth)
 	  where(provider: auth.provider, uid: auth.uid).first_or_create do |member|
 	    member.email = auth.info.email
