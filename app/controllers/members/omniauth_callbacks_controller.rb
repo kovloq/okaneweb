@@ -42,10 +42,10 @@ class Members::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def twitter
     
     @member = Member.from_omniauth(request.env["omniauth.auth"].except("extra"))
-    puts request.env["omniauth.auth"].except("extra")
+    # puts request.env["omniauth.auth"].except("extra")
     if @member.persisted?
-      sign_in_and_redirect @member, :event => :authentication #this will throw if @user is not activated
-      set_flash_message(:notice, :success, :kind => "Twitter") if is_navigational_format?
+      # sign_in_and_redirect @member, :event => :authentication #this will throw if @user is not activated
+      # set_flash_message(:notice, :success, :kind => "Twitter") if is_navigational_format?
     else
       session["devise.twitter_data"] = request.env["omniauth.auth"].except("extra")
       # session["devise.twitter_data"] = request.env["omniauth.auth"].select { |k, v| k == "email" }
