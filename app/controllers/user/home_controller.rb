@@ -3,6 +3,7 @@ class User::HomeController < UsersController
     require 'json'
 
   	# current_member["id"]
+    @ses=current_member
     @tot_income = Hash.new
     @tot_expense = Hash.new
   	@date = Date.today

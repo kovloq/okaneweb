@@ -1,7 +1,11 @@
 
+
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <h3 class="form-title">Login</h3>
     <%= devise_error_messages! %>
+    <% flash.each do |key, value| %>
+       <div class="<%= key %> alert-danger" role="alert"><%= value %></div>
+    <% end %>
       <div class="form-group">
           
           <%= f.label :email %>
