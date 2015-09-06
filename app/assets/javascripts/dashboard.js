@@ -27,5 +27,5 @@
 //= require exporting
 //= require bootstrap-datepicker.min
 //= require select2
-//= require jquery.validate.min
+//= require jquery.number.min.js
 

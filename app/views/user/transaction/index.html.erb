@@ -64,7 +64,7 @@
                             <tr>
                                 <td class="<%= color %>"><%= t.name %></td>
                                 
-                                <td class="<%= color %>"><%= icon %> <%= t.amount %></td>
+                                <td class="<%= color %>"><%= icon %> <%= number_to_currency(t.amount, unit: "",precision: 0) %></td>
                                 
                             </tr>
                         <% end %>

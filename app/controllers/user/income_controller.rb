@@ -7,6 +7,7 @@ class User::IncomeController < UsersController
   def create
     params[:transaction][:member_id]=current_member["id"]
     params[:transaction][:t_category]=1
+    params[:transaction][:amount]=params[:transaction][:amount].sub! ',', ''
     @transaction = Transaction.new(transaction_params)
     
     if @transaction.save
@@ -17,6 +18,7 @@ class User::IncomeController < UsersController
   end
 
   def update
+    params[:transaction][:amount]=params[:transaction][:amount].sub! ',', ''
     @transaction = Transaction.find(params[:id])
     if @transaction.update_attributes(income_params)
       redirect_to :action => 'edit', :id => params[:id]

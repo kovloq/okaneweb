@@ -48,7 +48,7 @@
                             <tr>
                                 <td><%= t.name %></td>
                                 <td><%= t.category.name %></td>
-                                <td><%= t.amount %></td>
+                                <td><%= number_to_currency(t.amount, unit: "",precision: 0) %></td>
                                 <td><%= t.date %></td>
                                 <td>
                                     <%= link_to "Edit",{:controller=>"user/income",:action=>"edit",:id=>t.id},:class=>"btn btn-warning" %>
