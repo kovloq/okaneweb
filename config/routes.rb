@@ -68,13 +68,26 @@ match 'user', to: 'user/home#index', via: [:get]
       resources :expense
       
       get 'faq/show'
+      # Setting 
       get 'setting/show'
-      get 'setting/update'
+      get 'setting/delete'
+      delete 'setting/delete_member'
+      get 'setting/profile'
+      get 'setting/password'
+      patch 'setting/update'
+      patch 'setting/update_password'
+      # Report 
       get 'report/index'
       get 'report/new'
       get 'report/create'
       get 'home/index'
     end
+
+    # resource :member, only: [:edit] do
+    #   collection do
+    #     patch 'user/setting/update_password'
+    #   end
+    # end
 
   # Example resource route with concerns:
   #   concern :toggleable do

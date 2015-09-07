@@ -1,6 +1,7 @@
 class Member < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
+  has_many :transaksi, class_name: "Transaction"
   devise :database_authenticatable, :registerable,:confirmable,
          :recoverable, :rememberable, :trackable, :omniauthable, :omniauth_providers => [:facebook,:twitter,:google_oauth2]
 # :validatable,

@@ -1,0 +1,35 @@
+ <h3 class="page-title">Setting</h3>
+<div class="page-bar">
+    <ul class="page-breadcrumb">
+        <li>
+            <%= link_to "Home", :controller => "user/home", :action => "index" %>
+            &nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;
+        </li>
+        
+        <li>
+        	<a href="#">Setting</a>
+        	&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;
+        </li>
+        <li>
+        	<a href="#">Delete</a>
+        </li>
+    </ul>
+</div>
+
+
+
+<div class="box-content">
+    <div class="content">
+        <div class="row">
+        	<div class="col-md-12">
+				 Upon deleting your account, your identification credentials (email, username, etc.) will be completely deleted from our database. You will NEVER be able to access any of the data you uploaded into your account.
+				 <br/><br/><br/>
+				<p>Are you sure you want to delete your account? </p>
+
+				<%= form_tag('/user/setting/delete_member', method: :delete) do %>
+				<input type="submit" value="Yes, delete my account" class="btn btn-danger">
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div>

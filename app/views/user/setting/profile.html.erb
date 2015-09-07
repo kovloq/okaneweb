@@ -1,0 +1,60 @@
+
+<h3 class="page-title">Profile</h3>
+<div class="page-bar">
+    <ul class="page-breadcrumb">
+        <li>
+            <%= link_to "Home", :controller => "user/home", :action => "index" %>
+            &nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;
+        </li>
+        <li>
+            <a href="#" title="setting" alt="setting">Setting</a>
+            &nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;
+        </li>
+        
+        <li>
+        <a href="#">Profile</a>
+        </li>
+    </ul>
+</div>
+
+
+<div class="portlet box green">
+	<div class="portlet-title">
+        <div class="caption">
+            <i class="fa fa-user"></i>
+            Profile
+        </div>
+    </div>
+    <div class="portlet-body form">
+		<%= form_for @profile,url: {action: "update"} do |f| %>
+		<div class="form-body">
+			<div class="form-group">
+				<label for="title" >Name</label>
+				<input type="text" name="member[name]" class="form-control" placeholder="Name" value="<%= current_member.name %>" required>
+				
+			</div>
+			<div class="form-group">
+				<label for="title" >Email</label>
+				<input type="email" name="member[email]" class="form-control" placeholder="Name" value="<%= current_member.email %>" required>
+			</div>
+			<% if current_member.image.present? %>
+			<div class="form-group">
+				<label for="title" >Image</label>
+				<img src="<%= current_member.image %>" alt="Image <%= current_member.provider %>">
+			</div>
+			<% end %>
+			
+		</div>
+		<div class="form-actions">
+				  	<input type="submit" class="btn green" value="Update"> 
+				  	<a href="#" onclick="goBack()" class="btn back-cancel default">Cancel</a>
+		 </div>
+		<% end %>
+					
+	</div>
+</div>
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>

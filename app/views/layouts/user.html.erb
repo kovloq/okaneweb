@@ -63,8 +63,9 @@
 									</a>
 									<ul class="dropdown-menu dropdown-menu-default">
 										<li>
-											<a href="#">
-											<i class="icon-user"></i> My Profile </a>
+											<%= link_to('/user/setting/profile', {:name => 'Profile',:title=>'Profile'}) do %>
+											<i class="icon-user"></i> My Profile 
+											<% end %>
 										</li>
 										
 										<li>
@@ -142,10 +143,31 @@
 								
 							</li>
 							<li>
-								<%= link_to('/user/setting/show', {:name => 'Setting',:title=>'Setting'}) do %>
+								<a title="setting" name="setting" href="#">
                                 <i class="icon-settings"></i>
                                 <span class="title">Setting</span>
-                                <% end %>
+                            	</a>
+                                <ul class="sub-menu">
+                                	<li>
+                                		<%= link_to('/user/setting/profile', {:name => 'Profile',:title=>'Profile'}) do %>
+			                                <i class="icon-user"></i>
+			                                <span class="submenu-title">Profile</span>
+			                            <% end %>
+                                	</li>
+                                	<li>
+                                		<%= link_to('/user/setting/password', {:name => 'Password',:title=>'Password'}) do %>
+			                                <i class="icon-lock"></i>
+			                                <span class="submenu-title">Password</span>
+			                            <% end %>
+                                	</li>
+                                	<li>
+                                		<%= link_to('/user/setting/delete', {:name => 'Delete Account',:title=>'Delete Account'}) do %>
+			                                <i style="color:red" class="icon-close"></i>
+			                                <span class="submenu-title" style="color:red">Delete Account</span>
+			                            <% end %>
+                                	</li>
+                                </ul>
+                                
 								
 							</li>
 							
