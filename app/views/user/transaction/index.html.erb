@@ -16,7 +16,7 @@
     <div class="portlet-title">
         <div class="caption">
             <i class="icon-user "></i>
-            <span class="caption-subject bold uppercase">Transaction List</span>
+            <span class="caption-subject bold uppercase">Transaction List (<%= @month %>)</span>
             
         </div>
         <div class="actions">
@@ -100,12 +100,13 @@ $(function () {
             text: 'Monthly Transaction',
             x: -20 //center
         },
+        exporting: { enabled: false },
         subtitle: {
             text: '<%= Date.today.strftime("%Y")%>',
             x: -20
         },
         xAxis: {
-            categories: <%= @mon.to_json.html_safe %>
+            categories: <%= @mon %>
         },
         yAxis: {
             title: {
@@ -127,12 +128,15 @@ $(function () {
             borderWidth: 0
         },
         series: [{
+            color: '#000',
             name: 'Income',
             data: <%= @inc %>
         }, {
+            color: 'red',
             name: 'Expense',
             data: <%= @exp %>
         }, {
+            color: 'blue',
             name: 'Balance',
             data: <%= @bal %>
         }]
