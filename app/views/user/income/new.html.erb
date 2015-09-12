@@ -41,7 +41,7 @@
 							</div>
 							<div class="form-group">
 								<label for="title" >Category</label>
-								<select class="form-control" name="transaction[category_id]">
+								<select class="form-control select2me" name="transaction[category_id]">
 									<option value="">Select Category</option>
 									<% @category.each do |c| %>
 									<option value="<%= c["id"] %>"><%= c["name"] %></option>

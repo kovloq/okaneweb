@@ -68,8 +68,79 @@
                                 
                             </tr>
                         <% end %>
+                        
                     </table>
-                    
+
+                    <hr/ style="border-color:#000">
+                    <div class="pull-left" style="font-size:16px;"><strong>Balance</strong></div>
+                    <% 
+                    if @balance < 0
+                        tanda="-"
+                        kelas="red-text"
+                    else
+                        tanda="+"
+                        kelas="green-text"
+                    end
+                    %>
+                    <div class="pull-right <%= kelas %>" style="font-size:16px;">
+                        <%= tanda %>
+                        <%= @balance %>
+                    </div>
+                    <div style="clear:both"></div>
                         <%= paginate @transaction %>
     </div><!-- End Body -->
 </div><!-- End Portlet -->
+<div id="chart"></div>
+
+
+<script>
+$(function () {
+    $('#chart').highcharts({
+        title: {
+            text: 'Monthly Transaction',
+            x: -20 //center
+        },
+        subtitle: {
+            text: '<%= Date.today.strftime("%Y")%>',
+            x: -20
+        },
+        xAxis: {
+            categories: <%= @mon.to_json.html_safe %>
+        },
+        yAxis: {
+            title: {
+                text: 'Transaction'
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
+        },
+        tooltip: {
+            // valueSuffix: '$'
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            borderWidth: 0
+        },
+        series: [{
+            name: 'Income',
+            data: <%= @inc %>
+        }, {
+            name: 'Expense',
+            data: <%= @exp %>
+        }, {
+            name: 'Balance',
+            data: <%= @bal %>
+        }]
+    });
+});
+</script>
+
+
+
+
+
