@@ -5,7 +5,8 @@
 			inc= Array.new 
 			exp=Array.new 
 			bal=Array.new
-			
+			@tot_expense=Array.new
+			@tot_income=Array.new
 			if Rails.env.development?
 				@all= Transaction.where("member_id = ? ",current_member.id).order("date ASC").group("strftime('%m', date)")
 				@transaction = Transaction.where("member_id = ? AND strftime('%m', date) = ? ",current_member.id,DateTime.now.strftime("%m")).order(:id => :desc).page(params[:page]).per(10) 
