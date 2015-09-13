@@ -8,12 +8,26 @@ class Members::RegistrationsController < Devise::RegistrationsController
   # def new
   #   super
   # end
-
+  require 'net/http'
   # POST /resource
   def create
     
     super
-    
+    if current_member.provider.nil?
+      gravatar_id = Digest::MD5::hexdigest(current_member.email).downcase
+      gravatar_check = "http://gravatar.com/avatar/#{gravatar_id}.png?d=404"
+      
+      # CHeck if gravatar exist
+      uri = URI.parse(gravatar_check)
+      http = Net::HTTP.new(uri.host, uri.port)
+      request = Net::HTTP::Get.new(uri.request_uri)
+      response = http.request(request)
+      if (response.code.to_i != 404)
+        url="https://secure.gravatar.com/avatar/#{gravatar_id}.png"
+        @member= Member.find_by_email(current_member.email)
+        @member.update_attribute(:image,url)
+      end
+    end
 
   end
 
