@@ -34,7 +34,7 @@
       			# @expense=Transaction.select("SUM(amount) as tot,date as month").where("t_category = ? ",2).order("date ASC").group("strftime('%m', date)")
 			else
 				
-				@all= Transaction.where("member_id = ? ",current_member.id).order("date ASC").group("date_trunc('month', date)","id")
+				@all= Transaction.select("date,date_trunc('month', date) as month").where("member_id = ? ",current_member.id).order("date ASC").group("date_trunc('month', date)")
 				@transaction = Transaction.where("member_id = ? AND EXTRACT(MONTH FROM date) = ? ",current_member.id,DateTime.now.strftime("%m")).order(:id => :desc).page(params[:page]).per(10) 
 				income_loop=Transaction.select("SUM(amount) as tot").where("EXTRACT(MONTH FROM date) = ? AND member_id = ? AND t_category = ? ",DateTime.now.strftime("%m"),current_member["id"],1).group("id")
 				income_loop.each do |s|
