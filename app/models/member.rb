@@ -11,7 +11,8 @@ class Member < ActiveRecord::Base
 	    member.password = Devise.friendly_token[0,20]
 	    member.name = auth.info.name   # assuming the user model has a name
 	    member.image = auth.info.image # assuming the user model has an image
-	    
+	    # member.birthdate=auth.extra.raw_info.birthday
+	    # member.gender=auth.extra.raw_info.gender
 	  end
 	end
 

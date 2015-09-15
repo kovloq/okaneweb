@@ -5,73 +5,36 @@
 			inc= Array.new 
 			exp=Array.new 
 			bal=Array.new
-			@tot_expense={"tot"=>0}
-			@tot_income={"tot"=>0}
-			if Rails.env.development?
-				@all= Transaction.where("member_id = ? ",current_member.id).order("date ASC").group("strftime('%m', date)")
-				@transaction = Transaction.where("member_id = ? AND strftime('%m', date) = ? ",current_member.id,DateTime.now.strftime("%m")).order(:id => :desc).page(params[:page]).per(10) 
-				@tot_income=Transaction.select("SUM(amount) as tot").where("strftime('%m', date) = ? AND member_id = ? AND t_category = ? ",DateTime.now.strftime("%m"),current_member["id"],1).first
-      			@tot_expense=Transaction.select("SUM(amount) as tot").where("strftime('%m', date) = ? AND member_id = ? AND t_category = ? ",DateTime.now.strftime("%m"),current_member["id"],2).first
-      			# Get all month
-      			@all.each do |a|
-      				mon << a["date"].strftime("%b")
-					# if(a["t_category"]==1)
-						# Get all income per month
-						@income=Transaction.select("SUM(amount) as tot,date as month").where("t_category = ? AND strftime('%m', date) = ? ",1,a["date"].strftime("%m")).order("date ASC").first
-						income = @income["tot"].present? ? @income["tot"] : 0
-					# else
-						# Get all expense per month
-						@expense=Transaction.select("SUM(amount) as tot,date as month").where("t_category = ? AND strftime('%m', date) = ? ",2,a["date"].strftime("%m")).order("date ASC").first
-						expense = @expense["tot"].present? ? @expense["tot"] : 0
-					# end
-					balance=income - expense
-					bal << balance
-					inc << income
-					exp << expense
-				end
-				# puts @all.to_sql
-      			# @income=Transaction.select("SUM(amount) as tot,date as month").where("t_category = ? ",1).order("date ASC").group("strftime('%m', date)")
-      			# @expense=Transaction.select("SUM(amount) as tot,date as month").where("t_category = ? ",2).order("date ASC").group("strftime('%m', date)")
-			else
-				
-				@all= Transaction.select("date,date_trunc('month', date) as month").where("member_id = ? ",current_member.id).order("date ASC").group("date_trunc('month', date)")
-				@transaction = Transaction.where("member_id = ? AND EXTRACT(MONTH FROM date) = ? ",current_member.id,DateTime.now.strftime("%m")).order(:id => :desc).page(params[:page]).per(10) 
-				income_loop=Transaction.select("SUM(amount) as tot").where("EXTRACT(MONTH FROM date) = ? AND member_id = ? AND t_category = ? ",DateTime.now.strftime("%m"),current_member["id"],1).group("id")
-				income_loop.each do |s|
-					@tot_income["tot"]=@tot_income["tot"] + s["tot"]
-				end
-      			expense_loop=Transaction.select("SUM(amount) as tot").where("EXTRACT(MONTH FROM date) = ? AND member_id = ? AND t_category = ? ",DateTime.now.strftime("%m"),current_member["id"],2).group("id")
-      			expense_loop.each do |s|
-      				@tot_expense["tot"]=@tot_expense["tot"] + s["tot"]
-      			end
-      			# Get all month
-      			@all.each do |a|
-      				mon << a["date"].strftime("%b")
-					# if(a["t_category"]==1)
-						# Get all income per month
-						@income=Transaction.select("SUM(amount) as tot,date as month").where("t_category = ? AND EXTRACT(MONTH FROM date) = ? ",1,a["date"].strftime("%m")).order("date ASC").group("date_trunc('month', date)","id").first
-						income = @income["tot"].present? ? @income["tot"] : 0
-					# else
-						# Get all expense per month
-						@expense=Transaction.select("SUM(amount) as tot,date as month").where("t_category = ? AND EXTRACT(MONTH FROM date) = ? ",2,a["date"].strftime("%m")).order("date ASC").group("date_trunc('month', date)","id").first
-						expense = @expense["tot"].present? ? @expense["tot"] : 0
-					# end
-					balance=income - expense
-					bal << balance
-					inc << income
-					exp << expense
-				end
-      			# @income=Transaction.select("SUM(amount) as tot,date as month").where("t_category = ? ",1).order("date ASC").group("EXTRACT(MONTH FROM date)")
-      			# @expense=Transaction.select("SUM(amount) as tot,date as month").where("t_category = ? ",2).order("date ASC").group("EXTRACT(MONTH FROM date)")
+			
+			
+			
+			@all= Transaction.where("member_id = ? ",current_member.id).order("date ASC").group("MONTH(date)")
+			@transaction = Transaction.where("member_id = ? AND MONTH(date) = ? ",current_member.id,DateTime.now.strftime("%m")).order(:id => :desc).page(params[:page]).per(10) 
+			@tot_income=Transaction.select("SUM(amount) as tot").where("MONTH(date) = ? AND member_id = ? AND t_category = ? ",DateTime.now.strftime("%m"),current_member["id"],1).first
+  			@tot_expense=Transaction.select("SUM(amount) as tot").where("MONTH(date) = ? AND member_id = ? AND t_category = ? ",DateTime.now.strftime("%m"),current_member["id"],2).first
+  			# Get all month
+  			@all.each do |a|
+  				mon << a["date"].strftime("%b")
+				# if(a["t_category"]==1)
+					# Get all income per month
+					@income=Transaction.select("SUM(amount) as tot").where("t_category = ? AND MONTH(date) = ? ",1,a["date"].strftime("%m")).order("date ASC").first
+					income = @income["tot"].present? ? @income["tot"] : 0
+				# else
+					# Get all expense per month
+					@expense=Transaction.select("SUM(amount) as tot").where("t_category = ? AND MONTH(date) = ? ",2,a["date"].strftime("%m")).order("date ASC").first
+					expense = @expense["tot"].present? ? @expense["tot"] : 0
+				# end
+				balance=income - expense
+				bal << balance
+				inc << income
+				exp << expense
 			end
-
-			if @tot_income.nil? || @tot_income["tot"].nil?
-				@tot_income={ "tot" =>0,
-           		"id" => ""}
-			end
-			if @tot_expense.nil? || @tot_expense["tot"].nil?
-				@tot_expense={ "tot" =>0,
-           		"id" => ""}
+			
+			if @tot_income["tot"].blank?
+				@tot_income={"tot"=>0}
+			end	
+			if @tot_expense["tot"].blank?
+				@tot_expense={"tot"=>0}
 			end
 
 			if @transaction.present?

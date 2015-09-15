@@ -7,7 +7,7 @@ gem 'rails', '4.1.5'
 
 group :production do
 	gem 'pg'
-	gem 'mysql2'
+	
 	gem 'thin'
 	gem 'rails_12factor'
 end
@@ -15,6 +15,8 @@ end
 group :development, :test do
 	gem 'sqlite3'
 end
+
+gem 'mysql2', '~> 0.3.18'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'

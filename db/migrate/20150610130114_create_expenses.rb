@@ -4,6 +4,7 @@ class CreateExpenses < ActiveRecord::Migration
       t.string :name
       t.integer :category_id
       t.integer :member_id
+      t.integer :amount
       t.date :date
       t.text :description
 

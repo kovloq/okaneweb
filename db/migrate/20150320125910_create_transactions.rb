@@ -3,6 +3,7 @@ class CreateTransactions < ActiveRecord::Migration
     create_table :transactions do |t|
       t.integer :user_id
       t.string :transaction_name
+      t.string :tags
       t.integer :category
       t.integer :value
       t.datetime :created_at

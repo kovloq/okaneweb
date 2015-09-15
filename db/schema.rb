@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150902100503) do
+ActiveRecord::Schema.define(version: 20150901124456) do
 
   create_table "admins", force: true do |t|
     t.string   "name"
@@ -19,16 +19,15 @@ ActiveRecord::Schema.define(version: 20150902100503) do
     t.string   "password"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "username"
   end
 
   create_table "categories", force: true do |t|
     t.string   "name"
     t.string   "color"
+    t.integer  "tipe",        limit: 2
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "tipe",        limit: 2
   end
 
   create_table "contacts", force: true do |t|
@@ -43,12 +42,12 @@ ActiveRecord::Schema.define(version: 20150902100503) do
   create_table "expenses", force: true do |t|
     t.string   "name"
     t.integer  "category_id"
+    t.integer  "member_id"
+    t.integer  "amount"
     t.date     "date"
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "member_id"
-    t.integer  "amount"
   end
 
   create_table "faqs", force: true do |t|
@@ -62,16 +61,17 @@ ActiveRecord::Schema.define(version: 20150902100503) do
   create_table "incomes", force: true do |t|
     t.string   "name"
     t.integer  "category_id"
+    t.integer  "member_id"
+    t.integer  "amount"
     t.date     "date"
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "member_id"
-    t.integer  "amount"
   end
 
   create_table "members", force: true do |t|
     t.string   "name"
+    t.string   "image"
     t.string   "email"
     t.string   "password"
     t.boolean  "gender"
@@ -93,14 +93,13 @@ ActiveRecord::Schema.define(version: 20150902100503) do
     t.string   "unconfirmed_email"
     t.string   "provider"
     t.string   "uid"
-    t.string   "image"
   end
 
-  add_index "members", ["confirmation_token"], name: "index_members_on_confirmation_token", unique: true
-  add_index "members", ["email"], name: "index_members_on_email", unique: true
-  add_index "members", ["provider"], name: "index_members_on_provider"
-  add_index "members", ["reset_password_token"], name: "index_members_on_reset_password_token", unique: true
-  add_index "members", ["uid"], name: "index_members_on_uid"
+  add_index "members", ["confirmation_token"], name: "index_members_on_confirmation_token", unique: true, using: :btree
+  add_index "members", ["email"], name: "index_members_on_email", unique: true, using: :btree
+  add_index "members", ["provider"], name: "index_members_on_provider", using: :btree
+  add_index "members", ["reset_password_token"], name: "index_members_on_reset_password_token", unique: true, using: :btree
+  add_index "members", ["uid"], name: "index_members_on_uid", using: :btree
 
   create_table "transactions", force: true do |t|
     t.integer  "member_id"
