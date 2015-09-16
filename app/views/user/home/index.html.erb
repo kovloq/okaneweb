@@ -15,7 +15,7 @@
                 <h3>Income</h3>
                 <span class="green-text" style="font-size:16px">
                 <% if @tot_income["tot"].present? && @tot_income.present? %>
-                    <%= @tot_income["tot"] %>
+                    <%= number_to_currency(@tot_income["tot"], unit: "",precision: 0) %>
                 <% else %>
                 0
                 <% end %>
@@ -25,7 +25,7 @@
                 <h3>Expense</h3>
                 <span class="red-text" style="font-size:16px">
                 <% if @tot_expense["tot"].present? && @tot_expense.present? %>
-                <%= @tot_expense["tot"] %>
+                <%= number_to_currency(@tot_expense["tot"], unit: "",precision: 0) %>
                 <% else %>
                 0
                 <% end %>
@@ -36,7 +36,7 @@
                 <span style="font-size:16px">
                 <% if(@tot_expense["tot"].present? && @tot_expense.present? && @tot_income["tot"].present? && @tot_income.present?) %>
                 
-                <%= "#{@tot_income['tot'] - @tot_expense['tot']}" %>
+                <%= number_to_currency("#{@tot_income['tot'] - @tot_expense['tot']}", unit: "",precision: 0) %>
                 <% else %>
                 0
                 <% end %>
@@ -98,7 +98,7 @@ $(function () {
                 <% @income.each do |i| %>
                 {
                     name: "<%= i.category.name %>",
-                    y: <%= number_with_precision i["total"].to_f/@income.length, :precision => 2 %>
+                    y: <%= number_with_precision i["amount"].to_f/@tot_income['tot'], :precision => 2 %>
                 },
                 <% end %>
                 ]
@@ -137,7 +137,7 @@ $(function () {
                 <% @expense.each do |i| %>
                 {
                     name: "<%= i.category.name %>",
-                    y: <%= number_with_precision i["total"].to_f/@income.length, :precision => 2 %>
+                    y: <%= number_with_precision i["amount"].to_f/@tot_expense['tot'], :precision => 2 %>
                 },
                 <% end %>
                 ]

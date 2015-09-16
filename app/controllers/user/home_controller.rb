@@ -8,8 +8,8 @@ class User::HomeController < UsersController
     @tot_expense = Hash.new
   	@date = Date.today
   	
-  	@income=Transaction.select("COUNT(*) as total,category_id").where("MONTH(date) = ? AND member_id = ? AND t_category = ? ",DateTime.now.strftime("%m"),current_member["id"],1).group("category_id")
-  	@expense=Transaction.select("COUNT(*) as total,category_id").where("MONTH(date) = ? AND member_id = ? AND t_category = ? ",DateTime.now.strftime("%m"),current_member["id"],2).group("category_id")
+  	@income=Transaction.where("MONTH(date) = ? AND member_id = ? AND t_category = ? ",DateTime.now.strftime("%m"),current_member["id"],1).group("category_id")
+  	@expense=Transaction.where("MONTH(date) = ? AND member_id = ? AND t_category = ? ",DateTime.now.strftime("%m"),current_member["id"],2).group("category_id")
     @tot_income=Transaction.select("SUM(amount) as tot").where("MONTH(date) = ? AND member_id = ? AND t_category = ? ",DateTime.now.strftime("%m"),current_member["id"],1).first
     @tot_expense=Transaction.select("SUM(amount) as tot").where("MONTH(date) = ? AND member_id = ? AND t_category = ? ",DateTime.now.strftime("%m"),current_member["id"],2).first
   	
