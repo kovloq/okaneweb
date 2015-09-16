@@ -12,8 +12,9 @@ class User::IncomeController < UsersController
     
     if @transaction.save
         redirect_to :controller => "user/income", :action => "index"
-    else
-      render :action => 'add'
+    else 
+      @category=Category.where("tipe = ? ",1);
+      render :action => 'new'
     end
   end
 

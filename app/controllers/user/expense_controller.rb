@@ -12,7 +12,8 @@ class User::ExpenseController < UsersController
     if @transaction.save
         redirect_to :controller => "user/expense", :action => "index"
     else
-      render :action => 'add'
+      @category=Category.where("tipe = ? ",2);
+      render :action => 'new'
     end
   end
 

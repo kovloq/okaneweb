@@ -5,5 +5,6 @@ class Transaction < ActiveRecord::Base
 	validates :name, presence: true
 	validates :category_id, presence: true
 	validates :date, presence: true
-	validates :description, presence: true
+	validates :amount, presence: true
+	# validates :description, presence: true
 end
