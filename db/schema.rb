@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 20150901124456) do
 
   create_table "admins", force: true do |t|
     t.string   "name"
+    t.string   "username"
     t.string   "email"
     t.string   "password"
     t.datetime "created_at"
@@ -74,7 +75,7 @@ ActiveRecord::Schema.define(version: 20150901124456) do
     t.string   "image"
     t.string   "email"
     t.string   "password"
-    t.boolean  "gender"
+    t.string   "gender"
     t.date     "birthdate"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -104,6 +105,7 @@ ActiveRecord::Schema.define(version: 20150901124456) do
   create_table "transactions", force: true do |t|
     t.integer  "member_id"
     t.string   "name"
+    t.string   "tags"
     t.integer  "t_category"
     t.integer  "amount"
     t.datetime "created_at"

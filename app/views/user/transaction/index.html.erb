@@ -84,7 +84,7 @@
                     %>
                     <div class="pull-right <%= kelas %>" style="font-size:16px;">
                         <%= tanda %>
-                        <%= @balance %>
+                        <%= number_to_currency(@balance, unit: "",precision: 0) %>
                     </div>
                     <div style="clear:both"></div>
                         <%= paginate @transaction %>

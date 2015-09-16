@@ -1,4 +1,8 @@
 language: ruby
 rvm:
-  - 1.9.3
   - 2.1.2
+env:
+  - DB=mysql
+  - RAILS_ENV=production
+script:
+  - RAILS_ENV=production bundle exec rake db:migrate --trace
