@@ -28,10 +28,10 @@ test:
 
 production:
   # <<: *default
-  # database: db/production.sqlite3
-  adapter: postgresql
-  host: ec2-54-235-147-211.compute-1.amazonaws.com
-  username: frikrukekqntcj
-  database: df1n49nkobkp7k
-  port: 5432
-  password: Jt2Htrdde3u8VZj1M_5uFyxjOr
+  encoding: utf8
+  adapter: mysql2
+  host: us-cdbr-iron-east-02.cleardb.net
+  username: bb3ba9c1ecd664
+  database: heroku_aba119144c700a2
+  port: 3306
+  password: f2cb1e6c
