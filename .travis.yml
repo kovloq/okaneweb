@@ -2,7 +2,9 @@ language: ruby
 rvm:
   - 2.1.2
 env:
-  - DB=mysql
-  - RAILS_ENV=production
+  global:
+	- CI=true
+  	- DB=mysql
+  	- RAILS_ENV=production
 script:
   - RAILS_ENV=production bundle exec rake db:migrate --trace
