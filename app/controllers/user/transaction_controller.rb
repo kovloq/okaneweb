@@ -17,11 +17,11 @@
   				mon << a["date"].strftime("%b")
 				# if(a["t_category"]==1)
 					# Get all income per month
-					@income=Transaction.select("SUM(amount) as tot").where("t_category = ? AND MONTH(date) = ? ",1,a["date"].strftime("%m")).order("date ASC").first
+					@income=Transaction.select("SUM(amount) as tot").where("t_category = ? AND MONTH(date) = ? AND member_id = ? ",1,a["date"].strftime("%m"),current_member.id).order("date ASC").first
 					income = @income["tot"].present? ? @income["tot"] : 0
 				# else
 					# Get all expense per month
-					@expense=Transaction.select("SUM(amount) as tot").where("t_category = ? AND MONTH(date) = ? ",2,a["date"].strftime("%m")).order("date ASC").first
+					@expense=Transaction.select("SUM(amount) as tot").where("t_category = ? AND MONTH(date) = ? AND member_id = ? ",2,a["date"].strftime("%m"),current_member.id).order("date ASC").first
 					expense = @expense["tot"].present? ? @expense["tot"] : 0
 				# end
 				balance=income - expense
