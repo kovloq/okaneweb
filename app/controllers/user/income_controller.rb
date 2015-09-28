@@ -7,7 +7,8 @@ class User::IncomeController < UsersController
   def create
     params[:transaction][:member_id]=current_member["id"]
     params[:transaction][:t_category]=1
-    params[:transaction][:amount]=params[:transaction][:amount].sub! ',', ''
+    params[:transaction][:amount]=params[:transaction][:amount].gsub! ',', ''
+
     @transaction = Transaction.new(transaction_params)
     
     if @transaction.save
@@ -19,9 +20,10 @@ class User::IncomeController < UsersController
   end
 
   def update
-    params[:transaction][:amount]=params[:transaction][:amount].sub! ',', ''
+    params[:transaction][:amount]=params[:transaction][:amount].gsub! ',', ''
+    # puts params[:transaction][:amount]
     @transaction = Transaction.find(params[:id])
-    if @transaction.update_attributes(income_params)
+    if @transaction.update_attributes(transaction_params)
       redirect_to :action => 'edit', :id => params[:id]
     else
       render :action => 'edit'
