@@ -36,7 +36,9 @@ class User::IncomeController < UsersController
   end
 
   def index
-  	@transaction = Transaction.where("member_id = ? AND t_category = ? ",current_member["id"],1).order(:id => :desc).page(params[:page]).per(10) 
+  	@transaction = Transaction.where("member_id = ? AND t_category = ? ",current_member["id"],1).order(:id => :desc).page(params[:page]).per(10)
+    @transaction = @transaction.where("category_id = ?",params[:category_id]) if params[:category_id].present?
+    @transaction = @transaction.where("name like ?","%#{params[:title]}%") if params[:title].present?
   end
 
   def destroy

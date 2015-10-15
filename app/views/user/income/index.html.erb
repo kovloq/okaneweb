@@ -17,6 +17,47 @@
     </ul>
 </div>
 
+<!-- Search -->
+<div class="portlet box green">
+    <div class="portlet-title">
+        <div class="caption">
+            <i class="icon-magnifier "></i>
+            <span class="caption-subject bold uppercase">Search Income</span>
+        </div>
+        <div class="tools">
+            <a class="collapse" href="javascript:;" data-original-title="" title=""></a>
+        </div>
+    </div>
+    <div class="portlet-body form">
+        <%= form_tag user_income_index_path, :method => 'get',:class=>"form-horizontal" do %>
+        <div class="form-body">
+            <div class="form-group">
+                <label class="col-md-3 control-label">Title</label>
+                <div class="col-md-4">
+                    <%= text_field_tag :title, params[:title],:class=>"form-control" %>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-3 control-label">Category</label>
+                <div class="col-md-4">
+                    
+                    <%= select_tag :category_id, options_from_collection_for_select(Category.where("tipe = ?",1), :id, :name, params[:category_id]), include_blank: true,:class=>"form-control" %>
+                </div>
+            </div>
+          
+        </div>
+        <div class="form-actions">
+            <div class="row">
+                <div class="col-md-offset-3 col-md-9">
+                <input type="submit" value="Search" class="btn btn-success">
+                </div>
+            </div>
+        </div>
+        <% end %>
+    </div>
+</div>
+
+
 <div class="portlet box green">
     <div class="portlet-title">
         <div class="caption">
