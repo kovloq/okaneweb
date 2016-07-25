@@ -1,0 +1,130 @@
+doctype html
+html
+  head
+    title Okane
+    meta charset="utf-8"
+	meta http-equiv="X-UA-Compatible" content="IE=edge"
+	meta content="width=device-width  initial-scale=1" name="viewport"
+	meta content="Expense Manager" name="description"
+	meta content="Perdana Adhitama" name="author"
+	= stylesheet_link_tag    'dashboard', media: 'all', 'data-turbolinks-track' => true 
+  
+	= javascript_include_tag 'dashboard', 'data-turbolinks-track' => true 
+	  
+	= csrf_meta_tags 
+    
+    javascript:
+      jQuery(document).ready(function() {    
+	    Metronic.init(); // init metronic core components
+		Layout.init(); // init current layout
+		$('.amount').number( true, 0 );
+	 });
+
+	css:
+		.tanggal {
+		color: #7f96ac;
+		padding: 24px 12px;
+		}
+	
+
+  body.page-header-fixed.page-footer-fixed.page-container-bg-solid.page-sidebar-closed-hide-logo
+
+	div.page-header.navbar.navbar-fixed-top
+	
+		div.page-header-inner
+			
+			div.page-logo
+				a href="index.html"
+					= image_tag("logo_okane.png", :height=>"14",:alt => "Logo",:class => "logo-default") 
+				
+				div.menu-toggler.sidebar-toggler
+			
+			a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse"
+			
+			div.page-top
+				
+				<!-- BEGIN TOP NAVIGATION MENU -->
+				div.top-menu
+                    ul.nav.navbar-nav.pull-right
+                        <!-- BEGIN USER LOGIN DROPDOWN -->
+						li.tanggal 
+							= Date.today.strftime("%a, %d %b %Y")
+						li.dropdown.dropdown-user
+							a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true"
+								img alt="" class="img-circle" src="#{current_member.image}"
+								span.username.username-hide-on-mobile
+									= current_member.name 
+								i.fa.fa-angle-down
+							
+							ul.dropdown-menu.dropdown-menu-default
+								li
+									= link_to('/user/setting/profile', {:name => 'Profile',:title=>'Profile'}) do 
+										i.icon-user My Profile 
+								li
+									= link_to(destroy_member_session_path, :method => :delete) do |s|
+					                    i.icon-key Log Out 
+					                
+	div.clearfix
+
+	div.page-container
+		<!-- BEGIN SIDEBAR -->
+		div.page-sidebar-wrapper
+			div.page-sidebar.navbar-collapse.collapse				
+				ul.page-sidebar-menu.page-sidebar-menu-hover-submenu data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200"
+					li
+						= link_to('/user/', {:name => 'Dashboard',:title=>'Dashboard'}) do 
+	                        i.icon-home
+	                        span.title 
+	                        	Dashboard
+					li
+						a href="/user/transaction"
+	                        i.icon-calendar
+	                        span.title Transaction
+	                        span.arrow
+                        ul.sub-menu
+                        	li
+                        		= link_to('/user/income', {:name => 'Income',:title=>'Income'}) do 
+	                                i.icon-home
+	                                span.submenu-title Income
+	                            
+                        	li
+                        		= link_to('/user/expense', {:name => 'Expense',:title=>'Expense'}) do 
+	                                i.icon-home
+	                                span.submenu-title Expense
+                        	li
+                        		= link_to('/user/report/index', {:name => 'Report',:title=>'Report'}) do 
+	                                i.icon-docs
+	                                span.submenu-title Report
+	                       
+					li
+						= link_to('/user/faq/show', {:name => 'FAQ',:title=>'FAQ'}) do
+	                        i.icon-question
+	                        span.title FAQ
+	                        
+					li
+						a title="setting" name="setting" href="#"
+	                        i.icon-settings
+	                        span.title Setting
+                        ul.sub-menu
+                        	li
+                        		= link_to('/user/setting/profile', {:name => 'Profile',:title=>'Profile'}) do
+	                                i.icon-user
+	                                span.submenu-title Profile
+	                            
+                        	li
+                        		= link_to('/user/setting/password', {:name => 'Password',:title=>'Password'}) do
+	                                i.icon-lock
+	                                span.submenu-title Password
+                        	li
+                        		= link_to('/user/setting/delete', {:name => 'Delete Account',:title=>'Delete Account'}) do
+	                                i style="color:red" class="icon-close"
+	                                span class="submenu-title" style="color:red" Delete Account
+
+		div.page-content-wrapper
+			div.page-content
+				== yield
+
+	div.page-footer
+		div.page-footer-inner 2016 &copy; Created by: Dana.
+		div.scroll-to-top i.icon-arrow-up
+      

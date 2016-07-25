@@ -1,0 +1,2194 @@
+---
+provinces:
+  - name: Aceh
+    id: 1
+
+    cities:
+      - name: Kabupaten Simeulue
+        id: 1
+        province_id: 1
+
+      - name: Kabupaten Aceh Singkil
+        id: 2
+        province_id: 1
+
+      - name: Kabupaten Aceh Selatan
+        id: 3
+        province_id: 1
+
+      - name: Kabupaten Aceh Tenggara
+        id: 4
+        province_id: 1
+
+      - name: Kabupaten Aceh Timur
+        id: 5
+        province_id: 1
+
+      - name: Kabupaten Aceh Tengah
+        id: 6
+        province_id: 1
+
+      - name: Kabupaten Aceh Barat
+        id: 7
+        province_id: 1
+
+      - name: Kabupaten Aceh Besar
+        id: 8
+        province_id: 1
+
+      - name: Kabupaten Pidie
+        id: 9
+        province_id: 1
+
+      - name: Kabupaten Bireuen
+        id: 10
+        province_id: 1
+
+      - name: Kabupaten Aceh Utara
+        id: 11
+        province_id: 1
+
+      - name: Kabupaten Aceh Barat Daya
+        id: 12
+        province_id: 1
+
+      - name: Kabupaten Gayo Lues
+        id: 13
+        province_id: 1
+
+      - name: Kabupaten Aceh Tamiang
+        id: 14
+        province_id: 1
+
+      - name: Kabupaten Nagan Raya
+        id: 15
+        province_id: 1
+
+      - name: Kabupaten Aceh Jaya
+        id: 16
+        province_id: 1
+
+      - name: Kabupaten Bener Meriah
+        id: 17
+        province_id: 1
+
+      - name: Kabupaten Pidie Jaya
+        id: 18
+        province_id: 1
+
+      - name: Kota Banda Aceh
+        id: 19
+        province_id: 1
+
+      - name: Kota Sabang
+        id: 20
+        province_id: 1
+
+      - name: Kota Langsa
+        id: 21
+        province_id: 1
+
+      - name: Kota Lhokseumawe
+        id: 22
+        province_id: 1
+
+      - name: Kota Subulussalam
+        id: 23
+        province_id: 1
+
+  - name: Sumatera Utara
+    id: 2
+
+    cities:
+      - name: Kabupaten Nias
+        id: 24
+        province_id: 2
+
+      - name: Kabupaten Mandailing Natal
+        id: 25
+        province_id: 2
+
+      - name: Kabupaten Tapanuli Selatan
+        id: 26
+        province_id: 2
+
+      - name: Kabupaten Tapanuli Tengah
+        id: 27
+        province_id: 2
+
+      - name: Kabupaten Tapanuli Utara
+        id: 28
+        province_id: 2
+
+      - name: Kabupaten Toba Samosir
+        id: 29
+        province_id: 2
+
+      - name: Kabupaten Labuhan Batu
+        id: 30
+        province_id: 2
+
+      - name: Kabupaten Asahan
+        id: 31
+        province_id: 2
+
+      - name: Kabupaten Simalungun
+        id: 32
+        province_id: 2
+
+      - name: Kabupaten Dairi
+        id: 33
+        province_id: 2
+
+      - name: Kabupaten Karo
+        id: 34
+        province_id: 2
+
+      - name: Kabupaten Deli Serdang
+        id: 35
+        province_id: 2
+
+      - name: Kabupaten Langkat
+        id: 36
+        province_id: 2
+
+      - name: Kabupaten Nias Selatan
+        id: 37
+        province_id: 2
+
+      - name: Kabupaten Humbang Hasundutan
+        id: 38
+        province_id: 2
+
+      - name: Kabupaten Pakpak Bharat
+        id: 39
+        province_id: 2
+
+      - name: Kabupaten Samosir
+        id: 40
+        province_id: 2
+
+      - name: Kabupaten Serdang Bedagai
+        id: 41
+        province_id: 2
+
+      - name: Kabupaten Batu Bara
+        id: 42
+        province_id: 2
+
+      - name: Kabupaten Padang Lawas Utara
+        id: 43
+        province_id: 2
+
+      - name: Kabupaten Padang Lawas
+        id: 44
+        province_id: 2
+
+      - name: Kabupaten Labuhan Batu Selatan
+        id: 45
+        province_id: 2
+
+      - name: Kabupaten Labuhan Batu Utara
+        id: 46
+        province_id: 2
+
+      - name: Kabupaten Nias Utara
+        id: 47
+        province_id: 2
+
+      - name: Kabupaten Nias Barat
+        id: 48
+        province_id: 2
+
+      - name: Kota Sibolga
+        id: 49
+        province_id: 2
+
+      - name: Kota Tanjung Balai
+        id: 50
+        province_id: 2
+
+      - name: Kota Pematang Siantar
+        id: 51
+        province_id: 2
+
+      - name: Kota Tebing Tinggi
+        id: 52
+        province_id: 2
+
+      - name: Kota Medan
+        id: 53
+        province_id: 2
+
+      - name: Kota Binjai
+        id: 54
+        province_id: 2
+
+      - name: Kota Padangsidimpuan
+        id: 55
+        province_id: 2
+
+      - name: Kota Gunungsitoli
+        id: 56
+        province_id: 2
+
+  - name: Sumatera Barat
+    id: 3
+
+    cities:
+      - name: Kabupaten Kepulauan Mentawai
+        id: 57
+        province_id: 3
+
+      - name: Kabupaten Pesisir Selatan
+        id: 58
+        province_id: 3
+
+      - name: Kabupaten Solok
+        id: 59
+        province_id: 3
+
+      - name: Kabupaten Sijunjung
+        id: 60
+        province_id: 3
+
+      - name: Kabupaten Tanah Datar
+        id: 61
+        province_id: 3
+
+      - name: Kabupaten Padang Pariaman
+        id: 62
+        province_id: 3
+
+      - name: Kabupaten Agam
+        id: 63
+        province_id: 3
+
+      - name: Kabupaten Lima Puluh Kota
+        id: 64
+        province_id: 3
+
+      - name: Kabupaten Pasaman
+        id: 65
+        province_id: 3
+
+      - name: Kabupaten Solok Selatan
+        id: 66
+        province_id: 3
+
+      - name: Kabupaten Dharmasraya
+        id: 67
+        province_id: 3
+
+      - name: Kabupaten Pasaman Barat
+        id: 68
+        province_id: 3
+
+      - name: Kota Padang
+        id: 69
+        province_id: 3
+
+      - name: Kota Solok
+        id: 70
+        province_id: 3
+
+      - name: Kota Sawah Lunto
+        id: 71
+        province_id: 3
+
+      - name: Kota Padang Panjang
+        id: 72
+        province_id: 3
+
+      - name: Kota Bukittinggi
+        id: 73
+        province_id: 3
+
+      - name: Kota Payakumbuh
+        id: 74
+        province_id: 3
+
+      - name: Kota Pariaman
+        id: 75
+        province_id: 3
+
+  - name: Riau
+    id: 4
+
+    cities:
+      - name: Kabupaten Kuantan Singingi
+        id: 76
+        province_id: 4
+
+      - name: Kabupaten Indragiri Hulu
+        id: 77
+        province_id: 4
+
+      - name: Kabupaten Indragiri Hilir
+        id: 78
+        province_id: 4
+
+      - name: Kabupaten Pelalawan
+        id: 79
+        province_id: 4
+
+      - name: Kabupaten S I A K
+        id: 80
+        province_id: 4
+
+      - name: Kabupaten Kampar
+        id: 81
+        province_id: 4
+
+      - name: Kabupaten Rokan Hulu
+        id: 82
+        province_id: 4
+
+      - name: Kabupaten Bengkalis
+        id: 83
+        province_id: 4
+
+      - name: Kabupaten Rokan Hilir
+        id: 84
+        province_id: 4
+
+      - name: Kabupaten Kepulauan Meranti
+        id: 85
+        province_id: 4
+
+      - name: Kota Pekanbaru
+        id: 86
+        province_id: 4
+
+      - name: Kota D U M A I
+        id: 87
+        province_id: 4
+
+  - name: Jambi
+    id: 5
+
+    cities:
+      - name: Kabupaten Kerinci
+        id: 88
+        province_id: 5
+
+      - name: Kabupaten Merangin
+        id: 89
+        province_id: 5
+
+      - name: Kabupaten Sarolangun
+        id: 90
+        province_id: 5
+
+      - name: Kabupaten Batang Hari
+        id: 91
+        province_id: 5
+
+      - name: Kabupaten Muaro Jambi
+        id: 92
+        province_id: 5
+
+      - name: Kabupaten Tanjung Jabung Timur
+        id: 93
+        province_id: 5
+
+      - name: Kabupaten Tanjung Jabung Barat
+        id: 94
+        province_id: 5
+
+      - name: Kabupaten Tebo
+        id: 95
+        province_id: 5
+
+      - name: Kabupaten Bungo
+        id: 96
+        province_id: 5
+
+      - name: Kota Jambi
+        id: 97
+        province_id: 5
+
+      - name: Kota Sungai Penuh
+        id: 98
+        province_id: 5
+
+  - name: Sumatera Selatan
+    id: 6
+
+    cities:
+      - name: Kabupaten Ogan Komering Ulu
+        id: 99
+        province_id: 6
+
+      - name: Kabupaten Ogan Komering Ilir
+        id: 100
+        province_id: 6
+
+      - name: Kabupaten Muara Enim
+        id: 101
+        province_id: 6
+
+      - name: Kabupaten Lahat
+        id: 102
+        province_id: 6
+
+      - name: Kabupaten Musi Rawas
+        id: 103
+        province_id: 6
+
+      - name: Kabupaten Musi Banyuasin
+        id: 104
+        province_id: 6
+
+      - name: Kabupaten Banyu Asin
+        id: 105
+        province_id: 6
+
+      - name: Kabupaten Ogan Komering Ulu Selatan
+        id: 106
+        province_id: 6
+
+      - name: Kabupaten Ogan Komering Ulu Timur
+        id: 107
+        province_id: 6
+
+      - name: Kabupaten Ogan Ilir
+        id: 108
+        province_id: 6
+
+      - name: Kabupaten Empat Lawang
+        id: 109
+        province_id: 6
+
+      - name: Kabupaten Penukal Abab Lematang Ilir
+        id: 110
+        province_id: 6
+
+      - name: Kabupaten Musi Rawas Utara
+        id: 111
+        province_id: 6
+
+      - name: Kota Palembang
+        id: 112
+        province_id: 6
+
+      - name: Kota Prabumulih
+        id: 113
+        province_id: 6
+
+      - name: Kota Pagar Alam
+        id: 114
+        province_id: 6
+
+      - name: Kota Lubuklinggau
+        id: 115
+        province_id: 6
+
+  - name: Bengkulu
+    id: 7
+
+    cities:
+      - name: Kabupaten Bengkulu Selatan
+        id: 116
+        province_id: 7
+
+      - name: Kabupaten Rejang Lebong
+        id: 117
+        province_id: 7
+
+      - name: Kabupaten Bengkulu Utara
+        id: 118
+        province_id: 7
+
+      - name: Kabupaten Kaur
+        id: 119
+        province_id: 7
+
+      - name: Kabupaten Seluma
+        id: 120
+        province_id: 7
+
+      - name: Kabupaten Mukomuko
+        id: 121
+        province_id: 7
+
+      - name: Kabupaten Lebong
+        id: 122
+        province_id: 7
+
+      - name: Kabupaten Kepahiang
+        id: 123
+        province_id: 7
+
+      - name: Kabupaten Bengkulu Tengah
+        id: 124
+        province_id: 7
+
+      - name: Kota Bengkulu
+        id: 125
+        province_id: 7
+
+  - name: Lampung
+    id: 8
+
+    cities:
+      - name: Kabupaten Lampung Barat
+        id: 126
+        province_id: 8
+
+      - name: Kabupaten Tanggamus
+        id: 127
+        province_id: 8
+
+      - name: Kabupaten Lampung Selatan
+        id: 128
+        province_id: 8
+
+      - name: Kabupaten Lampung Timur
+        id: 129
+        province_id: 8
+
+      - name: Kabupaten Lampung Tengah
+        id: 130
+        province_id: 8
+
+      - name: Kabupaten Lampung Utara
+        id: 131
+        province_id: 8
+
+      - name: Kabupaten Way Kanan
+        id: 132
+        province_id: 8
+
+      - name: Kabupaten Tulangbawang
+        id: 133
+        province_id: 8
+
+      - name: Kabupaten Pesawaran
+        id: 134
+        province_id: 8
+
+      - name: Kabupaten Pringsewu
+        id: 135
+        province_id: 8
+
+      - name: Kabupaten Mesuji
+        id: 136
+        province_id: 8
+
+      - name: Kabupaten Tulang Bawang Barat
+        id: 137
+        province_id: 8
+
+      - name: Kabupaten Pesisir Barat
+        id: 138
+        province_id: 8
+
+      - name: Kota Bandar Lampung
+        id: 139
+        province_id: 8
+
+      - name: Kota Metro
+        id: 140
+        province_id: 8
+
+  - name: Kepulauan Bangka Belitung
+    id: 9
+
+    cities:
+      - name: Kabupaten Bangka
+        id: 141
+        province_id: 9
+
+      - name: Kabupaten Belitung
+        id: 142
+        province_id: 9
+
+      - name: Kabupaten Bangka Barat
+        id: 143
+        province_id: 9
+
+      - name: Kabupaten Bangka Tengah
+        id: 144
+        province_id: 9
+
+      - name: Kabupaten Bangka Selatan
+        id: 145
+        province_id: 9
+
+      - name: Kabupaten Belitung Timur
+        id: 146
+        province_id: 9
+
+      - name: Kota Pangkal Pinang
+        id: 147
+        province_id: 9
+
+  - name: Kepulauan Riau
+    id: 10
+
+    cities:
+      - name: Kabupaten Karimun
+        id: 148
+        province_id: 10
+
+      - name: Kabupaten Bintan
+        id: 149
+        province_id: 10
+
+      - name: Kabupaten Natuna
+        id: 150
+        province_id: 10
+
+      - name: Kabupaten Lingga
+        id: 151
+        province_id: 10
+
+      - name: Kabupaten Kepulauan Anambas
+        id: 152
+        province_id: 10
+
+      - name: Kota B A T A M
+        id: 153
+        province_id: 10
+
+      - name: Kota Tanjung Pinang
+        id: 154
+        province_id: 10
+
+  - name: Dki Jakarta
+    id: 11
+
+    cities:
+      - name: Kabupaten Kepulauan Seribu
+        id: 155
+        province_id: 11
+
+      - name: Kota Jakarta Selatan
+        id: 156
+        province_id: 11
+
+      - name: Kota Jakarta Timur
+        id: 157
+        province_id: 11
+
+      - name: Kota Jakarta Pusat
+        id: 158
+        province_id: 11
+
+      - name: Kota Jakarta Barat
+        id: 159
+        province_id: 11
+
+      - name: Kota Jakarta Utara
+        id: 160
+        province_id: 11
+
+  - name: Jawa Barat
+    id: 12
+
+    cities:
+      - name: Kabupaten Bogor
+        id: 161
+        province_id: 12
+
+      - name: Kabupaten Sukabumi
+        id: 162
+        province_id: 12
+
+      - name: Kabupaten Cianjur
+        id: 163
+        province_id: 12
+
+      - name: Kabupaten Bandung
+        id: 164
+        province_id: 12
+
+      - name: Kabupaten Garut
+        id: 165
+        province_id: 12
+
+      - name: Kabupaten Tasikmalaya
+        id: 166
+        province_id: 12
+
+      - name: Kabupaten Ciamis
+        id: 167
+        province_id: 12
+
+      - name: Kabupaten Kuningan
+        id: 168
+        province_id: 12
+
+      - name: Kabupaten Cirebon
+        id: 169
+        province_id: 12
+
+      - name: Kabupaten Majalengka
+        id: 170
+        province_id: 12
+
+      - name: Kabupaten Sumedang
+        id: 171
+        province_id: 12
+
+      - name: Kabupaten Indramayu
+        id: 172
+        province_id: 12
+
+      - name: Kabupaten Subang
+        id: 173
+        province_id: 12
+
+      - name: Kabupaten Purwakarta
+        id: 174
+        province_id: 12
+
+      - name: Kabupaten Karawang
+        id: 175
+        province_id: 12
+
+      - name: Kabupaten Bekasi
+        id: 176
+        province_id: 12
+
+      - name: Kabupaten Bandung Barat
+        id: 177
+        province_id: 12
+
+      - name: Kabupaten Pangandaran
+        id: 178
+        province_id: 12
+
+      - name: Kota Bogor
+        id: 179
+        province_id: 12
+
+      - name: Kota Sukabumi
+        id: 180
+        province_id: 12
+
+      - name: Kota Bandung
+        id: 181
+        province_id: 12
+
+      - name: Kota Cirebon
+        id: 182
+        province_id: 12
+
+      - name: Kota Bekasi
+        id: 183
+        province_id: 12
+
+      - name: Kota Depok
+        id: 184
+        province_id: 12
+
+      - name: Kota Cimahi
+        id: 185
+        province_id: 12
+
+      - name: Kota Tasikmalaya
+        id: 186
+        province_id: 12
+
+      - name: Kota Banjar
+        id: 187
+        province_id: 12
+
+  - name: Jawa Tengah
+    id: 13
+
+    cities:
+      - name: Kabupaten Cilacap
+        id: 188
+        province_id: 13
+
+      - name: Kabupaten Banyumas
+        id: 189
+        province_id: 13
+
+      - name: Kabupaten Purbalingga
+        id: 190
+        province_id: 13
+
+      - name: Kabupaten Banjarnegara
+        id: 191
+        province_id: 13
+
+      - name: Kabupaten Kebumen
+        id: 192
+        province_id: 13
+
+      - name: Kabupaten Purworejo
+        id: 193
+        province_id: 13
+
+      - name: Kabupaten Wonosobo
+        id: 194
+        province_id: 13
+
+      - name: Kabupaten Magelang
+        id: 195
+        province_id: 13
+
+      - name: Kabupaten Boyolali
+        id: 196
+        province_id: 13
+
+      - name: Kabupaten Klaten
+        id: 197
+        province_id: 13
+
+      - name: Kabupaten Sukoharjo
+        id: 198
+        province_id: 13
+
+      - name: Kabupaten Wonogiri
+        id: 199
+        province_id: 13
+
+      - name: Kabupaten Karanganyar
+        id: 200
+        province_id: 13
+
+      - name: Kabupaten Sragen
+        id: 201
+        province_id: 13
+
+      - name: Kabupaten Grobogan
+        id: 202
+        province_id: 13
+
+      - name: Kabupaten Blora
+        id: 203
+        province_id: 13
+
+      - name: Kabupaten Rembang
+        id: 204
+        province_id: 13
+
+      - name: Kabupaten Pati
+        id: 205
+        province_id: 13
+
+      - name: Kabupaten Kudus
+        id: 206
+        province_id: 13
+
+      - name: Kabupaten Jepara
+        id: 207
+        province_id: 13
+
+      - name: Kabupaten Demak
+        id: 208
+        province_id: 13
+
+      - name: Kabupaten Semarang
+        id: 209
+        province_id: 13
+
+      - name: Kabupaten Temanggung
+        id: 210
+        province_id: 13
+
+      - name: Kabupaten Kendal
+        id: 211
+        province_id: 13
+
+      - name: Kabupaten Batang
+        id: 212
+        province_id: 13
+
+      - name: Kabupaten Pekalongan
+        id: 213
+        province_id: 13
+
+      - name: Kabupaten Pemalang
+        id: 214
+        province_id: 13
+
+      - name: Kabupaten Tegal
+        id: 215
+        province_id: 13
+
+      - name: Kabupaten Brebes
+        id: 216
+        province_id: 13
+
+      - name: Kota Magelang
+        id: 217
+        province_id: 13
+
+      - name: Kota Surakarta
+        id: 218
+        province_id: 13
+
+      - name: Kota Salatiga
+        id: 219
+        province_id: 13
+
+      - name: Kota Semarang
+        id: 220
+        province_id: 13
+
+      - name: Kota Pekalongan
+        id: 221
+        province_id: 13
+
+      - name: Kota Tegal
+        id: 222
+        province_id: 13
+
+  - name: Di Yogyakarta
+    id: 14
+
+    cities:
+      - name: Kabupaten Kulon Progo
+        id: 223
+        province_id: 14
+
+      - name: Kabupaten Bantul
+        id: 224
+        province_id: 14
+
+      - name: Kabupaten Gunung Kidul
+        id: 225
+        province_id: 14
+
+      - name: Kabupaten Sleman
+        id: 226
+        province_id: 14
+
+      - name: Kota Yogyakarta
+        id: 227
+        province_id: 14
+
+  - name: Jawa Timur
+    id: 15
+
+    cities:
+      - name: Kabupaten Pacitan
+        id: 228
+        province_id: 15
+
+      - name: Kabupaten Ponorogo
+        id: 229
+        province_id: 15
+
+      - name: Kabupaten Trenggalek
+        id: 230
+        province_id: 15
+
+      - name: Kabupaten Tulungagung
+        id: 231
+        province_id: 15
+
+      - name: Kabupaten Blitar
+        id: 232
+        province_id: 15
+
+      - name: Kabupaten Kediri
+        id: 233
+        province_id: 15
+
+      - name: Kabupaten Malang
+        id: 234
+        province_id: 15
+
+      - name: Kabupaten Lumajang
+        id: 235
+        province_id: 15
+
+      - name: Kabupaten Jember
+        id: 236
+        province_id: 15
+
+      - name: Kabupaten Banyuwangi
+        id: 237
+        province_id: 15
+
+      - name: Kabupaten Bondowoso
+        id: 238
+        province_id: 15
+
+      - name: Kabupaten Situbondo
+        id: 239
+        province_id: 15
+
+      - name: Kabupaten Probolinggo
+        id: 240
+        province_id: 15
+
+      - name: Kabupaten Pasuruan
+        id: 241
+        province_id: 15
+
+      - name: Kabupaten Sidoarjo
+        id: 242
+        province_id: 15
+
+      - name: Kabupaten Mojokerto
+        id: 243
+        province_id: 15
+
+      - name: Kabupaten Jombang
+        id: 244
+        province_id: 15
+
+      - name: Kabupaten Nganjuk
+        id: 245
+        province_id: 15
+
+      - name: Kabupaten Madiun
+        id: 246
+        province_id: 15
+
+      - name: Kabupaten Magetan
+        id: 247
+        province_id: 15
+
+      - name: Kabupaten Ngawi
+        id: 248
+        province_id: 15
+
+      - name: Kabupaten Bojonegoro
+        id: 249
+        province_id: 15
+
+      - name: Kabupaten Tuban
+        id: 250
+        province_id: 15
+
+      - name: Kabupaten Lamongan
+        id: 251
+        province_id: 15
+
+      - name: Kabupaten Gresik
+        id: 252
+        province_id: 15
+
+      - name: Kabupaten Bangkalan
+        id: 253
+        province_id: 15
+
+      - name: Kabupaten Sampang
+        id: 254
+        province_id: 15
+
+      - name: Kabupaten Pamekasan
+        id: 255
+        province_id: 15
+
+      - name: Kabupaten Sumenep
+        id: 256
+        province_id: 15
+
+      - name: Kota Kediri
+        id: 257
+        province_id: 15
+
+      - name: Kota Blitar
+        id: 258
+        province_id: 15
+
+      - name: Kota Malang
+        id: 259
+        province_id: 15
+
+      - name: Kota Probolinggo
+        id: 260
+        province_id: 15
+
+      - name: Kota Pasuruan
+        id: 261
+        province_id: 15
+
+      - name: Kota Mojokerto
+        id: 262
+        province_id: 15
+
+      - name: Kota Madiun
+        id: 263
+        province_id: 15
+
+      - name: Kota Surabaya
+        id: 264
+        province_id: 15
+
+      - name: Kota Batu
+        id: 265
+        province_id: 15
+
+  - name: Banten
+    id: 16
+
+    cities:
+      - name: Kabupaten Pandeglang
+        id: 266
+        province_id: 16
+
+      - name: Kabupaten Lebak
+        id: 267
+        province_id: 16
+
+      - name: Kabupaten Tangerang
+        id: 268
+        province_id: 16
+
+      - name: Kabupaten Serang
+        id: 269
+        province_id: 16
+
+      - name: Kota Tangerang
+        id: 270
+        province_id: 16
+
+      - name: Kota Cilegon
+        id: 271
+        province_id: 16
+
+      - name: Kota Serang
+        id: 272
+        province_id: 16
+
+      - name: Kota Tangerang Selatan
+        id: 273
+        province_id: 16
+
+  - name: Bali
+    id: 17
+
+    cities:
+      - name: Kabupaten Jembrana
+        id: 274
+        province_id: 17
+
+      - name: Kabupaten Tabanan
+        id: 275
+        province_id: 17
+
+      - name: Kabupaten Badung
+        id: 276
+        province_id: 17
+
+      - name: Kabupaten Gianyar
+        id: 277
+        province_id: 17
+
+      - name: Kabupaten Klungkung
+        id: 278
+        province_id: 17
+
+      - name: Kabupaten Bangli
+        id: 279
+        province_id: 17
+
+      - name: Kabupaten Karang Asem
+        id: 280
+        province_id: 17
+
+      - name: Kabupaten Buleleng
+        id: 281
+        province_id: 17
+
+      - name: Kota Denpasar
+        id: 282
+        province_id: 17
+
+  - name: Nusa Tenggara Barat
+    id: 18
+
+    cities:
+      - name: Kabupaten Lombok Barat
+        id: 283
+        province_id: 18
+
+      - name: Kabupaten Lombok Tengah
+        id: 284
+        province_id: 18
+
+      - name: Kabupaten Lombok Timur
+        id: 285
+        province_id: 18
+
+      - name: Kabupaten Sumbawa
+        id: 286
+        province_id: 18
+
+      - name: Kabupaten Dompu
+        id: 287
+        province_id: 18
+
+      - name: Kabupaten Bima
+        id: 288
+        province_id: 18
+
+      - name: Kabupaten Sumbawa Barat
+        id: 289
+        province_id: 18
+
+      - name: Kabupaten Lombok Utara
+        id: 290
+        province_id: 18
+
+      - name: Kota Mataram
+        id: 291
+        province_id: 18
+
+      - name: Kota Bima
+        id: 292
+        province_id: 18
+
+  - name: Nusa Tenggara Timur
+    id: 19
+
+    cities:
+      - name: Kabupaten Sumba Barat
+        id: 293
+        province_id: 19
+
+      - name: Kabupaten Sumba Timur
+        id: 294
+        province_id: 19
+
+      - name: Kabupaten Kupang
+        id: 295
+        province_id: 19
+
+      - name: Kabupaten Timor Tengah Selatan
+        id: 296
+        province_id: 19
+
+      - name: Kabupaten Timor Tengah Utara
+        id: 297
+        province_id: 19
+
+      - name: Kabupaten Belu
+        id: 298
+        province_id: 19
+
+      - name: Kabupaten Alor
+        id: 299
+        province_id: 19
+
+      - name: Kabupaten Lembata
+        id: 300
+        province_id: 19
+
+      - name: Kabupaten Flores Timur
+        id: 301
+        province_id: 19
+
+      - name: Kabupaten Sikka
+        id: 302
+        province_id: 19
+
+      - name: Kabupaten Ende
+        id: 303
+        province_id: 19
+
+      - name: Kabupaten Ngada
+        id: 304
+        province_id: 19
+
+      - name: Kabupaten Manggarai
+        id: 305
+        province_id: 19
+
+      - name: Kabupaten Rote Ndao
+        id: 306
+        province_id: 19
+
+      - name: Kabupaten Manggarai Barat
+        id: 307
+        province_id: 19
+
+      - name: Kabupaten Sumba Tengah
+        id: 308
+        province_id: 19
+
+      - name: Kabupaten Sumba Barat Daya
+        id: 309
+        province_id: 19
+
+      - name: Kabupaten Nagekeo
+        id: 310
+        province_id: 19
+
+      - name: Kabupaten Manggarai Timur
+        id: 311
+        province_id: 19
+
+      - name: Kabupaten Sabu Raijua
+        id: 312
+        province_id: 19
+
+      - name: Kabupaten Malaka
+        id: 313
+        province_id: 19
+
+      - name: Kota Kupang
+        id: 314
+        province_id: 19
+
+  - name: Kalimantan Barat
+    id: 20
+
+    cities:
+      - name: Kabupaten Sambas
+        id: 315
+        province_id: 20
+
+      - name: Kabupaten Bengkayang
+        id: 316
+        province_id: 20
+
+      - name: Kabupaten Landak
+        id: 317
+        province_id: 20
+
+      - name: Kabupaten Mempawah
+        id: 318
+        province_id: 20
+
+      - name: Kabupaten Sanggau
+        id: 319
+        province_id: 20
+
+      - name: Kabupaten Ketapang
+        id: 320
+        province_id: 20
+
+      - name: Kabupaten Sintang
+        id: 321
+        province_id: 20
+
+      - name: Kabupaten Kapuas Hulu
+        id: 322
+        province_id: 20
+
+      - name: Kabupaten Sekadau
+        id: 323
+        province_id: 20
+
+      - name: Kabupaten Melawi
+        id: 324
+        province_id: 20
+
+      - name: Kabupaten Kayong Utara
+        id: 325
+        province_id: 20
+
+      - name: Kabupaten Kubu Raya
+        id: 326
+        province_id: 20
+
+      - name: Kota Pontianak
+        id: 327
+        province_id: 20
+
+      - name: Kota Singkawang
+        id: 328
+        province_id: 20
+
+  - name: Kalimantan Tengah
+    id: 21
+
+    cities:
+      - name: Kabupaten Kotawaringin Barat
+        id: 329
+        province_id: 21
+
+      - name: Kabupaten Kotawaringin Timur
+        id: 330
+        province_id: 21
+
+      - name: Kabupaten Kapuas
+        id: 331
+        province_id: 21
+
+      - name: Kabupaten Barito Selatan
+        id: 332
+        province_id: 21
+
+      - name: Kabupaten Barito Utara
+        id: 333
+        province_id: 21
+
+      - name: Kabupaten Sukamara
+        id: 334
+        province_id: 21
+
+      - name: Kabupaten Lamandau
+        id: 335
+        province_id: 21
+
+      - name: Kabupaten Seruyan
+        id: 336
+        province_id: 21
+
+      - name: Kabupaten Katingan
+        id: 337
+        province_id: 21
+
+      - name: Kabupaten Pulang Pisau
+        id: 338
+        province_id: 21
+
+      - name: Kabupaten Gunung Mas
+        id: 339
+        province_id: 21
+
+      - name: Kabupaten Barito Timur
+        id: 340
+        province_id: 21
+
+      - name: Kabupaten Murung Raya
+        id: 341
+        province_id: 21
+
+      - name: Kota Palangka Raya
+        id: 342
+        province_id: 21
+
+  - name: Kalimantan Selatan
+    id: 22
+
+    cities:
+      - name: Kabupaten Tanah Laut
+        id: 343
+        province_id: 22
+
+      - name: Kabupaten Kota Baru
+        id: 344
+        province_id: 22
+
+      - name: Kabupaten Banjar
+        id: 345
+        province_id: 22
+
+      - name: Kabupaten Barito Kuala
+        id: 346
+        province_id: 22
+
+      - name: Kabupaten Tapin
+        id: 347
+        province_id: 22
+
+      - name: Kabupaten Hulu Sungai Selatan
+        id: 348
+        province_id: 22
+
+      - name: Kabupaten Hulu Sungai Tengah
+        id: 349
+        province_id: 22
+
+      - name: Kabupaten Hulu Sungai Utara
+        id: 350
+        province_id: 22
+
+      - name: Kabupaten Tabalong
+        id: 351
+        province_id: 22
+
+      - name: Kabupaten Tanah Bumbu
+        id: 352
+        province_id: 22
+
+      - name: Kabupaten Balangan
+        id: 353
+        province_id: 22
+
+      - name: Kota Banjarmasin
+        id: 354
+        province_id: 22
+
+      - name: Kota Banjar Baru
+        id: 355
+        province_id: 22
+
+  - name: Kalimantan Timur
+    id: 23
+
+    cities:
+      - name: Kabupaten Paser
+        id: 356
+        province_id: 23
+
+      - name: Kabupaten Kutai Barat
+        id: 357
+        province_id: 23
+
+      - name: Kabupaten Kutai Kartanegara
+        id: 358
+        province_id: 23
+
+      - name: Kabupaten Kutai Timur
+        id: 359
+        province_id: 23
+
+      - name: Kabupaten Berau
+        id: 360
+        province_id: 23
+
+      - name: Kabupaten Penajam Paser Utara
+        id: 361
+        province_id: 23
+
+      - name: Kabupaten Mahakam Hulu
+        id: 362
+        province_id: 23
+
+      - name: Kota Balikpapan
+        id: 363
+        province_id: 23
+
+      - name: Kota Samarinda
+        id: 364
+        province_id: 23
+
+      - name: Kota Bontang
+        id: 365
+        province_id: 23
+
+  - name: Kalimantan Utara
+    id: 24
+
+    cities:
+      - name: Kabupaten Malinau
+        id: 366
+        province_id: 24
+
+      - name: Kabupaten Bulungan
+        id: 367
+        province_id: 24
+
+      - name: Kabupaten Tana Tidung
+        id: 368
+        province_id: 24
+
+      - name: Kabupaten Nunukan
+        id: 369
+        province_id: 24
+
+      - name: Kota Tarakan
+        id: 370
+        province_id: 24
+
+  - name: Sulawesi Utara
+    id: 25
+
+    cities:
+      - name: Kabupaten Bolaang Mongondow
+        id: 371
+        province_id: 25
+
+      - name: Kabupaten Minahasa
+        id: 372
+        province_id: 25
+
+      - name: Kabupaten Kepulauan Sangihe
+        id: 373
+        province_id: 25
+
+      - name: Kabupaten Kepulauan Talaud
+        id: 374
+        province_id: 25
+
+      - name: Kabupaten Minahasa Selatan
+        id: 375
+        province_id: 25
+
+      - name: Kabupaten Minahasa Utara
+        id: 376
+        province_id: 25
+
+      - name: Kabupaten Bolaang Mongondow Utara
+        id: 377
+        province_id: 25
+
+      - name: Kabupaten Siau Tagulandang Biaro
+        id: 378
+        province_id: 25
+
+      - name: Kabupaten Minahasa Tenggara
+        id: 379
+        province_id: 25
+
+      - name: Kabupaten Bolaang Mongondow Selatan
+        id: 380
+        province_id: 25
+
+      - name: Kabupaten Bolaang Mongondow Timur
+        id: 381
+        province_id: 25
+
+      - name: Kota Manado
+        id: 382
+        province_id: 25
+
+      - name: Kota Bitung
+        id: 383
+        province_id: 25
+
+      - name: Kota Tomohon
+        id: 384
+        province_id: 25
+
+      - name: Kota Kotamobagu
+        id: 385
+        province_id: 25
+
+  - name: Sulawesi Tengah
+    id: 26
+
+    cities:
+      - name: Kabupaten Banggai Kepulauan
+        id: 386
+        province_id: 26
+
+      - name: Kabupaten Banggai
+        id: 387
+        province_id: 26
+
+      - name: Kabupaten Morowali
+        id: 388
+        province_id: 26
+
+      - name: Kabupaten Poso
+        id: 389
+        province_id: 26
+
+      - name: Kabupaten Donggala
+        id: 390
+        province_id: 26
+
+      - name: Kabupaten Toli-toli
+        id: 391
+        province_id: 26
+
+      - name: Kabupaten Buol
+        id: 392
+        province_id: 26
+
+      - name: Kabupaten Parigi Moutong
+        id: 393
+        province_id: 26
+
+      - name: Kabupaten Tojo Una-una
+        id: 394
+        province_id: 26
+
+      - name: Kabupaten Sigi
+        id: 395
+        province_id: 26
+
+      - name: Kabupaten Banggai Laut
+        id: 396
+        province_id: 26
+
+      - name: Kabupaten Morowali Utara
+        id: 397
+        province_id: 26
+
+      - name: Kota Palu
+        id: 398
+        province_id: 26
+
+  - name: Sulawesi Selatan
+    id: 27
+
+    cities:
+      - name: Kabupaten Kepulauan Selayar
+        id: 399
+        province_id: 27
+
+      - name: Kabupaten Bulukumba
+        id: 400
+        province_id: 27
+
+      - name: Kabupaten Bantaeng
+        id: 401
+        province_id: 27
+
+      - name: Kabupaten Jeneponto
+        id: 402
+        province_id: 27
+
+      - name: Kabupaten Takalar
+        id: 403
+        province_id: 27
+
+      - name: Kabupaten Gowa
+        id: 404
+        province_id: 27
+
+      - name: Kabupaten Sinjai
+        id: 405
+        province_id: 27
+
+      - name: Kabupaten Maros
+        id: 406
+        province_id: 27
+
+      - name: Kabupaten Pangkajene Dan Kepulauan
+        id: 407
+        province_id: 27
+
+      - name: Kabupaten Barru
+        id: 408
+        province_id: 27
+
+      - name: Kabupaten Bone
+        id: 409
+        province_id: 27
+
+      - name: Kabupaten Soppeng
+        id: 410
+        province_id: 27
+
+      - name: Kabupaten Wajo
+        id: 411
+        province_id: 27
+
+      - name: Kabupaten Sidenreng Rappang
+        id: 412
+        province_id: 27
+
+      - name: Kabupaten Pinrang
+        id: 413
+        province_id: 27
+
+      - name: Kabupaten Enrekang
+        id: 414
+        province_id: 27
+
+      - name: Kabupaten Luwu
+        id: 415
+        province_id: 27
+
+      - name: Kabupaten Tana Toraja
+        id: 416
+        province_id: 27
+
+      - name: Kabupaten Luwu Utara
+        id: 417
+        province_id: 27
+
+      - name: Kabupaten Luwu Timur
+        id: 418
+        province_id: 27
+
+      - name: Kabupaten Toraja Utara
+        id: 419
+        province_id: 27
+
+      - name: Kota Makassar
+        id: 420
+        province_id: 27
+
+      - name: Kota Parepare
+        id: 421
+        province_id: 27
+
+      - name: Kota Palopo
+        id: 422
+        province_id: 27
+
+  - name: Sulawesi Tenggara
+    id: 28
+
+    cities:
+      - name: Kabupaten Buton
+        id: 423
+        province_id: 28
+
+      - name: Kabupaten Muna
+        id: 424
+        province_id: 28
+
+      - name: Kabupaten Konawe
+        id: 425
+        province_id: 28
+
+      - name: Kabupaten Kolaka
+        id: 426
+        province_id: 28
+
+      - name: Kabupaten Konawe Selatan
+        id: 427
+        province_id: 28
+
+      - name: Kabupaten Bombana
+        id: 428
+        province_id: 28
+
+      - name: Kabupaten Wakatobi
+        id: 429
+        province_id: 28
+
+      - name: Kabupaten Kolaka Utara
+        id: 430
+        province_id: 28
+
+      - name: Kabupaten Buton Utara
+        id: 431
+        province_id: 28
+
+      - name: Kabupaten Konawe Utara
+        id: 432
+        province_id: 28
+
+      - name: Kabupaten Kolaka Timur
+        id: 433
+        province_id: 28
+
+      - name: Kabupaten Konawe Kepulauan
+        id: 434
+        province_id: 28
+
+      - name: Kabupaten Muna Barat
+        id: 435
+        province_id: 28
+
+      - name: Kabupaten Buton Tengah
+        id: 436
+        province_id: 28
+
+      - name: Kabupaten Buton Selatan
+        id: 437
+        province_id: 28
+
+      - name: Kota Kendari
+        id: 438
+        province_id: 28
+
+      - name: Kota Baubau
+        id: 439
+        province_id: 28
+
+  - name: Gorontalo
+    id: 29
+
+    cities:
+      - name: Kabupaten Boalemo
+        id: 440
+        province_id: 29
+
+      - name: Kabupaten Gorontalo
+        id: 441
+        province_id: 29
+
+      - name: Kabupaten Pohuwato
+        id: 442
+        province_id: 29
+
+      - name: Kabupaten Bone Bolango
+        id: 443
+        province_id: 29
+
+      - name: Kabupaten Gorontalo Utara
+        id: 444
+        province_id: 29
+
+      - name: Kota Gorontalo
+        id: 445
+        province_id: 29
+
+  - name: Sulawesi Barat
+    id: 30
+
+    cities:
+      - name: Kabupaten Majene
+        id: 446
+        province_id: 30
+
+      - name: Kabupaten Polewali Mandar
+        id: 447
+        province_id: 30
+
+      - name: Kabupaten Mamasa
+        id: 448
+        province_id: 30
+
+      - name: Kabupaten Mamuju
+        id: 449
+        province_id: 30
+
+      - name: Kabupaten Mamuju Utara
+        id: 450
+        province_id: 30
+
+      - name: Kabupaten Mamuju Tengah
+        id: 451
+        province_id: 30
+
+  - name: Maluku
+    id: 31
+
+    cities:
+      - name: Kabupaten Maluku Tenggara Barat
+        id: 452
+        province_id: 31
+
+      - name: Kabupaten Maluku Tenggara
+        id: 453
+        province_id: 31
+
+      - name: Kabupaten Maluku Tengah
+        id: 454
+        province_id: 31
+
+      - name: Kabupaten Buru
+        id: 455
+        province_id: 31
+
+      - name: Kabupaten Kepulauan Aru
+        id: 456
+        province_id: 31
+
+      - name: Kabupaten Seram Bagian Barat
+        id: 457
+        province_id: 31
+
+      - name: Kabupaten Seram Bagian Timur
+        id: 458
+        province_id: 31
+
+      - name: Kabupaten Maluku Barat Daya
+        id: 459
+        province_id: 31
+
+      - name: Kabupaten Buru Selatan
+        id: 460
+        province_id: 31
+
+      - name: Kota Ambon
+        id: 461
+        province_id: 31
+
+      - name: Kota Tual
+        id: 462
+        province_id: 31
+
+  - name: Maluku Utara
+    id: 32
+
+    cities:
+      - name: Kabupaten Halmahera Barat
+        id: 463
+        province_id: 32
+
+      - name: Kabupaten Halmahera Tengah
+        id: 464
+        province_id: 32
+
+      - name: Kabupaten Kepulauan Sula
+        id: 465
+        province_id: 32
+
+      - name: Kabupaten Halmahera Selatan
+        id: 466
+        province_id: 32
+
+      - name: Kabupaten Halmahera Utara
+        id: 467
+        province_id: 32
+
+      - name: Kabupaten Halmahera Timur
+        id: 468
+        province_id: 32
+
+      - name: Kabupaten Pulau Morotai
+        id: 469
+        province_id: 32
+
+      - name: Kabupaten Pulau Taliabu
+        id: 470
+        province_id: 32
+
+      - name: Kota Ternate
+        id: 471
+        province_id: 32
+
+      - name: Kota Tidore Kepulauan
+        id: 472
+        province_id: 32
+
+  - name: Papua Barat
+    id: 33
+
+    cities:
+      - name: Kabupaten Fakfak
+        id: 473
+        province_id: 33
+
+      - name: Kabupaten Kaimana
+        id: 474
+        province_id: 33
+
+      - name: Kabupaten Teluk Wondama
+        id: 475
+        province_id: 33
+
+      - name: Kabupaten Teluk Bintuni
+        id: 476
+        province_id: 33
+
+      - name: Kabupaten Manokwari
+        id: 477
+        province_id: 33
+
+      - name: Kabupaten Sorong Selatan
+        id: 478
+        province_id: 33
+
+      - name: Kabupaten Sorong
+        id: 479
+        province_id: 33
+
+      - name: Kabupaten Raja Ampat
+        id: 480
+        province_id: 33
+
+      - name: Kabupaten Tambrauw
+        id: 481
+        province_id: 33
+
+      - name: Kabupaten Maybrat
+        id: 482
+        province_id: 33
+
+      - name: Kabupaten Manokwari Selatan
+        id: 483
+        province_id: 33
+
+      - name: Kabupaten Pegunungan Arfak
+        id: 484
+        province_id: 33
+
+      - name: Kota Sorong
+        id: 485
+        province_id: 33
+
+  - name: Papua
+    id: 34
+
+    cities:
+      - name: Kabupaten Merauke
+        id: 486
+        province_id: 34
+
+      - name: Kabupaten Jayawijaya
+        id: 487
+        province_id: 34
+
+      - name: Kabupaten Jayapura
+        id: 488
+        province_id: 34
+
+      - name: Kabupaten Nabire
+        id: 489
+        province_id: 34
+
+      - name: Kabupaten Kepulauan Yapen
+        id: 490
+        province_id: 34
+
+      - name: Kabupaten Biak Numfor
+        id: 491
+        province_id: 34
+
+      - name: Kabupaten Paniai
+        id: 492
+        province_id: 34
+
+      - name: Kabupaten Puncak Jaya
+        id: 493
+        province_id: 34
+
+      - name: Kabupaten Mimika
+        id: 494
+        province_id: 34
+
+      - name: Kabupaten Boven Digoel
+        id: 495
+        province_id: 34
+
+      - name: Kabupaten Mappi
+        id: 496
+        province_id: 34
+
+      - name: Kabupaten Asmat
+        id: 497
+        province_id: 34
+
+      - name: Kabupaten Yahukimo
+        id: 498
+        province_id: 34
+
+      - name: Kabupaten Pegunungan Bintang
+        id: 499
+        province_id: 34
+
+      - name: Kabupaten Tolikara
+        id: 500
+        province_id: 34
+
+      - name: Kabupaten Sarmi
+        id: 501
+        province_id: 34
+
+      - name: Kabupaten Keerom
+        id: 502
+        province_id: 34
+
+      - name: Kabupaten Waropen
+        id: 503
+        province_id: 34
+
+      - name: Kabupaten Supiori
+        id: 504
+        province_id: 34
+
+      - name: Kabupaten Mamberamo Raya
+        id: 505
+        province_id: 34
+
+      - name: Kabupaten Nduga
+        id: 506
+        province_id: 34
+
+      - name: Kabupaten Lanny Jaya
+        id: 507
+        province_id: 34
+
+      - name: Kabupaten Mamberamo Tengah
+        id: 508
+        province_id: 34
+
+      - name: Kabupaten Yalimo
+        id: 509
+        province_id: 34
+
+      - name: Kabupaten Puncak
+        id: 510
+        province_id: 34
+
+      - name: Kabupaten Dogiyai
+        id: 511
+        province_id: 34
+
+      - name: Kabupaten Intan Jaya
+        id: 512
+        province_id: 34
+
+      - name: Kabupaten Deiyai
+        id: 513
+        province_id: 34
+
+      - name: Kota Jayapura
+        id: 514
+        province_id: 34
+

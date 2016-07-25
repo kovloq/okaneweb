@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
 
+  get 'fibonacci/index'
+
   devise_for :members,controllers: { sessions: "members/sessions",registrations:"members/registrations",:omniauth_callbacks => "members/omniauth_callbacks" }
 
   # devise_scope :member do

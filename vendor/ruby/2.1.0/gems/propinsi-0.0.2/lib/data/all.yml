@@ -1,0 +1,2194 @@
+---
+provinces:
+  - name: Aceh
+    id: 1
+
+    cities:
+      - name: Aceh
+        id: 1
+        province_id: 1
+
+      - name: Aceh
+        id: 2
+        province_id: 1
+
+      - name: Aceh
+        id: 3
+        province_id: 1
+
+      - name: Aceh
+        id: 4
+        province_id: 1
+
+      - name: Aceh
+        id: 5
+        province_id: 1
+
+      - name: Aceh
+        id: 6
+        province_id: 1
+
+      - name: Aceh
+        id: 7
+        province_id: 1
+
+      - name: Aceh
+        id: 8
+        province_id: 1
+
+      - name: Aceh
+        id: 9
+        province_id: 1
+
+      - name: Aceh
+        id: 10
+        province_id: 1
+
+      - name: Aceh
+        id: 11
+        province_id: 1
+
+      - name: Aceh
+        id: 12
+        province_id: 1
+
+      - name: Aceh
+        id: 13
+        province_id: 1
+
+      - name: Aceh
+        id: 14
+        province_id: 1
+
+      - name: Aceh
+        id: 15
+        province_id: 1
+
+      - name: Aceh
+        id: 16
+        province_id: 1
+
+      - name: Aceh
+        id: 17
+        province_id: 1
+
+      - name: Aceh
+        id: 18
+        province_id: 1
+
+      - name: Aceh
+        id: 19
+        province_id: 1
+
+      - name: Aceh
+        id: 20
+        province_id: 1
+
+      - name: Aceh
+        id: 21
+        province_id: 1
+
+      - name: Aceh
+        id: 22
+        province_id: 1
+
+      - name: Aceh
+        id: 23
+        province_id: 1
+
+  - name: Sumatera Utara
+    id: 2
+
+    cities:
+      - name: Sumatera Utara
+        id: 1
+        province_id: 2
+
+      - name: Sumatera Utara
+        id: 2
+        province_id: 2
+
+      - name: Sumatera Utara
+        id: 3
+        province_id: 2
+
+      - name: Sumatera Utara
+        id: 4
+        province_id: 2
+
+      - name: Sumatera Utara
+        id: 5
+        province_id: 2
+
+      - name: Sumatera Utara
+        id: 6
+        province_id: 2
+
+      - name: Sumatera Utara
+        id: 7
+        province_id: 2
+
+      - name: Sumatera Utara
+        id: 8
+        province_id: 2
+
+      - name: Sumatera Utara
+        id: 9
+        province_id: 2
+
+      - name: Sumatera Utara
+        id: 10
+        province_id: 2
+
+      - name: Sumatera Utara
+        id: 11
+        province_id: 2
+
+      - name: Sumatera Utara
+        id: 12
+        province_id: 2
+
+      - name: Sumatera Utara
+        id: 13
+        province_id: 2
+
+      - name: Sumatera Utara
+        id: 14
+        province_id: 2
+
+      - name: Sumatera Utara
+        id: 15
+        province_id: 2
+
+      - name: Sumatera Utara
+        id: 16
+        province_id: 2
+
+      - name: Sumatera Utara
+        id: 17
+        province_id: 2
+
+      - name: Sumatera Utara
+        id: 18
+        province_id: 2
+
+      - name: Sumatera Utara
+        id: 19
+        province_id: 2
+
+      - name: Sumatera Utara
+        id: 20
+        province_id: 2
+
+      - name: Sumatera Utara
+        id: 21
+        province_id: 2
+
+      - name: Sumatera Utara
+        id: 22
+        province_id: 2
+
+      - name: Sumatera Utara
+        id: 23
+        province_id: 2
+
+      - name: Sumatera Utara
+        id: 24
+        province_id: 2
+
+      - name: Sumatera Utara
+        id: 25
+        province_id: 2
+
+      - name: Sumatera Utara
+        id: 26
+        province_id: 2
+
+      - name: Sumatera Utara
+        id: 27
+        province_id: 2
+
+      - name: Sumatera Utara
+        id: 28
+        province_id: 2
+
+      - name: Sumatera Utara
+        id: 29
+        province_id: 2
+
+      - name: Sumatera Utara
+        id: 30
+        province_id: 2
+
+      - name: Sumatera Utara
+        id: 31
+        province_id: 2
+
+      - name: Sumatera Utara
+        id: 32
+        province_id: 2
+
+      - name: Sumatera Utara
+        id: 33
+        province_id: 2
+
+  - name: Sumatera Barat
+    id: 3
+
+    cities:
+      - name: Sumatera Barat
+        id: 1
+        province_id: 3
+
+      - name: Sumatera Barat
+        id: 2
+        province_id: 3
+
+      - name: Sumatera Barat
+        id: 3
+        province_id: 3
+
+      - name: Sumatera Barat
+        id: 4
+        province_id: 3
+
+      - name: Sumatera Barat
+        id: 5
+        province_id: 3
+
+      - name: Sumatera Barat
+        id: 6
+        province_id: 3
+
+      - name: Sumatera Barat
+        id: 7
+        province_id: 3
+
+      - name: Sumatera Barat
+        id: 8
+        province_id: 3
+
+      - name: Sumatera Barat
+        id: 9
+        province_id: 3
+
+      - name: Sumatera Barat
+        id: 10
+        province_id: 3
+
+      - name: Sumatera Barat
+        id: 11
+        province_id: 3
+
+      - name: Sumatera Barat
+        id: 12
+        province_id: 3
+
+      - name: Sumatera Barat
+        id: 13
+        province_id: 3
+
+      - name: Sumatera Barat
+        id: 14
+        province_id: 3
+
+      - name: Sumatera Barat
+        id: 15
+        province_id: 3
+
+      - name: Sumatera Barat
+        id: 16
+        province_id: 3
+
+      - name: Sumatera Barat
+        id: 17
+        province_id: 3
+
+      - name: Sumatera Barat
+        id: 18
+        province_id: 3
+
+      - name: Sumatera Barat
+        id: 19
+        province_id: 3
+
+  - name: Riau
+    id: 4
+
+    cities:
+      - name: Riau
+        id: 1
+        province_id: 4
+
+      - name: Riau
+        id: 2
+        province_id: 4
+
+      - name: Riau
+        id: 3
+        province_id: 4
+
+      - name: Riau
+        id: 4
+        province_id: 4
+
+      - name: Riau
+        id: 5
+        province_id: 4
+
+      - name: Riau
+        id: 6
+        province_id: 4
+
+      - name: Riau
+        id: 7
+        province_id: 4
+
+      - name: Riau
+        id: 8
+        province_id: 4
+
+      - name: Riau
+        id: 9
+        province_id: 4
+
+      - name: Riau
+        id: 10
+        province_id: 4
+
+      - name: Riau
+        id: 11
+        province_id: 4
+
+      - name: Riau
+        id: 12
+        province_id: 4
+
+  - name: Jambi
+    id: 5
+
+    cities:
+      - name: Jambi
+        id: 1
+        province_id: 5
+
+      - name: Jambi
+        id: 2
+        province_id: 5
+
+      - name: Jambi
+        id: 3
+        province_id: 5
+
+      - name: Jambi
+        id: 4
+        province_id: 5
+
+      - name: Jambi
+        id: 5
+        province_id: 5
+
+      - name: Jambi
+        id: 6
+        province_id: 5
+
+      - name: Jambi
+        id: 7
+        province_id: 5
+
+      - name: Jambi
+        id: 8
+        province_id: 5
+
+      - name: Jambi
+        id: 9
+        province_id: 5
+
+      - name: Jambi
+        id: 10
+        province_id: 5
+
+      - name: Jambi
+        id: 11
+        province_id: 5
+
+  - name: Sumatera Selatan
+    id: 6
+
+    cities:
+      - name: Sumatera Selatan
+        id: 1
+        province_id: 6
+
+      - name: Sumatera Selatan
+        id: 2
+        province_id: 6
+
+      - name: Sumatera Selatan
+        id: 3
+        province_id: 6
+
+      - name: Sumatera Selatan
+        id: 4
+        province_id: 6
+
+      - name: Sumatera Selatan
+        id: 5
+        province_id: 6
+
+      - name: Sumatera Selatan
+        id: 6
+        province_id: 6
+
+      - name: Sumatera Selatan
+        id: 7
+        province_id: 6
+
+      - name: Sumatera Selatan
+        id: 8
+        province_id: 6
+
+      - name: Sumatera Selatan
+        id: 9
+        province_id: 6
+
+      - name: Sumatera Selatan
+        id: 10
+        province_id: 6
+
+      - name: Sumatera Selatan
+        id: 11
+        province_id: 6
+
+      - name: Sumatera Selatan
+        id: 12
+        province_id: 6
+
+      - name: Sumatera Selatan
+        id: 13
+        province_id: 6
+
+      - name: Sumatera Selatan
+        id: 14
+        province_id: 6
+
+      - name: Sumatera Selatan
+        id: 15
+        province_id: 6
+
+      - name: Sumatera Selatan
+        id: 16
+        province_id: 6
+
+      - name: Sumatera Selatan
+        id: 17
+        province_id: 6
+
+  - name: Bengkulu
+    id: 7
+
+    cities:
+      - name: Bengkulu
+        id: 1
+        province_id: 7
+
+      - name: Bengkulu
+        id: 2
+        province_id: 7
+
+      - name: Bengkulu
+        id: 3
+        province_id: 7
+
+      - name: Bengkulu
+        id: 4
+        province_id: 7
+
+      - name: Bengkulu
+        id: 5
+        province_id: 7
+
+      - name: Bengkulu
+        id: 6
+        province_id: 7
+
+      - name: Bengkulu
+        id: 7
+        province_id: 7
+
+      - name: Bengkulu
+        id: 8
+        province_id: 7
+
+      - name: Bengkulu
+        id: 9
+        province_id: 7
+
+      - name: Bengkulu
+        id: 10
+        province_id: 7
+
+  - name: Lampung
+    id: 8
+
+    cities:
+      - name: Lampung
+        id: 1
+        province_id: 8
+
+      - name: Lampung
+        id: 2
+        province_id: 8
+
+      - name: Lampung
+        id: 3
+        province_id: 8
+
+      - name: Lampung
+        id: 4
+        province_id: 8
+
+      - name: Lampung
+        id: 5
+        province_id: 8
+
+      - name: Lampung
+        id: 6
+        province_id: 8
+
+      - name: Lampung
+        id: 7
+        province_id: 8
+
+      - name: Lampung
+        id: 8
+        province_id: 8
+
+      - name: Lampung
+        id: 9
+        province_id: 8
+
+      - name: Lampung
+        id: 10
+        province_id: 8
+
+      - name: Lampung
+        id: 11
+        province_id: 8
+
+      - name: Lampung
+        id: 12
+        province_id: 8
+
+      - name: Lampung
+        id: 13
+        province_id: 8
+
+      - name: Lampung
+        id: 14
+        province_id: 8
+
+      - name: Lampung
+        id: 15
+        province_id: 8
+
+  - name: Kepulauan Bangka Belitung
+    id: 9
+
+    cities:
+      - name: Kepulauan Bangka Belitung
+        id: 1
+        province_id: 9
+
+      - name: Kepulauan Bangka Belitung
+        id: 2
+        province_id: 9
+
+      - name: Kepulauan Bangka Belitung
+        id: 3
+        province_id: 9
+
+      - name: Kepulauan Bangka Belitung
+        id: 4
+        province_id: 9
+
+      - name: Kepulauan Bangka Belitung
+        id: 5
+        province_id: 9
+
+      - name: Kepulauan Bangka Belitung
+        id: 6
+        province_id: 9
+
+      - name: Kepulauan Bangka Belitung
+        id: 7
+        province_id: 9
+
+  - name: Kepulauan Riau
+    id: 10
+
+    cities:
+      - name: Kepulauan Riau
+        id: 1
+        province_id: 10
+
+      - name: Kepulauan Riau
+        id: 2
+        province_id: 10
+
+      - name: Kepulauan Riau
+        id: 3
+        province_id: 10
+
+      - name: Kepulauan Riau
+        id: 4
+        province_id: 10
+
+      - name: Kepulauan Riau
+        id: 5
+        province_id: 10
+
+      - name: Kepulauan Riau
+        id: 6
+        province_id: 10
+
+      - name: Kepulauan Riau
+        id: 7
+        province_id: 10
+
+  - name: Dki Jakarta
+    id: 11
+
+    cities:
+      - name: Dki Jakarta
+        id: 1
+        province_id: 11
+
+      - name: Dki Jakarta
+        id: 2
+        province_id: 11
+
+      - name: Dki Jakarta
+        id: 3
+        province_id: 11
+
+      - name: Dki Jakarta
+        id: 4
+        province_id: 11
+
+      - name: Dki Jakarta
+        id: 5
+        province_id: 11
+
+      - name: Dki Jakarta
+        id: 6
+        province_id: 11
+
+  - name: Jawa Barat
+    id: 12
+
+    cities:
+      - name: Jawa Barat
+        id: 1
+        province_id: 12
+
+      - name: Jawa Barat
+        id: 2
+        province_id: 12
+
+      - name: Jawa Barat
+        id: 3
+        province_id: 12
+
+      - name: Jawa Barat
+        id: 4
+        province_id: 12
+
+      - name: Jawa Barat
+        id: 5
+        province_id: 12
+
+      - name: Jawa Barat
+        id: 6
+        province_id: 12
+
+      - name: Jawa Barat
+        id: 7
+        province_id: 12
+
+      - name: Jawa Barat
+        id: 8
+        province_id: 12
+
+      - name: Jawa Barat
+        id: 9
+        province_id: 12
+
+      - name: Jawa Barat
+        id: 10
+        province_id: 12
+
+      - name: Jawa Barat
+        id: 11
+        province_id: 12
+
+      - name: Jawa Barat
+        id: 12
+        province_id: 12
+
+      - name: Jawa Barat
+        id: 13
+        province_id: 12
+
+      - name: Jawa Barat
+        id: 14
+        province_id: 12
+
+      - name: Jawa Barat
+        id: 15
+        province_id: 12
+
+      - name: Jawa Barat
+        id: 16
+        province_id: 12
+
+      - name: Jawa Barat
+        id: 17
+        province_id: 12
+
+      - name: Jawa Barat
+        id: 18
+        province_id: 12
+
+      - name: Jawa Barat
+        id: 19
+        province_id: 12
+
+      - name: Jawa Barat
+        id: 20
+        province_id: 12
+
+      - name: Jawa Barat
+        id: 21
+        province_id: 12
+
+      - name: Jawa Barat
+        id: 22
+        province_id: 12
+
+      - name: Jawa Barat
+        id: 23
+        province_id: 12
+
+      - name: Jawa Barat
+        id: 24
+        province_id: 12
+
+      - name: Jawa Barat
+        id: 25
+        province_id: 12
+
+      - name: Jawa Barat
+        id: 26
+        province_id: 12
+
+      - name: Jawa Barat
+        id: 27
+        province_id: 12
+
+  - name: Jawa Tengah
+    id: 13
+
+    cities:
+      - name: Jawa Tengah
+        id: 1
+        province_id: 13
+
+      - name: Jawa Tengah
+        id: 2
+        province_id: 13
+
+      - name: Jawa Tengah
+        id: 3
+        province_id: 13
+
+      - name: Jawa Tengah
+        id: 4
+        province_id: 13
+
+      - name: Jawa Tengah
+        id: 5
+        province_id: 13
+
+      - name: Jawa Tengah
+        id: 6
+        province_id: 13
+
+      - name: Jawa Tengah
+        id: 7
+        province_id: 13
+
+      - name: Jawa Tengah
+        id: 8
+        province_id: 13
+
+      - name: Jawa Tengah
+        id: 9
+        province_id: 13
+
+      - name: Jawa Tengah
+        id: 10
+        province_id: 13
+
+      - name: Jawa Tengah
+        id: 11
+        province_id: 13
+
+      - name: Jawa Tengah
+        id: 12
+        province_id: 13
+
+      - name: Jawa Tengah
+        id: 13
+        province_id: 13
+
+      - name: Jawa Tengah
+        id: 14
+        province_id: 13
+
+      - name: Jawa Tengah
+        id: 15
+        province_id: 13
+
+      - name: Jawa Tengah
+        id: 16
+        province_id: 13
+
+      - name: Jawa Tengah
+        id: 17
+        province_id: 13
+
+      - name: Jawa Tengah
+        id: 18
+        province_id: 13
+
+      - name: Jawa Tengah
+        id: 19
+        province_id: 13
+
+      - name: Jawa Tengah
+        id: 20
+        province_id: 13
+
+      - name: Jawa Tengah
+        id: 21
+        province_id: 13
+
+      - name: Jawa Tengah
+        id: 22
+        province_id: 13
+
+      - name: Jawa Tengah
+        id: 23
+        province_id: 13
+
+      - name: Jawa Tengah
+        id: 24
+        province_id: 13
+
+      - name: Jawa Tengah
+        id: 25
+        province_id: 13
+
+      - name: Jawa Tengah
+        id: 26
+        province_id: 13
+
+      - name: Jawa Tengah
+        id: 27
+        province_id: 13
+
+      - name: Jawa Tengah
+        id: 28
+        province_id: 13
+
+      - name: Jawa Tengah
+        id: 29
+        province_id: 13
+
+      - name: Jawa Tengah
+        id: 30
+        province_id: 13
+
+      - name: Jawa Tengah
+        id: 31
+        province_id: 13
+
+      - name: Jawa Tengah
+        id: 32
+        province_id: 13
+
+      - name: Jawa Tengah
+        id: 33
+        province_id: 13
+
+      - name: Jawa Tengah
+        id: 34
+        province_id: 13
+
+      - name: Jawa Tengah
+        id: 35
+        province_id: 13
+
+  - name: Di Yogyakarta
+    id: 14
+
+    cities:
+      - name: Di Yogyakarta
+        id: 1
+        province_id: 14
+
+      - name: Di Yogyakarta
+        id: 2
+        province_id: 14
+
+      - name: Di Yogyakarta
+        id: 3
+        province_id: 14
+
+      - name: Di Yogyakarta
+        id: 4
+        province_id: 14
+
+      - name: Di Yogyakarta
+        id: 5
+        province_id: 14
+
+  - name: Jawa Timur
+    id: 15
+
+    cities:
+      - name: Jawa Timur
+        id: 1
+        province_id: 15
+
+      - name: Jawa Timur
+        id: 2
+        province_id: 15
+
+      - name: Jawa Timur
+        id: 3
+        province_id: 15
+
+      - name: Jawa Timur
+        id: 4
+        province_id: 15
+
+      - name: Jawa Timur
+        id: 5
+        province_id: 15
+
+      - name: Jawa Timur
+        id: 6
+        province_id: 15
+
+      - name: Jawa Timur
+        id: 7
+        province_id: 15
+
+      - name: Jawa Timur
+        id: 8
+        province_id: 15
+
+      - name: Jawa Timur
+        id: 9
+        province_id: 15
+
+      - name: Jawa Timur
+        id: 10
+        province_id: 15
+
+      - name: Jawa Timur
+        id: 11
+        province_id: 15
+
+      - name: Jawa Timur
+        id: 12
+        province_id: 15
+
+      - name: Jawa Timur
+        id: 13
+        province_id: 15
+
+      - name: Jawa Timur
+        id: 14
+        province_id: 15
+
+      - name: Jawa Timur
+        id: 15
+        province_id: 15
+
+      - name: Jawa Timur
+        id: 16
+        province_id: 15
+
+      - name: Jawa Timur
+        id: 17
+        province_id: 15
+
+      - name: Jawa Timur
+        id: 18
+        province_id: 15
+
+      - name: Jawa Timur
+        id: 19
+        province_id: 15
+
+      - name: Jawa Timur
+        id: 20
+        province_id: 15
+
+      - name: Jawa Timur
+        id: 21
+        province_id: 15
+
+      - name: Jawa Timur
+        id: 22
+        province_id: 15
+
+      - name: Jawa Timur
+        id: 23
+        province_id: 15
+
+      - name: Jawa Timur
+        id: 24
+        province_id: 15
+
+      - name: Jawa Timur
+        id: 25
+        province_id: 15
+
+      - name: Jawa Timur
+        id: 26
+        province_id: 15
+
+      - name: Jawa Timur
+        id: 27
+        province_id: 15
+
+      - name: Jawa Timur
+        id: 28
+        province_id: 15
+
+      - name: Jawa Timur
+        id: 29
+        province_id: 15
+
+      - name: Jawa Timur
+        id: 30
+        province_id: 15
+
+      - name: Jawa Timur
+        id: 31
+        province_id: 15
+
+      - name: Jawa Timur
+        id: 32
+        province_id: 15
+
+      - name: Jawa Timur
+        id: 33
+        province_id: 15
+
+      - name: Jawa Timur
+        id: 34
+        province_id: 15
+
+      - name: Jawa Timur
+        id: 35
+        province_id: 15
+
+      - name: Jawa Timur
+        id: 36
+        province_id: 15
+
+      - name: Jawa Timur
+        id: 37
+        province_id: 15
+
+      - name: Jawa Timur
+        id: 38
+        province_id: 15
+
+  - name: Banten
+    id: 16
+
+    cities:
+      - name: Banten
+        id: 1
+        province_id: 16
+
+      - name: Banten
+        id: 2
+        province_id: 16
+
+      - name: Banten
+        id: 3
+        province_id: 16
+
+      - name: Banten
+        id: 4
+        province_id: 16
+
+      - name: Banten
+        id: 5
+        province_id: 16
+
+      - name: Banten
+        id: 6
+        province_id: 16
+
+      - name: Banten
+        id: 7
+        province_id: 16
+
+      - name: Banten
+        id: 8
+        province_id: 16
+
+  - name: Bali
+    id: 17
+
+    cities:
+      - name: Bali
+        id: 1
+        province_id: 17
+
+      - name: Bali
+        id: 2
+        province_id: 17
+
+      - name: Bali
+        id: 3
+        province_id: 17
+
+      - name: Bali
+        id: 4
+        province_id: 17
+
+      - name: Bali
+        id: 5
+        province_id: 17
+
+      - name: Bali
+        id: 6
+        province_id: 17
+
+      - name: Bali
+        id: 7
+        province_id: 17
+
+      - name: Bali
+        id: 8
+        province_id: 17
+
+      - name: Bali
+        id: 9
+        province_id: 17
+
+  - name: Nusa Tenggara Barat
+    id: 18
+
+    cities:
+      - name: Nusa Tenggara Barat
+        id: 1
+        province_id: 18
+
+      - name: Nusa Tenggara Barat
+        id: 2
+        province_id: 18
+
+      - name: Nusa Tenggara Barat
+        id: 3
+        province_id: 18
+
+      - name: Nusa Tenggara Barat
+        id: 4
+        province_id: 18
+
+      - name: Nusa Tenggara Barat
+        id: 5
+        province_id: 18
+
+      - name: Nusa Tenggara Barat
+        id: 6
+        province_id: 18
+
+      - name: Nusa Tenggara Barat
+        id: 7
+        province_id: 18
+
+      - name: Nusa Tenggara Barat
+        id: 8
+        province_id: 18
+
+      - name: Nusa Tenggara Barat
+        id: 9
+        province_id: 18
+
+      - name: Nusa Tenggara Barat
+        id: 10
+        province_id: 18
+
+  - name: Nusa Tenggara Timur
+    id: 19
+
+    cities:
+      - name: Nusa Tenggara Timur
+        id: 1
+        province_id: 19
+
+      - name: Nusa Tenggara Timur
+        id: 2
+        province_id: 19
+
+      - name: Nusa Tenggara Timur
+        id: 3
+        province_id: 19
+
+      - name: Nusa Tenggara Timur
+        id: 4
+        province_id: 19
+
+      - name: Nusa Tenggara Timur
+        id: 5
+        province_id: 19
+
+      - name: Nusa Tenggara Timur
+        id: 6
+        province_id: 19
+
+      - name: Nusa Tenggara Timur
+        id: 7
+        province_id: 19
+
+      - name: Nusa Tenggara Timur
+        id: 8
+        province_id: 19
+
+      - name: Nusa Tenggara Timur
+        id: 9
+        province_id: 19
+
+      - name: Nusa Tenggara Timur
+        id: 10
+        province_id: 19
+
+      - name: Nusa Tenggara Timur
+        id: 11
+        province_id: 19
+
+      - name: Nusa Tenggara Timur
+        id: 12
+        province_id: 19
+
+      - name: Nusa Tenggara Timur
+        id: 13
+        province_id: 19
+
+      - name: Nusa Tenggara Timur
+        id: 14
+        province_id: 19
+
+      - name: Nusa Tenggara Timur
+        id: 15
+        province_id: 19
+
+      - name: Nusa Tenggara Timur
+        id: 16
+        province_id: 19
+
+      - name: Nusa Tenggara Timur
+        id: 17
+        province_id: 19
+
+      - name: Nusa Tenggara Timur
+        id: 18
+        province_id: 19
+
+      - name: Nusa Tenggara Timur
+        id: 19
+        province_id: 19
+
+      - name: Nusa Tenggara Timur
+        id: 20
+        province_id: 19
+
+      - name: Nusa Tenggara Timur
+        id: 21
+        province_id: 19
+
+      - name: Nusa Tenggara Timur
+        id: 22
+        province_id: 19
+
+  - name: Kalimantan Barat
+    id: 20
+
+    cities:
+      - name: Kalimantan Barat
+        id: 1
+        province_id: 20
+
+      - name: Kalimantan Barat
+        id: 2
+        province_id: 20
+
+      - name: Kalimantan Barat
+        id: 3
+        province_id: 20
+
+      - name: Kalimantan Barat
+        id: 4
+        province_id: 20
+
+      - name: Kalimantan Barat
+        id: 5
+        province_id: 20
+
+      - name: Kalimantan Barat
+        id: 6
+        province_id: 20
+
+      - name: Kalimantan Barat
+        id: 7
+        province_id: 20
+
+      - name: Kalimantan Barat
+        id: 8
+        province_id: 20
+
+      - name: Kalimantan Barat
+        id: 9
+        province_id: 20
+
+      - name: Kalimantan Barat
+        id: 10
+        province_id: 20
+
+      - name: Kalimantan Barat
+        id: 11
+        province_id: 20
+
+      - name: Kalimantan Barat
+        id: 12
+        province_id: 20
+
+      - name: Kalimantan Barat
+        id: 13
+        province_id: 20
+
+      - name: Kalimantan Barat
+        id: 14
+        province_id: 20
+
+  - name: Kalimantan Tengah
+    id: 21
+
+    cities:
+      - name: Kalimantan Tengah
+        id: 1
+        province_id: 21
+
+      - name: Kalimantan Tengah
+        id: 2
+        province_id: 21
+
+      - name: Kalimantan Tengah
+        id: 3
+        province_id: 21
+
+      - name: Kalimantan Tengah
+        id: 4
+        province_id: 21
+
+      - name: Kalimantan Tengah
+        id: 5
+        province_id: 21
+
+      - name: Kalimantan Tengah
+        id: 6
+        province_id: 21
+
+      - name: Kalimantan Tengah
+        id: 7
+        province_id: 21
+
+      - name: Kalimantan Tengah
+        id: 8
+        province_id: 21
+
+      - name: Kalimantan Tengah
+        id: 9
+        province_id: 21
+
+      - name: Kalimantan Tengah
+        id: 10
+        province_id: 21
+
+      - name: Kalimantan Tengah
+        id: 11
+        province_id: 21
+
+      - name: Kalimantan Tengah
+        id: 12
+        province_id: 21
+
+      - name: Kalimantan Tengah
+        id: 13
+        province_id: 21
+
+      - name: Kalimantan Tengah
+        id: 14
+        province_id: 21
+
+  - name: Kalimantan Selatan
+    id: 22
+
+    cities:
+      - name: Kalimantan Selatan
+        id: 1
+        province_id: 22
+
+      - name: Kalimantan Selatan
+        id: 2
+        province_id: 22
+
+      - name: Kalimantan Selatan
+        id: 3
+        province_id: 22
+
+      - name: Kalimantan Selatan
+        id: 4
+        province_id: 22
+
+      - name: Kalimantan Selatan
+        id: 5
+        province_id: 22
+
+      - name: Kalimantan Selatan
+        id: 6
+        province_id: 22
+
+      - name: Kalimantan Selatan
+        id: 7
+        province_id: 22
+
+      - name: Kalimantan Selatan
+        id: 8
+        province_id: 22
+
+      - name: Kalimantan Selatan
+        id: 9
+        province_id: 22
+
+      - name: Kalimantan Selatan
+        id: 10
+        province_id: 22
+
+      - name: Kalimantan Selatan
+        id: 11
+        province_id: 22
+
+      - name: Kalimantan Selatan
+        id: 12
+        province_id: 22
+
+      - name: Kalimantan Selatan
+        id: 13
+        province_id: 22
+
+  - name: Kalimantan Timur
+    id: 23
+
+    cities:
+      - name: Kalimantan Timur
+        id: 1
+        province_id: 23
+
+      - name: Kalimantan Timur
+        id: 2
+        province_id: 23
+
+      - name: Kalimantan Timur
+        id: 3
+        province_id: 23
+
+      - name: Kalimantan Timur
+        id: 4
+        province_id: 23
+
+      - name: Kalimantan Timur
+        id: 5
+        province_id: 23
+
+      - name: Kalimantan Timur
+        id: 6
+        province_id: 23
+
+      - name: Kalimantan Timur
+        id: 7
+        province_id: 23
+
+      - name: Kalimantan Timur
+        id: 8
+        province_id: 23
+
+      - name: Kalimantan Timur
+        id: 9
+        province_id: 23
+
+      - name: Kalimantan Timur
+        id: 10
+        province_id: 23
+
+  - name: Kalimantan Utara
+    id: 24
+
+    cities:
+      - name: Kalimantan Utara
+        id: 1
+        province_id: 24
+
+      - name: Kalimantan Utara
+        id: 2
+        province_id: 24
+
+      - name: Kalimantan Utara
+        id: 3
+        province_id: 24
+
+      - name: Kalimantan Utara
+        id: 4
+        province_id: 24
+
+      - name: Kalimantan Utara
+        id: 5
+        province_id: 24
+
+  - name: Sulawesi Utara
+    id: 25
+
+    cities:
+      - name: Sulawesi Utara
+        id: 1
+        province_id: 25
+
+      - name: Sulawesi Utara
+        id: 2
+        province_id: 25
+
+      - name: Sulawesi Utara
+        id: 3
+        province_id: 25
+
+      - name: Sulawesi Utara
+        id: 4
+        province_id: 25
+
+      - name: Sulawesi Utara
+        id: 5
+        province_id: 25
+
+      - name: Sulawesi Utara
+        id: 6
+        province_id: 25
+
+      - name: Sulawesi Utara
+        id: 7
+        province_id: 25
+
+      - name: Sulawesi Utara
+        id: 8
+        province_id: 25
+
+      - name: Sulawesi Utara
+        id: 9
+        province_id: 25
+
+      - name: Sulawesi Utara
+        id: 10
+        province_id: 25
+
+      - name: Sulawesi Utara
+        id: 11
+        province_id: 25
+
+      - name: Sulawesi Utara
+        id: 12
+        province_id: 25
+
+      - name: Sulawesi Utara
+        id: 13
+        province_id: 25
+
+      - name: Sulawesi Utara
+        id: 14
+        province_id: 25
+
+      - name: Sulawesi Utara
+        id: 15
+        province_id: 25
+
+  - name: Sulawesi Tengah
+    id: 26
+
+    cities:
+      - name: Sulawesi Tengah
+        id: 1
+        province_id: 26
+
+      - name: Sulawesi Tengah
+        id: 2
+        province_id: 26
+
+      - name: Sulawesi Tengah
+        id: 3
+        province_id: 26
+
+      - name: Sulawesi Tengah
+        id: 4
+        province_id: 26
+
+      - name: Sulawesi Tengah
+        id: 5
+        province_id: 26
+
+      - name: Sulawesi Tengah
+        id: 6
+        province_id: 26
+
+      - name: Sulawesi Tengah
+        id: 7
+        province_id: 26
+
+      - name: Sulawesi Tengah
+        id: 8
+        province_id: 26
+
+      - name: Sulawesi Tengah
+        id: 9
+        province_id: 26
+
+      - name: Sulawesi Tengah
+        id: 10
+        province_id: 26
+
+      - name: Sulawesi Tengah
+        id: 11
+        province_id: 26
+
+      - name: Sulawesi Tengah
+        id: 12
+        province_id: 26
+
+      - name: Sulawesi Tengah
+        id: 13
+        province_id: 26
+
+  - name: Sulawesi Selatan
+    id: 27
+
+    cities:
+      - name: Sulawesi Selatan
+        id: 1
+        province_id: 27
+
+      - name: Sulawesi Selatan
+        id: 2
+        province_id: 27
+
+      - name: Sulawesi Selatan
+        id: 3
+        province_id: 27
+
+      - name: Sulawesi Selatan
+        id: 4
+        province_id: 27
+
+      - name: Sulawesi Selatan
+        id: 5
+        province_id: 27
+
+      - name: Sulawesi Selatan
+        id: 6
+        province_id: 27
+
+      - name: Sulawesi Selatan
+        id: 7
+        province_id: 27
+
+      - name: Sulawesi Selatan
+        id: 8
+        province_id: 27
+
+      - name: Sulawesi Selatan
+        id: 9
+        province_id: 27
+
+      - name: Sulawesi Selatan
+        id: 10
+        province_id: 27
+
+      - name: Sulawesi Selatan
+        id: 11
+        province_id: 27
+
+      - name: Sulawesi Selatan
+        id: 12
+        province_id: 27
+
+      - name: Sulawesi Selatan
+        id: 13
+        province_id: 27
+
+      - name: Sulawesi Selatan
+        id: 14
+        province_id: 27
+
+      - name: Sulawesi Selatan
+        id: 15
+        province_id: 27
+
+      - name: Sulawesi Selatan
+        id: 16
+        province_id: 27
+
+      - name: Sulawesi Selatan
+        id: 17
+        province_id: 27
+
+      - name: Sulawesi Selatan
+        id: 18
+        province_id: 27
+
+      - name: Sulawesi Selatan
+        id: 19
+        province_id: 27
+
+      - name: Sulawesi Selatan
+        id: 20
+        province_id: 27
+
+      - name: Sulawesi Selatan
+        id: 21
+        province_id: 27
+
+      - name: Sulawesi Selatan
+        id: 22
+        province_id: 27
+
+      - name: Sulawesi Selatan
+        id: 23
+        province_id: 27
+
+      - name: Sulawesi Selatan
+        id: 24
+        province_id: 27
+
+  - name: Sulawesi Tenggara
+    id: 28
+
+    cities:
+      - name: Sulawesi Tenggara
+        id: 1
+        province_id: 28
+
+      - name: Sulawesi Tenggara
+        id: 2
+        province_id: 28
+
+      - name: Sulawesi Tenggara
+        id: 3
+        province_id: 28
+
+      - name: Sulawesi Tenggara
+        id: 4
+        province_id: 28
+
+      - name: Sulawesi Tenggara
+        id: 5
+        province_id: 28
+
+      - name: Sulawesi Tenggara
+        id: 6
+        province_id: 28
+
+      - name: Sulawesi Tenggara
+        id: 7
+        province_id: 28
+
+      - name: Sulawesi Tenggara
+        id: 8
+        province_id: 28
+
+      - name: Sulawesi Tenggara
+        id: 9
+        province_id: 28
+
+      - name: Sulawesi Tenggara
+        id: 10
+        province_id: 28
+
+      - name: Sulawesi Tenggara
+        id: 11
+        province_id: 28
+
+      - name: Sulawesi Tenggara
+        id: 12
+        province_id: 28
+
+      - name: Sulawesi Tenggara
+        id: 13
+        province_id: 28
+
+      - name: Sulawesi Tenggara
+        id: 14
+        province_id: 28
+
+      - name: Sulawesi Tenggara
+        id: 15
+        province_id: 28
+
+      - name: Sulawesi Tenggara
+        id: 16
+        province_id: 28
+
+      - name: Sulawesi Tenggara
+        id: 17
+        province_id: 28
+
+  - name: Gorontalo
+    id: 29
+
+    cities:
+      - name: Gorontalo
+        id: 1
+        province_id: 29
+
+      - name: Gorontalo
+        id: 2
+        province_id: 29
+
+      - name: Gorontalo
+        id: 3
+        province_id: 29
+
+      - name: Gorontalo
+        id: 4
+        province_id: 29
+
+      - name: Gorontalo
+        id: 5
+        province_id: 29
+
+      - name: Gorontalo
+        id: 6
+        province_id: 29
+
+  - name: Sulawesi Barat
+    id: 30
+
+    cities:
+      - name: Sulawesi Barat
+        id: 1
+        province_id: 30
+
+      - name: Sulawesi Barat
+        id: 2
+        province_id: 30
+
+      - name: Sulawesi Barat
+        id: 3
+        province_id: 30
+
+      - name: Sulawesi Barat
+        id: 4
+        province_id: 30
+
+      - name: Sulawesi Barat
+        id: 5
+        province_id: 30
+
+      - name: Sulawesi Barat
+        id: 6
+        province_id: 30
+
+  - name: Maluku
+    id: 31
+
+    cities:
+      - name: Maluku
+        id: 1
+        province_id: 31
+
+      - name: Maluku
+        id: 2
+        province_id: 31
+
+      - name: Maluku
+        id: 3
+        province_id: 31
+
+      - name: Maluku
+        id: 4
+        province_id: 31
+
+      - name: Maluku
+        id: 5
+        province_id: 31
+
+      - name: Maluku
+        id: 6
+        province_id: 31
+
+      - name: Maluku
+        id: 7
+        province_id: 31
+
+      - name: Maluku
+        id: 8
+        province_id: 31
+
+      - name: Maluku
+        id: 9
+        province_id: 31
+
+      - name: Maluku
+        id: 10
+        province_id: 31
+
+      - name: Maluku
+        id: 11
+        province_id: 31
+
+  - name: Maluku Utara
+    id: 32
+
+    cities:
+      - name: Maluku Utara
+        id: 1
+        province_id: 32
+
+      - name: Maluku Utara
+        id: 2
+        province_id: 32
+
+      - name: Maluku Utara
+        id: 3
+        province_id: 32
+
+      - name: Maluku Utara
+        id: 4
+        province_id: 32
+
+      - name: Maluku Utara
+        id: 5
+        province_id: 32
+
+      - name: Maluku Utara
+        id: 6
+        province_id: 32
+
+      - name: Maluku Utara
+        id: 7
+        province_id: 32
+
+      - name: Maluku Utara
+        id: 8
+        province_id: 32
+
+      - name: Maluku Utara
+        id: 9
+        province_id: 32
+
+      - name: Maluku Utara
+        id: 10
+        province_id: 32
+
+  - name: Papua Barat
+    id: 33
+
+    cities:
+      - name: Papua Barat
+        id: 1
+        province_id: 33
+
+      - name: Papua Barat
+        id: 2
+        province_id: 33
+
+      - name: Papua Barat
+        id: 3
+        province_id: 33
+
+      - name: Papua Barat
+        id: 4
+        province_id: 33
+
+      - name: Papua Barat
+        id: 5
+        province_id: 33
+
+      - name: Papua Barat
+        id: 6
+        province_id: 33
+
+      - name: Papua Barat
+        id: 7
+        province_id: 33
+
+      - name: Papua Barat
+        id: 8
+        province_id: 33
+
+      - name: Papua Barat
+        id: 9
+        province_id: 33
+
+      - name: Papua Barat
+        id: 10
+        province_id: 33
+
+      - name: Papua Barat
+        id: 11
+        province_id: 33
+
+      - name: Papua Barat
+        id: 12
+        province_id: 33
+
+      - name: Papua Barat
+        id: 13
+        province_id: 33
+
+  - name: Papua
+    id: 34
+
+    cities:
+      - name: Papua
+        id: 1
+        province_id: 34
+
+      - name: Papua
+        id: 2
+        province_id: 34
+
+      - name: Papua
+        id: 3
+        province_id: 34
+
+      - name: Papua
+        id: 4
+        province_id: 34
+
+      - name: Papua
+        id: 5
+        province_id: 34
+
+      - name: Papua
+        id: 6
+        province_id: 34
+
+      - name: Papua
+        id: 7
+        province_id: 34
+
+      - name: Papua
+        id: 8
+        province_id: 34
+
+      - name: Papua
+        id: 9
+        province_id: 34
+
+      - name: Papua
+        id: 10
+        province_id: 34
+
+      - name: Papua
+        id: 11
+        province_id: 34
+
+      - name: Papua
+        id: 12
+        province_id: 34
+
+      - name: Papua
+        id: 13
+        province_id: 34
+
+      - name: Papua
+        id: 14
+        province_id: 34
+
+      - name: Papua
+        id: 15
+        province_id: 34
+
+      - name: Papua
+        id: 16
+        province_id: 34
+
+      - name: Papua
+        id: 17
+        province_id: 34
+
+      - name: Papua
+        id: 18
+        province_id: 34
+
+      - name: Papua
+        id: 19
+        province_id: 34
+
+      - name: Papua
+        id: 20
+        province_id: 34
+
+      - name: Papua
+        id: 21
+        province_id: 34
+
+      - name: Papua
+        id: 22
+        province_id: 34
+
+      - name: Papua
+        id: 23
+        province_id: 34
+
+      - name: Papua
+        id: 24
+        province_id: 34
+
+      - name: Papua
+        id: 25
+        province_id: 34
+
+      - name: Papua
+        id: 26
+        province_id: 34
+
+      - name: Papua
+        id: 27
+        province_id: 34
+
+      - name: Papua
+        id: 28
+        province_id: 34
+
+      - name: Papua
+        id: 29
+        province_id: 34
+

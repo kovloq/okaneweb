@@ -1,96 +1,71 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="Expense Manager" name="description"/>
-<meta content="Perdana Adhitama" name="author"/>
-<title>Okane</title>
-<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css"/>
-<link rel="shortcut icon" href="favicon.ico"/>
+doctype html
+html
+head
+meta charset="utf-8
+meta http-equiv="X-UA-Compatible" content="IE=edge"
+meta content="width=device-width  initial-scale=1" name="viewport"
+meta content="Expense Manager" name="description"
+meta content="Perdana Adhitama" name="author"
+title Okane
+link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css"
+link rel="shortcut icon" href="favicon.ico"
 <%= stylesheet_link_tag    'dashboard', media: 'all', 'data-turbolinks-track' => true %>
   
 <%= javascript_include_tag 'dashboard', 'data-turbolinks-track' => true %>
   
 <%= csrf_meta_tags %>
-<script>
+javascript:
     jQuery(document).ready(function() {    
     Metronic.init(); // init metronic core components
 	Layout.init(); // init current layout
  });
-</script>
-</head>
+	
 
-<body class="page-header-fixed page-footer-fixed page-container-bg-solid page-sidebar-closed-hide-logo">
+body class="page-header-fixed page-footer-fixed page-container-bg-solid page-sidebar-closed-hide-logo"
 <!-- BEGIN HEADER -->
-<div class="page-header navbar navbar-fixed-top">
+div.page-header.navbar.navbar-fixed-top
 	<!-- BEGIN HEADER INNER -->
-	<div class="page-header-inner">
+	div.page-header-inner
 		<!-- BEGIN LOGO -->
-		<div class="page-logo">
-			<a href="index.html">
+		div.page-logo
+			a href="#"
 				<%= image_tag("logo_okane.png", :height=>"14",:alt => "Logo",:class => "logo-default") %>
-				
-			</a>
-			<div class="menu-toggler sidebar-toggler"></div>
-		</div>
-		<!-- END LOGO -->
+			div.menu-toggler.sidebar-toggler
 		<!-- BEGIN RESPONSIVE MENU TOGGLER -->
-		<a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">
-		</a>
+		a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse"
 		<!-- END RESPONSIVE MENU TOGGLER -->
 		
 		<!-- BEGIN PAGE TOP -->
-		<div class="page-top">
+		div.page-top
 			
 			<!-- BEGIN TOP NAVIGATION MENU -->
-			<div class="top-menu">
-				<ul class="nav navbar-nav pull-right">
-					
+			div.top-menu
+				ul.nav.navbar-nav.pull-right					
 					<!-- BEGIN USER LOGIN DROPDOWN -->
-					
-					<li class="dropdown dropdown-user">
-						<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-						<img alt="" class="img-circle" src=""/>
-						<span class="username username-hide-on-mobile">
-						<%= session[:admin_name] %></span>
-						<i class="fa fa-angle-down"></i>
-						</a>
-						<ul class="dropdown-menu dropdown-menu-default">
-							<li>
-								<a href="extra_profile.html">
-								<i class="icon-user"></i> My Profile </a>
-							</li>
+					li.dropdown.dropdown-user
+						a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true"
+							img alt="" class="img-circle" src=""/
+							span.username.username-hide-on-mobile
+								<%= session[:admin_name] %>
+							i.fa.fa-angle-down
+						ul.dropdown-menu.dropdown-menu-default
+							li
+								a href="extra_profile.html" i.icon-user My Profile
 							
-							<li>
+							li
 								<%= link_to({controller:"administrator/login",action:"logout"}) do %>
 								
-								<i class="icon-key"></i> Log Out </a>
+									i.icon-key
+									Log Out
 								<% end %>
-							</li>
-						</ul>
-					</li>
-					<!-- END USER LOGIN DROPDOWN -->
-				</ul>
-			</div>
-			<!-- END TOP NAVIGATION MENU -->
-		</div>
-		<!-- END PAGE TOP -->
-	</div>
-	<!-- END HEADER INNER -->
-</div>
-<!-- END HEADER -->
-<div class="clearfix">
-</div>
+
+div.clearfix
 
 	<!-- BEGIN CONTAINER -->
-	<div class="page-container">
+	div.page-container
 		<!-- BEGIN SIDEBAR -->
-		<div class="page-sidebar-wrapper">
-			<!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
-			<!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
-			<div class="page-sidebar navbar-collapse collapse">
+		div.page-sidebar-wrapper
+			div.page-sidebar.navbar-collapse.collapse
 				<!-- BEGIN SIDEBAR MENU -->
 				
 				<ul class="page-sidebar-menu page-sidebar-menu-hover-submenu " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
@@ -135,30 +110,14 @@
 					</li>
 				</ul>
 				<!-- END SIDEBAR MENU -->
-			</div>
-		</div>
-		<!-- END SIDEBAR -->
 		<!-- BEGIN CONTENT -->
-		<div class="page-content-wrapper">
-			<div class="page-content">
-				<%= yield %>
-			</div>
-		</div>
-		<!-- END CONTENT -->
-		
-	</div>
-	<!-- END CONTAINER -->
+		div.page-content-wrapper
+			div.page-content
+				== yield
 	<!-- BEGIN FOOTER -->
-	<div class="page-footer">
-		<div class="page-footer-inner">
-			 2015 &copy; Created by: Dana.
-		</div>
-		<div class="scroll-to-top">
-			<i class="icon-arrow-up"></i>
-		</div>
-	</div>
-	<!-- END FOOTER -->
-
-
-</body>
-</html>
+	div.page-footer
+		div.page-footer-inner
+			 2016 &copy; Created by: Dana.
+		
+		div.scroll-to-top
+			i.icon-arrow-up
