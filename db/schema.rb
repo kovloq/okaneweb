@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -13,82 +12,82 @@
 
 ActiveRecord::Schema.define(version: 20160607132844) do
 
-  create_table "admins", force: true do |t|
+  create_table "admins", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
-    t.string   "username",   null: false
+    t.string   "username"
     t.string   "email"
     t.string   "password"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "categories", force: true do |t|
+  create_table "categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.string   "color"
     t.integer  "tipe",        limit: 2
-    t.text     "description"
+    t.text     "description", limit: 65535
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "cities", force: true do |t|
+  create_table "cities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "province_id"
     t.string "name"
   end
 
-  create_table "contacts", force: true do |t|
+  create_table "contacts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.string   "email"
     t.string   "phone"
-    t.text     "message"
+    t.text     "message",    limit: 65535
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "expenses", force: true do |t|
+  create_table "expenses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.integer  "category_id"
     t.integer  "member_id"
     t.integer  "amount"
     t.date     "date"
-    t.text     "description"
+    t.text     "description", limit: 65535
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "faqs", force: true do |t|
+  create_table "faqs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
-    t.text     "description"
+    t.text     "description", limit: 65535
     t.integer  "order"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "incomes", force: true do |t|
+  create_table "incomes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.integer  "category_id"
     t.integer  "member_id"
     t.integer  "amount"
     t.date     "date"
-    t.text     "description"
+    t.text     "description", limit: 65535
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "members", force: true do |t|
+  create_table "members", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.string   "image"
     t.string   "email"
     t.string   "password"
-    t.string   "gender",                 limit: 200
+    t.string   "gender"
     t.date     "birthdate"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "encrypted_password",                 default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",                      default: 0,  null: false
+    t.integer  "sign_in_count",          default: 0,  null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
@@ -99,22 +98,21 @@ ActiveRecord::Schema.define(version: 20160607132844) do
     t.string   "unconfirmed_email"
     t.string   "provider"
     t.string   "uid"
+    t.index ["confirmation_token"], name: "index_members_on_confirmation_token", unique: true, using: :btree
+    t.index ["email"], name: "index_members_on_email", unique: true, using: :btree
+    t.index ["provider"], name: "index_members_on_provider", using: :btree
+    t.index ["reset_password_token"], name: "index_members_on_reset_password_token", unique: true, using: :btree
+    t.index ["uid"], name: "index_members_on_uid", using: :btree
   end
 
-  add_index "members", ["confirmation_token"], name: "index_members_on_confirmation_token", unique: true, using: :btree
-  add_index "members", ["email"], name: "index_members_on_email", unique: true, using: :btree
-  add_index "members", ["provider"], name: "index_members_on_provider", using: :btree
-  add_index "members", ["reset_password_token"], name: "index_members_on_reset_password_token", unique: true, using: :btree
-  add_index "members", ["uid"], name: "index_members_on_uid", using: :btree
-
-  create_table "provinces", force: true do |t|
+  create_table "provinces", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
   end
 
-  create_table "transactions", force: true do |t|
+  create_table "transactions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "member_id"
     t.string   "name"
-    t.string   "tags",        limit: 250
+    t.string   "tags"
     t.integer  "t_category"
     t.integer  "amount"
     t.datetime "created_at"
@@ -123,7 +121,7 @@ ActiveRecord::Schema.define(version: 20160607132844) do
     t.integer  "updated_by"
     t.boolean  "delete_flag"
     t.date     "date"
-    t.text     "description"
+    t.text     "description", limit: 65535
     t.integer  "category_id"
   end
 

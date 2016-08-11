@@ -43,6 +43,9 @@ gem 'spring',        group: :development
 # use kaminari for pagination
 gem 'kaminari'
 
+# CORS handling
+gem "rack-cors"
+
 gem 'devise'
 # gem 'omniauth'
 gem 'omniauth-facebook'
